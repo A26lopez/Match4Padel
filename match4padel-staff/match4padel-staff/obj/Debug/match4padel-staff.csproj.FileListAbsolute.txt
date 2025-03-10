@@ -4,7 +4,6 @@ C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-st
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\bin\Debug\match4padel-staff.pdb
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\App.g.cs
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\match4padel-staff_MarkupCompile.cache
-C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\match4padel-staff_MarkupCompile.lref
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\match4padel-staff.g.resources
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\match4padel_staff.Properties.Resources.resources
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\match4padel-staff.csproj.GenerateResource.cache
