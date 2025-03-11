@@ -11,18 +11,10 @@
         Width="1080"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize">
-    
+
     <Window.DataContext>
         <ViewModel:LoginViewModel/>
     </Window.DataContext>
-
-    <Window.Resources>
-        <BooleanToVisibilityConverter x:Key="BoolToVisibility"/>
-    </Window.Resources>
-
-    <Window.Visibility>
-        <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BoolToVisibility}"/>
-    </Window.Visibility>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -100,10 +92,10 @@
 
         </Grid>
         <Grid Grid.Column="1"
-             Background="{StaticResource DecorationColor}">
+             Background="{StaticResource GrayLightDecoration}">
         </Grid>
         <Grid Grid.Column="2"
-              Background="{StaticResource SecondaryColor}">
+              Background="{StaticResource GrayLightDecoration}">
             <Image Source="../Resources/Images/login_screen_image.png"
                    Opacity="0.75"
                    Stretch="UniformToFill"/>

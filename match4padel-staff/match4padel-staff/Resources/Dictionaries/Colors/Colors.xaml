@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- Corporative colors -->
+    <SolidColorBrush x:Key="BluePrimaryColor">#515CAC</SolidColorBrush>
+    <SolidColorBrush x:Key="BlueSecondaryColor">#B8BCD7</SolidColorBrush>
+    
+    <!-- Decoration colors -->
+    <SolidColorBrush x:Key="YellowDetails">#E3EA6A</SolidColorBrush>
+    <SolidColorBrush x:Key="GrayDarkDecoration">#8F8E8E</SolidColorBrush>
+    <SolidColorBrush x:Key="GrayLightDecoration">#B8B9BB</SolidColorBrush>
+
+    <!-- Text colors -->
+    <SolidColorBrush x:Key="DarkText">#535353</SolidColorBrush>
+    <SolidColorBrush x:Key="PlainTextPrimary">#8F8E8E</SolidColorBrush>
+    <SolidColorBrush x:Key="PlainTextSecondary">#B8B9BB</SolidColorBrush>
+    <SolidColorBrush x:Key="LightText">#C7C7C7</SolidColorBrush>
+
+</ResourceDictionary>

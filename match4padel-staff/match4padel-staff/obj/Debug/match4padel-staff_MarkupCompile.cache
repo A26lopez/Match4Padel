@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\App.xaml
-6-1655405282
+9630718015
 
 9-1296362683
 14767248286
-Resources\Dictionaries\Images.xaml;Resources\Dictionaries\Strings.xaml;Resources\Dictionaries\Styles.xaml;View\LoginView.xaml;View\MainView.xaml;Resources\Dictionaries\Colors.xaml;
+Resources\Dictionaries\Images\Images.xaml;Resources\Dictionaries\Strings\Strings.xaml;Resources\Dictionaries\AppStyles.xaml;Resources\Dictionaries\Styles\Buttons.xaml;Resources\Dictionaries\Styles\TextBoxes.xaml;Resources\Dictionaries\Styles\Texts.xaml;View\LoginView.xaml;View\MainView.xaml;Resources\Dictionaries\Colors\Colors.xaml;
 
 False
 
