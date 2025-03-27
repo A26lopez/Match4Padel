@@ -1,133 +1,54 @@
 package com.match4padel.match4padel_api.models;
 
-import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import java.time.LocalDate;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "contact_info")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class ContactInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
-    @Column(name = "first_name", nullable = false, length = 100)
+    @Column(nullable = false)
+    @JsonProperty("first_name")
     private String firstName;
 
-    @Column(name = "last_name", nullable = false, length = 100)
+    @Column(nullable = false)
+    @JsonProperty("last_name")
     private String lastName;
 
-    @Column(unique = true, length = 50)
+    @Column(unique = true)
     private String dni;
 
-    @Column(unique = true, nullable = false, length = 150)
+    @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(unique = true, nullable = false, length = 20)
+    @Column(nullable = false, unique = true)
+    @JsonProperty("phone_number")
     private String phoneNumber;
 
-    @Column(name = "birth_date", nullable = false)
+    @Column(nullable = false)
+    @JsonProperty("birth_date")
     private LocalDate birthDate;
 
-    @Column(columnDefinition = "TEXT")
     private String address;
-
-    @Column(length = 100)
     private String city;
-
-    @Column(name = "postal_code", length = 20)
     private String postalCode;
-
-    @Column(length = 100)
     private String country;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getDni() {
-        return dni;
-    }
-
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getPostalCode() {
-        return postalCode;
-    }
-
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-    
-    
 }

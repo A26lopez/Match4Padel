@@ -1,5 +1,7 @@
 package com.match4padel.match4padel_api.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -10,74 +12,47 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "users")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Level level;
 
-    @OneToOne
-    @JoinColumn(name = "account_info_id", nullable = false, unique = true)
+    @OneToOne(cascade = CascadeType.ALL)
+    @JsonProperty("account_info")
+    @JoinColumn(nullable = false, unique = true, name = "account_info_id")
     private AccountInfo accountInfo;
 
-    @OneToOne
-    @JoinColumn(name = "contact_info_id", nullable = false, unique = true)
+    @OneToOne(cascade = CascadeType.ALL)
+    @JsonProperty("contact_info")
+    @JoinColumn(nullable = false, unique = true, name = "contact_info_id")
     private ContactInfo contactInfo;
 
-    @OneToOne
-    @JoinColumn(name = "account_security_id", nullable = false, unique = true)
+    @OneToOne(cascade = CascadeType.ALL)
+    @JsonProperty("account_security")
+    @JoinColumn(nullable = false, unique = true, name = "account_security_id")
     private AccountSecurity accountSecurity;
-
-    public enum Level {
-        BEGINNER, INTERMEDIATE, ADVANCED
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Level getLevel() {
-        return level;
-    }
-
-    public void setLevel(Level level) {
-        this.level = level;
-    }
-
-    public AccountInfo getAccountInfo() {
-        return accountInfo;
-    }
-
-    public void setAccountInfo(AccountInfo accountInfo) {
-        this.accountInfo = accountInfo;
-    }
-
-    public ContactInfo getContactInfo() {
-        return contactInfo;
-    }
-
-    public void setContactInfo(ContactInfo contactInfo) {
-        this.contactInfo = contactInfo;
-    }
-
-    public AccountSecurity getAccountSecurity() {
-        return accountSecurity;
-    }
-
-    public void setAccountSecurity(AccountSecurity accountSecurity) {
-        this.accountSecurity = accountSecurity;
-    }
     
     
+}
+
+enum Level{
+    beginner,
+    intermediate,
+    advanced
 }
