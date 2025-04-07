@@ -1,5 +1,7 @@
 package com.match4padel.match4padel_api.models;
 
+import com.match4padel.match4padel_api.models.enums.Level;
+import com.match4padel.match4padel_api.models.enums.MatchStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -28,23 +30,23 @@ public class Match {
     private Long id;
 
     @OneToOne
-    @JoinColumn(name = "reservation_id", nullable = false)
+    @JoinColumn(nullable = false)
     private Reservation reservation;
 
     @ManyToOne
-    @JoinColumn(name = "owner_id", nullable = false)
+    @JoinColumn(nullable = false)
     private User owner;
 
     @ManyToOne
-    @JoinColumn(name = "player_1_id")
+    @JoinColumn
     private User player1;
 
     @ManyToOne
-    @JoinColumn(name = "player_2_id")
+    @JoinColumn
     private User player2;
 
     @ManyToOne
-    @JoinColumn(name = "player_3_id")
+    @JoinColumn
     private User player3;
 
     @Enumerated(EnumType.STRING)
@@ -52,23 +54,6 @@ public class Match {
     private MatchStatus status = MatchStatus.OPEN;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "level", nullable = false)
-    private matchLevel level;
+    @Column(nullable = false)
+    private Level level;
 }
-
-enum MatchStatus {
-    OPEN,
-    CLOSED,
-    CONFIRMED,
-    FINISHED,
-    CANCELLED
-}
-
-enum matchLevel {
-    BEGINNER,
-    INTERMEDIATE,
-    ADVANCED
-}
-
-
-

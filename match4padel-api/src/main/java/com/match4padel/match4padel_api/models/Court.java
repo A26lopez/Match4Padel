@@ -2,7 +2,10 @@ package com.match4padel.match4padel_api.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.match4padel.match4padel_api.models.enums.CourtStatus;
+import com.match4padel.match4padel_api.models.enums.CourtType;
+import com.match4padel.match4padel_api.models.enums.CourtZone;
 import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -35,18 +38,17 @@ public class Court {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private CourtStatus status = CourtStatus.available;
+    private CourtStatus courtStatus = CourtStatus.AVAILABLE;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Zone zone;
+    private CourtZone courtZone;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private CourtType type;
+    private CourtType courtType;
 
     @Column(nullable = false)
-    @JsonProperty("price_per_match")
     private BigDecimal pricePerMatch;
 
     @CreationTimestamp
@@ -54,15 +56,5 @@ public class Court {
 
     @UpdateTimestamp
     private LocalDateTime updatedAt;
-}
-
-
-
-enum Zone {
-    indoor, outdoor
-}
-
-enum CourtType {
-    artificial_grass, hard_court
 }
 

@@ -1,5 +1,6 @@
 package com.match4padel.match4padel_api.models;
 
+import com.match4padel.match4padel_api.models.enums.WorkerRole;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -29,7 +30,7 @@ public class WorkInfo {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Role role = Role.EMPLOYEE;
+    private WorkerRole role = WorkerRole.EMPLOYEE;
 
     @Column(nullable = false)
     private LocalDate hireDateStart;
@@ -45,8 +46,4 @@ public class WorkInfo {
     @Column(nullable = false, unique = true)
     private String bankAccount;
 
-}
-
-enum Role {
-    EMPLOYEE, ADMINISTRATOR
 }

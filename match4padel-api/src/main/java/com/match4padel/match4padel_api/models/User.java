@@ -1,6 +1,7 @@
 package com.match4padel.match4padel_api.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.match4padel.match4padel_api.models.enums.Level;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,6 +13,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,28 +33,19 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
+    @NotNull(message = "Elige un nivel.")
     private Level level;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JsonProperty("account_info")
-    @JoinColumn(nullable = false, unique = true, name = "account_info_id")
+    @JoinColumn(nullable = false)
     private AccountInfo accountInfo;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JsonProperty("contact_info")
-    @JoinColumn(nullable = false, unique = true, name = "contact_info_id")
+    @JoinColumn(nullable = false)
     private ContactInfo contactInfo;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JsonProperty("account_security")
-    @JoinColumn(nullable = false, unique = true, name = "account_security_id")
+    @JoinColumn(nullable = false)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private AccountSecurity accountSecurity;
-    
-    
-}
-
-enum Level{
-    beginner,
-    intermediate,
-    advanced
 }

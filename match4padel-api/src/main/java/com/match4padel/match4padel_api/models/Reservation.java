@@ -1,5 +1,6 @@
 package com.match4padel.match4padel_api.models;
 
+import com.match4padel.match4padel_api.models.enums.ReservationStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -52,7 +53,7 @@ public class Reservation {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private ReservationStatus status = ReservationStatus.PENDING;
+    private ReservationStatus status = ReservationStatus.CONFIRMED;
 
     @Column(nullable = false)
     @CreationTimestamp
@@ -60,12 +61,5 @@ public class Reservation {
 
     @Column(nullable = false)
     private boolean paid = false;
-}
-
-enum ReservationStatus {
-    PENDING,
-    CONFIRMED,
-    CANCELLED,
-    FINISHED
 }
 

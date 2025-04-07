@@ -1,5 +1,7 @@
 package com.match4padel.match4padel_api.models;
 
+import com.match4padel.match4padel_api.models.enums.PaymentMethod;
+import com.match4padel.match4padel_api.models.enums.PaymentStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -27,14 +29,14 @@ public class Payment {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "reservation_id", nullable = false)
+    @JoinColumn(nullable = false)
     private Reservation reservation;
 
     @Column(nullable = false)
     private double amount;
 
     @Column(nullable = false)
-    private LocalDateTime date = LocalDateTime.now();
+    private LocalDateTime date;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -43,17 +45,4 @@ public class Payment {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private PaymentStatus status = PaymentStatus.PENDING;
-}
-
-enum PaymentMethod {
-    CARD,
-    APPLE_PAY,
-    CASH
-}
-
-enum PaymentStatus {
-    PENDING,
-    COMPLETED,
-    FAILED,
-    CANCELLED
 }
