@@ -11,6 +11,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -20,11 +22,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
-
 @Entity
 @Table(name = "reservations")
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Reservation {
 
     @Id
@@ -32,34 +35,37 @@ public class Reservation {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(nullable = false)
+    @NotNull(message = "La reserva tiene que estar hecha por un usuario.")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "court_id", nullable = false)
+    @JoinColumn(nullable = false)
+    @NotNull(message = "Elige la pista.")
     private Court court;
 
     @Column(nullable = false)
+    @Future(message = "La fecha debe ser posterior a la actual.")
+    @NotNull(message = "Elige la fecha.")
     private LocalDate date;
 
     @Column(nullable = false)
+    @NotNull(message = "Elige la hora")
     private LocalTime startTime;
 
     @Column(nullable = false)
     private LocalTime endTime;
 
     @Column(nullable = false)
-    private int duration;
+    private int duration = 90;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private ReservationStatus status = ReservationStatus.CONFIRMED;
 
-    @Column(nullable = false)
     @CreationTimestamp
-    private LocalDateTime statusDate;
+    private LocalDateTime createdAt;
 
     @Column(nullable = false)
     private boolean paid = false;
 }
-

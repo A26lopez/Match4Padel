@@ -13,11 +13,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
 @Table(name = "users")
@@ -31,21 +35,31 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Valid
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     @NotNull(message = "Elige un nivel.")
     private Level level;
 
+    @Valid
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(nullable = false)
     private AccountInfo accountInfo;
 
+    @Valid
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(nullable = false)
     private ContactInfo contactInfo;
 
+    @Valid
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(nullable = false)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private AccountSecurity accountSecurity;
+
+    @CreationTimestamp
+    private LocalDateTime createdAt;
+
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
 }

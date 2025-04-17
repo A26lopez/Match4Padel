@@ -43,9 +43,9 @@ public class ContactInfo {
     private String lastName;
 
     @Column(unique = true)
-    @NotBlank(message = "El DNI no puede estar vacío.")
-    @Pattern(regexp = "^[0-9]{8}[A-Za-z]$", message = "El DNI no es válido.")
-    private String dni;
+    @NotBlank(message = "El NIF no puede estar vacío.")
+    @Pattern(regexp = "^[0-9]{8}[A-Za-z]$", message = "El NIF no es válido.")
+    private String nif;
 
     @Column(nullable = false, unique = true)
     @NotBlank(message = "El email no puede estar vacío.")

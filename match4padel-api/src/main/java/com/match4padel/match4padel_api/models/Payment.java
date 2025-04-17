@@ -12,16 +12,21 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
 @Table(name = "payments")
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Payment {
 
     @Id
@@ -33,16 +38,22 @@ public class Payment {
     private Reservation reservation;
 
     @Column(nullable = false)
+    @NotBlank(message = "El precio no puede estar vacío.")
     private double amount;
 
     @Column(nullable = false)
+    @NotBlank(message = "Elige una fecha.")
     private LocalDateTime date;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
+    @NotBlank(message = "Elige un método de pago.")
     private PaymentMethod method;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private PaymentStatus status = PaymentStatus.PENDING;
+
+    @CreationTimestamp
+    private LocalDateTime createdAt;
 }

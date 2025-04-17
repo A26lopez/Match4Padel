@@ -1,12 +1,10 @@
 package com.match4padel.match4padel_api.services;
 
-import com.match4padel.match4padel_api.exceptions.DuplicateFieldException;
+import com.match4padel.match4padel_api.exceptions.DuplicateException;
+import com.match4padel.match4padel_api.exceptions.UserNotFoundException;
 import com.match4padel.match4padel_api.models.User;
 import com.match4padel.match4padel_api.repositories.UserRepository;
-import jakarta.persistence.EntityNotFoundException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -27,50 +25,132 @@ public class UserService {
 
     public User getById(Long id) {
         return userRepository.findById(id)
-                .orElseThrow();
+                .orElseThrow(() -> new UserNotFoundException("id", id.toString()));
     }
 
-    public List<User> getByStatus(boolean isActive) {
-        return userRepository.findByAccountInfoIsActive(isActive);
+    public User getByUsername(String username) {
+        return userRepository.findByAccountInfoUsername(username)
+                .orElseThrow(() -> new UserNotFoundException("nombre de usuario", username));
+    }
+
+    public User getByEmail(String email) {
+        return userRepository.findByContactInfoEmail(email)
+                .orElseThrow(() -> new UserNotFoundException("email", email));
+    }
+
+    public List<User> getActive() {
+        return userRepository.findActive();
     }
 
     public List<User> search(String q) {
         return userRepository.search(q);
     }
 
-    public void changeStatus(Long id) {
-
-    }
-
     @Transactional
     public User create(User user) {
-        checkIfUserExists(user);
+        String username = user.getAccountInfo().getUsername();
+        validateFieldAvailability("username", username);
+
+        String email = user.getContactInfo().getEmail();
+        validateFieldAvailability("email", email);
+
+        String phoneNumber = user.getContactInfo().getPhoneNumber();
+        validateFieldAvailability("phoneNumber", phoneNumber);
+
+        String nif = user.getContactInfo().getNif();
+        validateFieldAvailability("nif", nif);
+
         String password = user.getAccountSecurity().getPassword();
         String passwordHash = passwordEncoder.encode(password);
         user.getAccountSecurity().setPasswordHash(passwordHash);
         return userRepository.save(user);
     }
 
-    private void checkIfUserExists(User user) {
-        Map<String, String> duplicateFields = new HashMap<>();
-        String username = user.getAccountInfo().getUsername();
-        String email = user.getContactInfo().getEmail();
-        String phoneNumber = user.getContactInfo().getPhoneNumber();
-        String dni = user.getContactInfo().getDni();
-        if (userRepository.existsByAccountInfoUsername(username)) {
-            duplicateFields.put("username", "El usuario " + username + " ya está registrado.");
+    @Transactional
+    public User update(Long id, User updatedUser) {
+        User existingUser = getById(id);
+
+        if (hasFieldChanged(existingUser.getAccountInfo().getUsername(), updatedUser.getAccountInfo().getUsername())) {
+            String username = updatedUser.getAccountInfo().getUsername();
+            validateFieldAvailability("username", username);
+            existingUser.getAccountInfo().setUsername(username);
         }
-        if (userRepository.existsByContactInfoEmail(email)) {
-            duplicateFields.put("email", "El email " + email + " ya está registrado.");
+
+        if (hasFieldChanged(existingUser.getContactInfo().getEmail(), updatedUser.getContactInfo().getEmail())) {
+            String email = updatedUser.getContactInfo().getEmail();
+            validateFieldAvailability("email", email);
+            existingUser.getContactInfo().setEmail(email);
         }
-        if (userRepository.existsByContactInfoPhoneNumber(phoneNumber)) {
-            duplicateFields.put("phoneNumber", "El número de teléfono " + phoneNumber + " ya está registrado.");
+
+        if (hasFieldChanged(existingUser.getContactInfo().getPhoneNumber(), updatedUser.getContactInfo().getPhoneNumber())) {
+            String phoneNumber = updatedUser.getContactInfo().getPhoneNumber();
+            validateFieldAvailability("phoneNumber", phoneNumber);
+            existingUser.getContactInfo().setPhoneNumber(phoneNumber);
         }
-        if (userRepository.existsByContactInfoDni(dni)) {
-            duplicateFields.put("dni", "El DNI " + dni + " ya está registrado.");
+
+        if (hasFieldChanged(existingUser.getContactInfo().getNif(), updatedUser.getContactInfo().getNif())) {
+            String nif = updatedUser.getContactInfo().getNif();
+            validateFieldAvailability("nif", nif);
+            existingUser.getContactInfo().setNif(nif);
         }
-        if (!duplicateFields.isEmpty()) {
-            throw new DuplicateFieldException(duplicateFields);
+
+        if (!passwordEncoder.matches(updatedUser.getAccountSecurity().getPassword(), existingUser.getAccountSecurity().getPasswordHash())) {
+            String password = updatedUser.getAccountSecurity().getPassword();
+            String passwordHash = passwordEncoder.encode(password);
+            existingUser.getAccountSecurity().setPasswordHash(passwordHash);
+        }
+
+        existingUser.getAccountInfo().setProfilePictureUrl(updatedUser.getAccountInfo().getProfilePictureUrl());
+        existingUser.getContactInfo().setFirstName(updatedUser.getContactInfo().getFirstName());
+        existingUser.getContactInfo().setLastName(updatedUser.getContactInfo().getLastName());
+        existingUser.getContactInfo().setBirthDate(updatedUser.getContactInfo().getBirthDate());
+        existingUser.getContactInfo().setAddress(updatedUser.getContactInfo().getAddress());
+        existingUser.getContactInfo().setCity(updatedUser.getContactInfo().getCity());
+        existingUser.getContactInfo().setPostalCode(updatedUser.getContactInfo().getPostalCode());
+        existingUser.getContactInfo().setCountry(updatedUser.getContactInfo().getCountry());
+        return userRepository.save(existingUser);
+    }
+
+    private boolean hasFieldChanged(String oldValue, String newValue) {
+        if (oldValue == null) {
+            return newValue != null;
+        }
+        return !oldValue.equalsIgnoreCase(newValue);
+    }
+
+    private void validateFieldAvailability(String field, String value) {
+        switch (field) {
+            case "username":
+                if (userRepository.existsByAccountInfoUsername(value)) {
+                    throw new DuplicateException("nombre de usuario", value);
+                }
+                break;
+            case "email":
+                if (userRepository.existsByContactInfoEmail(value)) {
+                    throw new DuplicateException("email", value);
+                }
+                break;
+            case "phoneNumber":
+                if (userRepository.existsByContactInfoPhoneNumber(value)) {
+                    throw new DuplicateException("número de teléfono", value);
+                }
+                break;
+            case "nif":
+                if (userRepository.existsByContactInfoNif(value)) {
+                    throw new DuplicateException("NIF", value);
+                }
+                break;
+            default:
+                throw new IllegalArgumentException("Campo no válido: " + field);
         }
     }
+
+    @Transactional
+    public void deleteById(Long id) {
+        if (!userRepository.existsById(id)) {
+            throw new UserNotFoundException("id", id.toString());
+        }
+        userRepository.deleteById(id);
+    }
+
 }
