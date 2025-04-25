@@ -1,7 +1,15 @@
 package com.match4padel.match4padel_api.controllers;
 
+import com.match4padel.match4padel_api.models.Reservation;
 import com.match4padel.match4padel_api.services.ReservationService;
+import java.time.LocalDate;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,5 +17,37 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("reservations")
 public class ReservationController {
 
+    @Autowired
+    ReservationService reservationService;
+
+    @GetMapping
+    public List<Reservation> getAll() {
+        return reservationService.getAll();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Reservation> getById(@PathVariable Long id) {
+        return ResponseEntity.ok(reservationService.getById(id));
+    }
+
+    @GetMapping("/date/{date}")
+    public List<Reservation> getByDate(@PathVariable String date) {
+        return reservationService.getByDate(LocalDate.parse(date));
+    }
+
+    @GetMapping("/user/{userId}")
+    public List<Reservation> getByUserId(@PathVariable Long userId) {
+        return reservationService.getByUserId(userId);
+    }
+
+    @GetMapping("/court/{courtId}")
+    public List<Reservation> getByCourtId(@PathVariable Long courtId) {
+        return reservationService.getByCourtId(courtId);
+    }
+
+    @PostMapping
+    public ResponseEntity<Reservation> create(@RequestBody Reservation reservation) {
+        return ResponseEntity.ok(reservationService.create(reservation));
+    }
 
 }

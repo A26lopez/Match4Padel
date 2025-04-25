@@ -1,25 +1,22 @@
 package com.match4padel.match4padel_api.exceptions;
 
+import com.match4padel.match4padel_api.models.Reservation;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
-public class ReservationNotFoundException extends RuntimeException {
+public class CourtOccupiedException extends RuntimeException {
 
-    public ReservationNotFoundException(String field, String value) {
-        super("No se ha encontrado ninguna reserva con " + field + " " + value + ".");
-    }
-
-    public ReservationNotFoundException(String courtName, LocalDate date, LocalTime startTime, LocalTime endTime) {
-        super(buildMessage(courtName, date, startTime, endTime));
+    public CourtOccupiedException(Reservation reservation) {
+        super(buildMessage(reservation.getCourt().getName(), reservation.getDate(), reservation.getStartTime(), reservation.getEndTime()));
     }
 
     private static String buildMessage(String courtName, LocalDate date, LocalTime startTime, LocalTime endTime) {
         String formattedDate = date.format(DateTimeFormatter.ofPattern("EEEE, d 'de' MMMM 'de' yyyy", new Locale("es", "ES")));
         String formattedStarTime = startTime.format(DateTimeFormatter.ofPattern("HH:mm"));
         String formattedEndTime = endTime.format(DateTimeFormatter.ofPattern("HH:mm"));
-        return "No se han encontrado reservas en la pista " + courtName + " para el día " + formattedDate
+        return "La pista " + courtName + " está ocupada el día " + formattedDate
                 + " entre las " + formattedStarTime + " y las " + formattedEndTime + ".";
     }
 }

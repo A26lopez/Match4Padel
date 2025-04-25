@@ -56,10 +56,4 @@ public class User {
     @JoinColumn(nullable = false)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private AccountSecurity accountSecurity;
-
-    @CreationTimestamp
-    private LocalDateTime createdAt;
-
-    @UpdateTimestamp
-    private LocalDateTime updatedAt;
 }

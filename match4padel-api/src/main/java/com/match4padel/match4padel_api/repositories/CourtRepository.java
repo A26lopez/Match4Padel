@@ -21,12 +21,15 @@ public interface CourtRepository extends JpaRepository<Court, Long> {
         SELECT r.court.id 
         FROM Reservation r 
         WHERE r.date = :date 
-        AND r.startTime < :time 
-        AND r.endTime > :time
         AND r.status = 'CONFIRMED'
+        AND (:startTime < r.endTime AND :endTime > r.startTime)
     ) 
     AND c.courtStatus = 'AVAILABLE'
 """)
-    List<Court> findFreeCourtsByDateAndTime(@Param("date") LocalDate date, @Param("time") LocalTime time);
+    List<Court> findFreeCourtsByDateAndTimeRange(
+            @Param("date") LocalDate date,
+            @Param("startTime") LocalTime startTime,
+            @Param("endTime") LocalTime endTime
+    );
 
 }

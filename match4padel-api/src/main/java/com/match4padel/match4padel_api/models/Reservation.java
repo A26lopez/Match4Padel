@@ -20,6 +20,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.aspectj.weaver.patterns.ThisOrTargetPointcut;
 import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
@@ -30,6 +31,8 @@ import org.hibernate.annotations.CreationTimestamp;
 @AllArgsConstructor
 public class Reservation {
 
+    public static final int DEFAULT_RESERVATION_DURATION_MINUTES = 90;
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -45,7 +48,6 @@ public class Reservation {
     private Court court;
 
     @Column(nullable = false)
-    @Future(message = "La fecha debe ser posterior a la actual.")
     @NotNull(message = "Elige la fecha.")
     private LocalDate date;
 
@@ -57,7 +59,7 @@ public class Reservation {
     private LocalTime endTime;
 
     @Column(nullable = false)
-    private int duration = 90;
+    private int duration = DEFAULT_RESERVATION_DURATION_MINUTES;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -68,4 +70,5 @@ public class Reservation {
 
     @Column(nullable = false)
     private boolean paid = false;
+
 }

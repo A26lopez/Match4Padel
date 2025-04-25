@@ -1,12 +1,9 @@
 package com.match4padel.match4padel_api.services;
 
-import com.match4padel.match4padel_api.exceptions.UserNotFoundException;
+import com.match4padel.match4padel_api.exceptions.CourtNotFoundException;
 import com.match4padel.match4padel_api.models.Court;
-import com.match4padel.match4padel_api.models.Reservation;
 import com.match4padel.match4padel_api.models.enums.CourtStatus;
-import com.match4padel.match4padel_api.models.enums.ReservationStatus;
 import com.match4padel.match4padel_api.repositories.CourtRepository;
-import com.match4padel.match4padel_api.repositories.ReservationRepository;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
@@ -16,11 +13,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class CourtService {
 
+    
     @Autowired
     CourtRepository courtRepository;
-
-    @Autowired
-    ReservationRepository reservationRepository;
+    
 
     public List<Court> getAll() {
         return courtRepository.findAll();
@@ -28,22 +24,22 @@ public class CourtService {
 
     public Court getById(Long id) {
         return courtRepository.findById(id)
-                .orElseThrow(() -> new UserNotFoundException("id", id.toString()));
+                .orElseThrow(() -> new CourtNotFoundException("id", id.toString()));
     }
 
     public List<Court> getFreeNow() {
         LocalDate today = LocalDate.now();
         LocalTime now = LocalTime.now();
-        return courtRepository.findFreeCourtsByDateAndTime(today, now);
+        return courtRepository.findFreeCourtsByDateAndTimeRange(today, now, now.plusMinutes(90));
     }
 
-    public List<Court> getFreeByDateAndTime(LocalDate date, LocalTime time) {
-        return courtRepository.findFreeCourtsByDateAndTime(date, time);
+    public List<Court> getFreeByDateAndTime(LocalDate date, LocalTime time, int duration) {
+        return courtRepository.findFreeCourtsByDateAndTimeRange(date, time, time.plusMinutes(duration));
     }
 
-    public boolean isCourtFree(Long courtId, LocalDate date, LocalTime startTime) {
+    public boolean isCourtFreeByDateAndTime(Long courtId, LocalDate date, LocalTime startTime, int duration) {
         Court court = getById(courtId);
-        List<Court> freeCourts = getFreeByDateAndTime(date, startTime);
+        List<Court> freeCourts = getFreeByDateAndTime(date, startTime, duration);
         return freeCourts.contains(court);
     }
 

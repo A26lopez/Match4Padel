@@ -40,6 +40,8 @@ public class Court {
 
     private String description;
 
+    private String pictureUrl;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     @NotNull(message = "Elige un estado.")
@@ -58,10 +60,4 @@ public class Court {
     @Column(nullable = false)
     @NotNull(message = "Elige un precio.")
     private BigDecimal pricePerMatch;
-
-    @CreationTimestamp
-    private LocalDateTime createdAt;
-
-    @UpdateTimestamp
-    private LocalDateTime updatedAt;
 }

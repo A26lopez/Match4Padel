@@ -24,12 +24,12 @@ public class CourtController {
     private CourtService courtService;
 
     @GetMapping
-    public ResponseEntity<List<Court>> getAllCourts() {
+    public ResponseEntity<List<Court>> getAll() {
         return ResponseEntity.ok(courtService.getAll());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Court> getCourtById(@PathVariable Long id) {
+    public ResponseEntity<Court> getById(@PathVariable Long id) {
         return ResponseEntity.ok(courtService.getById(id));
     }
 
@@ -39,13 +39,15 @@ public class CourtController {
     }
 
     @GetMapping("/free")
-    public ResponseEntity<List<Court>> getAvailableCourts(
+    public ResponseEntity<List<Court>> getFreeCourts(
             @RequestParam("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date,
-            @RequestParam("time") @DateTimeFormat(iso = DateTimeFormat.ISO.TIME) LocalTime time) {
-        List<Court> availableCourts = courtService.getFreeByDateAndTime(date, time);
+            @RequestParam("time") @DateTimeFormat(iso = DateTimeFormat.ISO.TIME) LocalTime time,
+            @RequestParam("duration") int duration) {
+
+        List<Court> availableCourts = courtService.getFreeByDateAndTime(date, time, duration);
         return ResponseEntity.ok(availableCourts);
     }
-    
+
     @PatchMapping("/{id}")
     public ResponseEntity<Court> changeStatus(
             @PathVariable Long id,
