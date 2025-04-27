@@ -35,8 +35,6 @@ public class AccountInfo {
     private String username;
 
     private String profilePictureUrl;
-    
-    private Boolean isActive = true;
 
     @CreationTimestamp
     private LocalDateTime createdAt;

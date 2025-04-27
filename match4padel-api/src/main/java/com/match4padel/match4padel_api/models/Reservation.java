@@ -1,6 +1,8 @@
 package com.match4padel.match4padel_api.models;
 
+import com.match4padel.match4padel_api.config.ReservationConfig;
 import com.match4padel.match4padel_api.models.enums.ReservationStatus;
+import jakarta.annotation.PostConstruct;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -11,7 +13,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -20,7 +21,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.aspectj.weaver.patterns.ThisOrTargetPointcut;
 import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
@@ -31,8 +31,6 @@ import org.hibernate.annotations.CreationTimestamp;
 @AllArgsConstructor
 public class Reservation {
 
-    public static final int DEFAULT_RESERVATION_DURATION_MINUTES = 90;
-    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -56,10 +54,10 @@ public class Reservation {
     private LocalTime startTime;
 
     @Column(nullable = false)
-    private LocalTime endTime;
+    private int duration = ReservationConfig.DURATION;
 
     @Column(nullable = false)
-    private int duration = DEFAULT_RESERVATION_DURATION_MINUTES;
+    private LocalTime endTime;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

@@ -19,7 +19,7 @@ public class ReservationNotFoundException extends RuntimeException {
         String formattedDate = date.format(DateTimeFormatter.ofPattern("EEEE, d 'de' MMMM 'de' yyyy", new Locale("es", "ES")));
         String formattedStarTime = startTime.format(DateTimeFormatter.ofPattern("HH:mm"));
         String formattedEndTime = endTime.format(DateTimeFormatter.ofPattern("HH:mm"));
-        return "No se han encontrado reservas en la pista " + courtName + " para el día " + formattedDate
-                + " entre las " + formattedStarTime + " y las " + formattedEndTime + ".";
+        return "No se ha encontrado ninguna reserva en la pista " + courtName + " para el día " + formattedDate
+                + " de " + formattedStarTime + " a " + formattedEndTime + ".";
     }
 }

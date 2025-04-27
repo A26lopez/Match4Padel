@@ -1,6 +1,5 @@
 package com.match4padel.match4padel_api.models;
 
-import com.match4padel.match4padel_api.models.enums.CourtStatus;
 import com.match4padel.match4padel_api.models.enums.CourtType;
 import com.match4padel.match4padel_api.models.enums.CourtZone;
 import jakarta.persistence.Column;
@@ -14,13 +13,10 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
 @Table(name = "courts")
@@ -41,11 +37,6 @@ public class Court {
     private String description;
 
     private String pictureUrl;
-
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    @NotNull(message = "Elige un estado.")
-    private CourtStatus courtStatus = CourtStatus.AVAILABLE;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

@@ -40,11 +40,6 @@ public class UserController {
         return ResponseEntity.ok(userService.getByEmail(email));
     }
 
-    @GetMapping("/active")
-    public ResponseEntity<List<User>> getByStatus() {
-        return ResponseEntity.ok(userService.getActive());
-    }
-
     @GetMapping("/search")
     public ResponseEntity<List<User>> search(@RequestParam String q) {
         return ResponseEntity.ok(userService.search(q));

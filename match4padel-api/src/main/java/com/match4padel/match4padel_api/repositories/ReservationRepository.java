@@ -16,24 +16,34 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ReservationRepository extends JpaRepository<Reservation, Long> {
 
-    List<Reservation> findByDate(LocalDate date);
+    List<Reservation> findByCourt(Court court);
 
     List<Reservation> findByUser(User user);
 
-    List<Reservation> findByCourt(Court court);
+    List<Reservation> findByUserAndStatus(User user, ReservationStatus status);
 
+    List<Reservation> findByDate(LocalDate date);
+
+    Optional<Reservation> findByCourtAndDateAndStartTimeAndEndTime(Court court, LocalDate date, LocalTime startTime, LocalTime endTime);
 
     @Query("""
-    SELECT r FROM Reservation r
-    WHERE r.court.id = :courtId
-    AND r.date = :date
-    AND (:startTime < r.endTime AND :endTime > r.startTime)
+    SELECT c FROM Court c
+    WHERE c.id NOT IN (
+        SELECT r.court.id FROM Reservation r
+        WHERE r.date = :date
+        AND r.startTime < :endTime
+        AND r.endTime > :startTime
+    )
 """)
-    Optional<Reservation> findByCourtIdAndDateAndTimeRange(
-            @Param("courtId") Long courtId,
+    List<Court> findFreeCourtsByDateAndTime(
             @Param("date") LocalDate date,
             @Param("startTime") LocalTime startTime,
             @Param("endTime") LocalTime endTime
     );
+
+    @Query("SELECT r FROM Reservation r WHERE r.court = :court "
+            + "AND r.date = :date "
+            + "AND ((r.startTime < :endTime AND r.endTime > :startTime))")
+   List<Reservation> findConflictingReservations(Court court, LocalDate date, LocalTime startTime, LocalTime endTime);
 
 }

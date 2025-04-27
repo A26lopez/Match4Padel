@@ -38,10 +38,6 @@ public class UserService {
                 .orElseThrow(() -> new UserNotFoundException("email", email));
     }
 
-    public List<User> getActive() {
-        return userRepository.findActive();
-    }
-
     public List<User> search(String q) {
         return userRepository.search(q);
     }

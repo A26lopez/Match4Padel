@@ -6,8 +6,8 @@ C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\co
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\User.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\controllers\CourtController.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\GlobalExceptionHandler.java
-C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\CourtNotAvailableException.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\CourtOccupiedException.java
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\config\ReservationConfig.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\Match.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\enums\PaymentStatus.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\Reservation.java
@@ -15,7 +15,6 @@ C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\co
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\services\ReservationService.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\DuplicateException.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\AccountInfo.java
-C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\UserNotActiveException.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\Court.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\enums\CourtType.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\config\SecurityConfig.java
@@ -29,7 +28,6 @@ C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\co
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\controllers\ReservationController.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\AccountSecurity.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\CourtNotFoundException.java
-C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\enums\CourtStatus.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\enums\CourtZone.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\Payment.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\services\CourtService.java

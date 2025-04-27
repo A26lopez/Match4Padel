@@ -11,9 +11,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    @Query("SELECT u FROM User u WHERE u.accountInfo.isActive = true")
-    List<User> findActive();
-
     @Query("""
     SELECT u FROM User u
     WHERE LOWER(u.accountInfo.username) LIKE LOWER(CONCAT('%', :q, '%'))
