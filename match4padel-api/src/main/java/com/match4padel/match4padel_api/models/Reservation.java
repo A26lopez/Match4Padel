@@ -2,7 +2,6 @@ package com.match4padel.match4padel_api.models;
 
 import com.match4padel.match4padel_api.config.ReservationConfig;
 import com.match4padel.match4padel_api.models.enums.ReservationStatus;
-import jakarta.annotation.PostConstruct;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -48,13 +47,16 @@ public class Reservation {
     @Column(nullable = false)
     @NotNull(message = "Elige la fecha.")
     private LocalDate date;
+    
+    @Column(nullable = false)
+    private boolean isMatch = false;
 
     @Column(nullable = false)
     @NotNull(message = "Elige la hora")
     private LocalTime startTime;
 
     @Column(nullable = false)
-    private int duration = ReservationConfig.DURATION;
+    private int duration = ReservationConfig.MATCH_DURATION_MINUTES;
 
     @Column(nullable = false)
     private LocalTime endTime;
@@ -67,6 +69,6 @@ public class Reservation {
     private LocalDateTime createdAt;
 
     @Column(nullable = false)
-    private boolean paid = false;
+    private boolean isPaid = false;
 
 }

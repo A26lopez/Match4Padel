@@ -13,7 +13,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -37,9 +37,13 @@ public class Payment {
     @JoinColumn(nullable = false)
     private Reservation reservation;
 
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private User user;
+
     @Column(nullable = false)
     @NotBlank(message = "El precio no puede estar vacío.")
-    private double amount;
+    private BigDecimal amount;
 
     @Column(nullable = false)
     @NotBlank(message = "Elige una fecha.")

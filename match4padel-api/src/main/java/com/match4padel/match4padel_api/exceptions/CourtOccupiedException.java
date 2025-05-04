@@ -1,31 +1,40 @@
 package com.match4padel.match4padel_api.exceptions;
 
 import com.match4padel.match4padel_api.models.Reservation;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Locale;
 
 public class CourtOccupiedException extends RuntimeException {
 
-    public CourtOccupiedException(List<Reservation> conflictingReservations) {
-        super(buildMessage(conflictingReservations));
+    public CourtOccupiedException(Reservation reservation, List<LocalTime> freeHours) {
+        super(buildMessage(reservation, freeHours));
 
     }
 
-    private static String buildMessage(List<Reservation> conflictingReservations) {
-      
-        conflictingReservations.sort((r1, r2) -> r1.getStartTime().compareTo(r2.getStartTime()));
-     
-        Reservation firstReservation = conflictingReservations.get(0);
-        Reservation lastReservation = conflictingReservations.get(conflictingReservations.size() - 1);
+    private static String buildMessage(Reservation reservation, List<LocalTime> freeHours) {
 
-        String formattedDate = firstReservation.getDate().format(DateTimeFormatter.ofPattern("EEEE, d 'de' MMMM 'de' yyyy", new Locale("es", "ES")));
-        String formattedStartTime = firstReservation.getStartTime().format(DateTimeFormatter.ofPattern("HH:mm"));
-        String formattedEndTime = lastReservation.getEndTime().format(DateTimeFormatter.ofPattern("HH:mm"));
-        String courtName = firstReservation.getCourt().getName();
+        LocalTime startTime = reservation.getStartTime();
+        LocalTime endTime = reservation.getEndTime();
 
-        
+        LocalTime nextFreeHour = freeHours.stream()
+                .filter(hour -> hour.isAfter(endTime) || hour.equals(endTime))
+                .findFirst()
+                .orElse(null);
+
+        String formattedDate = reservation.getDate().format(
+                DateTimeFormatter.ofPattern("EEEE, d 'de' MMMM", new Locale("es", "ES"))
+        );
+        String formattedStartTime = startTime.format(DateTimeFormatter.ofPattern("HH:mm"));
+        String courtName = reservation.getCourt().getName();
+
+        String nextFreeHourText = (nextFreeHour != null)
+                ? nextFreeHour.format(DateTimeFormatter.ofPattern("HH:mm"))
+                : "no hay más disponibilidad ese día";
+
         return "La pista " + courtName + " está ocupada el día " + formattedDate
-                + " desde las " + formattedStartTime + " hasta las " + formattedEndTime + ".";
+                + " a las " + formattedStartTime + ". La próxima hora libre: " + nextFreeHourText + ".";
     }
+
 }

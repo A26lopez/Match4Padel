@@ -45,16 +45,16 @@ public class UserService {
     @Transactional
     public User create(User user) {
         String username = user.getAccountInfo().getUsername();
-        validateFieldAvailability("username", username);
+        validateUserAvailability("username", username);
 
         String email = user.getContactInfo().getEmail();
-        validateFieldAvailability("email", email);
+        validateUserAvailability("email", email);
 
         String phoneNumber = user.getContactInfo().getPhoneNumber();
-        validateFieldAvailability("phoneNumber", phoneNumber);
+        validateUserAvailability("phoneNumber", phoneNumber);
 
         String nif = user.getContactInfo().getNif();
-        validateFieldAvailability("nif", nif);
+        validateUserAvailability("nif", nif);
 
         String password = user.getAccountSecurity().getPassword();
         String passwordHash = passwordEncoder.encode(password);
@@ -68,25 +68,25 @@ public class UserService {
 
         if (hasFieldChanged(existingUser.getAccountInfo().getUsername(), updatedUser.getAccountInfo().getUsername())) {
             String username = updatedUser.getAccountInfo().getUsername();
-            validateFieldAvailability("username", username);
+            validateUserAvailability("username", username);
             existingUser.getAccountInfo().setUsername(username);
         }
 
         if (hasFieldChanged(existingUser.getContactInfo().getEmail(), updatedUser.getContactInfo().getEmail())) {
             String email = updatedUser.getContactInfo().getEmail();
-            validateFieldAvailability("email", email);
+            validateUserAvailability("email", email);
             existingUser.getContactInfo().setEmail(email);
         }
 
         if (hasFieldChanged(existingUser.getContactInfo().getPhoneNumber(), updatedUser.getContactInfo().getPhoneNumber())) {
             String phoneNumber = updatedUser.getContactInfo().getPhoneNumber();
-            validateFieldAvailability("phoneNumber", phoneNumber);
+            validateUserAvailability("phoneNumber", phoneNumber);
             existingUser.getContactInfo().setPhoneNumber(phoneNumber);
         }
 
         if (hasFieldChanged(existingUser.getContactInfo().getNif(), updatedUser.getContactInfo().getNif())) {
             String nif = updatedUser.getContactInfo().getNif();
-            validateFieldAvailability("nif", nif);
+            validateUserAvailability("nif", nif);
             existingUser.getContactInfo().setNif(nif);
         }
 
@@ -114,7 +114,7 @@ public class UserService {
         return !oldValue.equalsIgnoreCase(newValue);
     }
 
-    private void validateFieldAvailability(String field, String value) {
+    private void validateUserAvailability(String field, String value) {
         switch (field) {
             case "username":
                 if (userRepository.existsByAccountInfoUsername(value)) {

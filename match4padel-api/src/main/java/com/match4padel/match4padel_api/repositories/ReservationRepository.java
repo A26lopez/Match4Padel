@@ -7,7 +7,6 @@ import com.match4padel.match4padel_api.models.enums.ReservationStatus;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
-import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -24,26 +23,19 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
 
     List<Reservation> findByDate(LocalDate date);
 
-    Optional<Reservation> findByCourtAndDateAndStartTimeAndEndTime(Court court, LocalDate date, LocalTime startTime, LocalTime endTime);
+    List<Reservation> findByCourtAndDate(Court court, LocalDate date);
 
     @Query("""
-    SELECT c FROM Court c
-    WHERE c.id NOT IN (
-        SELECT r.court.id FROM Reservation r
-        WHERE r.date = :date
-        AND r.startTime < :endTime
-        AND r.endTime > :startTime
-    )
-""")
-    List<Court> findFreeCourtsByDateAndTime(
-            @Param("date") LocalDate date,
-            @Param("startTime") LocalTime startTime,
-            @Param("endTime") LocalTime endTime
-    );
+    SELECT r FROM Reservation r
+    WHERE r.status = 'CONFIRMED'
+    AND (r.date < :today OR (r.date = :today AND r.endTime < :now))
+    """)
+    List<Reservation> findPastUncompletedReservations(@Param("today") LocalDate today, @Param("now") LocalTime now);
 
     @Query("SELECT r FROM Reservation r WHERE r.court = :court "
             + "AND r.date = :date "
+            + "AND r.status = 'CONFIRMED' "
             + "AND ((r.startTime < :endTime AND r.endTime > :startTime))")
-   List<Reservation> findConflictingReservations(Court court, LocalDate date, LocalTime startTime, LocalTime endTime);
+    List<Reservation> findConflictingReservations(Court court, LocalDate date, LocalTime startTime, LocalTime endTime);
 
 }

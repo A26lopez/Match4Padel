@@ -6,7 +6,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,4 +29,16 @@ public class CourtController {
     public ResponseEntity<Court> getById(@PathVariable Long id) {
         return ResponseEntity.ok(courtService.getById(id));
     }
+
+    @GetMapping("/free")
+    public ResponseEntity<List<Court>> getFreeCourtsByDateAndTime(@RequestParam("date") LocalDate date,
+            @RequestParam("startTime") LocalTime startTime) {
+        return ResponseEntity.ok(courtService.getFreeByDateAndTime(date, startTime));
+    }
+
+    @GetMapping("/free/now")
+    public ResponseEntity<List<Court>> getFreeCourtsNow() {
+        return ResponseEntity.ok(courtService.getFreeNow());
+    }
+
 }
