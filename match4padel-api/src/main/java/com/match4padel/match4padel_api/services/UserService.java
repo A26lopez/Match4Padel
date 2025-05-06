@@ -19,31 +19,31 @@ public class UserService {
     @Autowired
     BCryptPasswordEncoder passwordEncoder;
 
-    public List<User> getAll() {
+    public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
-    public User getById(Long id) {
+    public User getUserById(Long id) {
         return userRepository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("id", id.toString()));
     }
 
-    public User getByUsername(String username) {
+    public User getUserByUsername(String username) {
         return userRepository.findByAccountInfoUsername(username)
                 .orElseThrow(() -> new UserNotFoundException("nombre de usuario", username));
     }
 
-    public User getByEmail(String email) {
+    public User getUserByEmail(String email) {
         return userRepository.findByContactInfoEmail(email)
                 .orElseThrow(() -> new UserNotFoundException("email", email));
     }
 
-    public List<User> search(String q) {
+    public List<User> searchUser(String q) {
         return userRepository.search(q);
     }
 
     @Transactional
-    public User create(User user) {
+    public User createUser(User user) {
         String username = user.getAccountInfo().getUsername();
         validateUserAvailability("username", username);
 
@@ -63,8 +63,8 @@ public class UserService {
     }
 
     @Transactional
-    public User update(Long id, User updatedUser) {
-        User existingUser = getById(id);
+    public User updateUser(Long id, User updatedUser) {
+        User existingUser = getUserById(id);
 
         if (hasFieldChanged(existingUser.getAccountInfo().getUsername(), updatedUser.getAccountInfo().getUsername())) {
             String username = updatedUser.getAccountInfo().getUsername();
@@ -142,7 +142,7 @@ public class UserService {
     }
 
     @Transactional
-    public void deleteById(Long id) {
+    public void deleteUserById(Long id) {
         if (!userRepository.existsById(id)) {
             throw new UserNotFoundException("id", id.toString());
         }

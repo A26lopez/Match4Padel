@@ -13,6 +13,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
@@ -42,16 +43,11 @@ public class Payment {
     private User user;
 
     @Column(nullable = false)
-    @NotBlank(message = "El precio no puede estar vacío.")
     private BigDecimal amount;
-
-    @Column(nullable = false)
-    @NotBlank(message = "Elige una fecha.")
-    private LocalDateTime date;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    @NotBlank(message = "Elige un método de pago.")
+    @NotNull(message = "Elige un método de pago.")
     private PaymentMethod method;
 
     @Enumerated(EnumType.STRING)

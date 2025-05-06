@@ -18,11 +18,6 @@ public class ReservationScheduler {
     @Scheduled(cron = "0 * * * * *")
     public void updateReservations() {
         reservationService.markPastReservationsAsCompleted();
+        reservationService.markUnpaidReservationsAsCancelled();
     }
-
-    @Scheduled(cron = "0 * * * * *")
-    public void updatePayments() {
-        paymentService.markPendingPaymentsAsCompleted();
-    }
-
 }

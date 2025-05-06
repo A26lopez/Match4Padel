@@ -17,16 +17,16 @@ public class CourtService {
     CourtRepository courtRepository;
    
 
-    public List<Court> getAll() {
+    public List<Court> getAllCourts() {
         return courtRepository.findAll();
     }
 
-    public Court getById(Long id) {
+    public Court getCourtById(Long id) {
         return courtRepository.findById(id)
                 .orElseThrow(() -> new CourtNotFoundException("id", id.toString()));
     }
 
-    public List<Court> getFreeByDateAndTime(LocalDate date, LocalTime startTime) {
+    public List<Court> getFreeCourtsByDateAndTime(LocalDate date, LocalTime startTime) {
         LocalTime endTime = startTime.plusMinutes(ReservationConfig.MATCH_DURATION_MINUTES);
         if (endTime.isAfter(ReservationConfig.CLOSING_TIME)) {
             return List.of();
@@ -34,7 +34,7 @@ public class CourtService {
         return courtRepository.findFreeCourtsByDateAndTime(date, startTime, endTime);
     }
 
-    public List<Court> getFreeNow() {
-        return getFreeByDateAndTime(LocalDate.now(), LocalTime.now());
+    public List<Court> getFreeCourtsNow() {
+        return getFreeCourtsByDateAndTime(LocalDate.now(), LocalTime.now());
     }
 }

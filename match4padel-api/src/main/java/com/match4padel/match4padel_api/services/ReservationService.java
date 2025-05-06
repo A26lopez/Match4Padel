@@ -1,17 +1,19 @@
 package com.match4padel.match4padel_api.services;
 
 import com.match4padel.match4padel_api.config.ReservationConfig;
-import com.match4padel.match4padel_api.exceptions.CancelledReservationException;
 import com.match4padel.match4padel_api.exceptions.ClubClosedException;
 import com.match4padel.match4padel_api.exceptions.CourtOccupiedException;
 import com.match4padel.match4padel_api.exceptions.PastDateTimeException;
+import com.match4padel.match4padel_api.exceptions.ReservationAlreadyCompletedException;
 import com.match4padel.match4padel_api.exceptions.ReservationNotFoundException;
 import com.match4padel.match4padel_api.exceptions.ReservationTimeNotValidException;
 import com.match4padel.match4padel_api.models.Court;
 import com.match4padel.match4padel_api.models.Payment;
 import com.match4padel.match4padel_api.models.Reservation;
 import com.match4padel.match4padel_api.models.User;
+import com.match4padel.match4padel_api.models.enums.PaymentStatus;
 import com.match4padel.match4padel_api.models.enums.ReservationStatus;
+import com.match4padel.match4padel_api.repositories.PaymentRepository;
 import com.match4padel.match4padel_api.repositories.ReservationRepository;
 import com.match4padel.match4padel_api.utils.TimeSlotsGenerator;
 import java.time.LocalDate;
@@ -35,38 +37,41 @@ public class ReservationService {
     @Autowired
     UserService userService;
 
-    public List<Reservation> getAll() {
+    @Autowired
+    PaymentRepository paymentRepository;
+    
+    public List<Reservation> getAllReservations() {
         return reservationRepository.findAll();
     }
 
-    public Reservation getById(Long id) {
+    public Reservation getReservationById(Long id) {
         return reservationRepository.findById(id)
                 .orElseThrow(() -> new ReservationNotFoundException("id", id.toString()));
     }
 
-    public List<Reservation> getByCourtId(Long courtId) {
-        Court court = courtService.getById(courtId);
+    public List<Reservation> getReservationsByCourtId(Long courtId) {
+        Court court = courtService.getCourtById(courtId);
         return reservationRepository.findByCourt(court);
     }
 
-    public List<Reservation> getByUserId(Long userId) {
-        User user = userService.getById(userId);
+    public List<Reservation> getReservationsByUserId(Long userId) {
+        User user = userService.getUserById(userId);
         return reservationRepository.findByUser(user);
     }
 
-    public List<Reservation> getByUserIdAndStatus(Long userId, ReservationStatus status) {
-        User user = userService.getById(userId);
+    public List<Reservation> getReservationsByUserIdAndStatus(Long userId, ReservationStatus status) {
+        User user = userService.getUserById(userId);
         return reservationRepository.findByUserAndStatus(user, status);
     }
 
-    public List<Reservation> getByDate(LocalDate date) {
+    public List<Reservation> getReservationsByDate(LocalDate date) {
         return reservationRepository.findByDate(date);
     }
 
     @Transactional
-    public Reservation create(Reservation reservation) {
-        Court court = courtService.getById(reservation.getCourt().getId());
-        User user = userService.getById(reservation.getUser().getId());
+    public Reservation createReservation(Reservation reservation) {
+        Court court = courtService.getCourtById(reservation.getCourt().getId());
+        User user = userService.getUserById(reservation.getUser().getId());
         reservation.setCourt(court);
         reservation.setUser(user);
         reservation.setEndTime(reservation.getStartTime().plusMinutes(ReservationConfig.MATCH_DURATION_MINUTES));
@@ -75,14 +80,14 @@ public class ReservationService {
 
     }
 
-    public List<Reservation> getByCourtIdAndDate(Long courtId, LocalDate date) {
-        Court court = courtService.getById(courtId);
+    public List<Reservation> getReservationsByCourtIdAndDate(Long courtId, LocalDate date) {
+        Court court = courtService.getCourtById(courtId);
         return reservationRepository.findByCourtAndDate(court, date);
 
     }
 
     public List<LocalTime> getFreeHoursByCourtIdAndDate(Long courtId, LocalDate date) {
-        List<Reservation> reservations = getByCourtIdAndDate(courtId, date);
+        List<Reservation> reservations = getReservationsByCourtIdAndDate(courtId, date);
         List<LocalTime> allSlots = new ArrayList<>(TimeSlotsGenerator.VALID_TIME_SLOTS);
 
         for (Reservation r : reservations) {
@@ -103,7 +108,7 @@ public class ReservationService {
         return slot.isBefore(reservation.getEndTime()) && slotEnd.isAfter(reservation.getStartTime());
     }
 
-    public void validateReservation(Reservation reservation) {
+    private void validateReservation(Reservation reservation) {
         Court court = reservation.getCourt();
         LocalDate date = reservation.getDate();
         LocalTime startTime = reservation.getStartTime();
@@ -123,19 +128,26 @@ public class ReservationService {
     }
 
     @Transactional
-    public Reservation updateIsPaid(Long id, Boolean isPaid) {
-        Reservation existingReservation = getById(id);
-        if (isPaid != null) {
-            existingReservation.setPaid(isPaid);
-        }
-        return reservationRepository.save(existingReservation);
+    public Reservation markReservationAsPaidById(Long id) {
+        Reservation reservation = getReservationById(id);
+        reservation.setPaid(true);
+        return reservationRepository.save(reservation);
     }
 
     @Transactional
-    public Reservation cancelReservation(Long id) {
-        Reservation reservation = getById(id);
-        if (reservation.getStatus() == ReservationStatus.CONFIRMED) {
-            reservation.setStatus(ReservationStatus.CANCELLED);
+    public Reservation cancelReservationById(Long id) {
+        Reservation reservation = getReservationById(id);
+        if (reservation.getStatus() == ReservationStatus.COMPLETED) {
+            throw new ReservationAlreadyCompletedException(reservation);
+        }
+        reservation.setStatus(ReservationStatus.CANCELLED);
+        reservation.setPaid(false);
+        List<Payment> paymentsByReservation = paymentRepository.findByReservation(reservation);
+        if (!paymentsByReservation.isEmpty()) {
+            for (Payment p : paymentsByReservation) {
+                p.setStatus(PaymentStatus.CANCELLED);
+                paymentRepository.save(p);
+            }
         }
         return reservationRepository.save(reservation);
     }
@@ -144,11 +156,21 @@ public class ReservationService {
     public void markPastReservationsAsCompleted() {
         LocalDate today = LocalDate.now();
         LocalTime now = LocalTime.now();
-        List<Reservation> pendingReservations = reservationRepository.findPastUncompletedReservations(today, now);
-
+        List<Reservation> pendingReservations = reservationRepository.findFinishedReservations(today, now);
         for (Reservation r : pendingReservations) {
             r.setStatus(ReservationStatus.COMPLETED);
             reservationRepository.save(r);
         }
     }
+
+    @Transactional
+    public void markUnpaidReservationsAsCancelled() {
+        LocalDate today = LocalDate.now();
+        LocalTime now = LocalTime.now();
+        List<Reservation> unpaidReservations = reservationRepository.findStartedUnpaidReservations(today, now);
+        for (Reservation r : unpaidReservations) {
+            cancelReservationById(r.getId());
+        }
+    }
+
 }

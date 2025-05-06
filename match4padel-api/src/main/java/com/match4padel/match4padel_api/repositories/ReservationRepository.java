@@ -28,14 +28,25 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
     @Query("""
     SELECT r FROM Reservation r
     WHERE r.status = 'CONFIRMED'
+    AND r.isPaid = true
     AND (r.date < :today OR (r.date = :today AND r.endTime < :now))
-    """)
-    List<Reservation> findPastUncompletedReservations(@Param("today") LocalDate today, @Param("now") LocalTime now);
+""")
+    List<Reservation> findFinishedReservations(@Param("today") LocalDate today, @Param("now") LocalTime now);
 
-    @Query("SELECT r FROM Reservation r WHERE r.court = :court "
-            + "AND r.date = :date "
-            + "AND r.status = 'CONFIRMED' "
-            + "AND ((r.startTime < :endTime AND r.endTime > :startTime))")
+    @Query("""
+    SELECT r FROM Reservation r
+    WHERE r.status = 'CONFIRMED'
+    AND r.isPaid = false
+    AND (r.date < :today OR (r.date = :today AND r.startTime < :now))
+""")
+    List<Reservation> findStartedUnpaidReservations(@Param("today") LocalDate today, @Param("now") LocalTime now);
+
+    @Query("""
+    SELECT r FROM Reservation r WHERE r.court = :court
+    AND r.date = :date
+    AND r.status = 'CONFIRMED'
+    AND ((r.startTime < :endTime AND r.endTime > :startTime))
+    """)
     List<Reservation> findConflictingReservations(Court court, LocalDate date, LocalTime startTime, LocalTime endTime);
 
 }

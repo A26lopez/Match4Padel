@@ -21,8 +21,9 @@ public interface PaymentRepository extends JpaRepository<Payment, Long> {
     @Query("""
     SELECT p FROM Payment p
     WHERE p.status = 'PENDING'
+    AND p.method = 'CASH'
     AND (p.reservation.date < :today OR (p.reservation.date = :today AND p.reservation.startTime < :now))
     """)
-    List<Payment> findPastPendingPayments(@Param("today") LocalDate today, @Param("now") LocalTime now);
+    List<Payment> findPendingPayments(@Param("today") LocalDate today, @Param("now") LocalTime now);
 
 }

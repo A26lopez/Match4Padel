@@ -21,24 +21,24 @@ public class CourtController {
     private CourtService courtService;
 
     @GetMapping
-    public ResponseEntity<List<Court>> getAll() {
-        return ResponseEntity.ok(courtService.getAll());
+    public ResponseEntity<List<Court>> getAllCourts() {
+        return ResponseEntity.ok(courtService.getAllCourts());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Court> getById(@PathVariable Long id) {
-        return ResponseEntity.ok(courtService.getById(id));
+    public ResponseEntity<Court> getCourtById(@PathVariable Long id) {
+        return ResponseEntity.ok(courtService.getCourtById(id));
     }
 
     @GetMapping("/free")
     public ResponseEntity<List<Court>> getFreeCourtsByDateAndTime(@RequestParam("date") LocalDate date,
             @RequestParam("startTime") LocalTime startTime) {
-        return ResponseEntity.ok(courtService.getFreeByDateAndTime(date, startTime));
+        return ResponseEntity.ok(courtService.getFreeCourtsByDateAndTime(date, startTime));
     }
 
     @GetMapping("/free/now")
     public ResponseEntity<List<Court>> getFreeCourtsNow() {
-        return ResponseEntity.ok(courtService.getFreeNow());
+        return ResponseEntity.ok(courtService.getFreeCourtsNow());
     }
 
 }

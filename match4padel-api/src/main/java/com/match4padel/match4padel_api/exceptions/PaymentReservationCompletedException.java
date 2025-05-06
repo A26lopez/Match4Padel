@@ -4,9 +4,9 @@ import com.match4padel.match4padel_api.models.Reservation;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
-public class PaymentReservationException extends RuntimeException {
+public class PaymentReservationCompletedException extends RuntimeException {
 
-    public PaymentReservationException(Reservation reservation) {
+    public PaymentReservationCompletedException(Reservation reservation) {
         super(buildMessage(reservation));
     }
 
