@@ -11,9 +11,7 @@ import com.match4padel.match4padel_api.models.Court;
 import com.match4padel.match4padel_api.models.Payment;
 import com.match4padel.match4padel_api.models.Reservation;
 import com.match4padel.match4padel_api.models.User;
-import com.match4padel.match4padel_api.models.enums.PaymentStatus;
 import com.match4padel.match4padel_api.models.enums.ReservationStatus;
-import com.match4padel.match4padel_api.repositories.PaymentRepository;
 import com.match4padel.match4padel_api.repositories.ReservationRepository;
 import com.match4padel.match4padel_api.utils.TimeSlotsGenerator;
 import java.time.LocalDate;
@@ -38,8 +36,8 @@ public class ReservationService {
     UserService userService;
 
     @Autowired
-    PaymentRepository paymentRepository;
-    
+    PaymentService paymentService;
+
     public List<Reservation> getAllReservations() {
         return reservationRepository.findAll();
     }
@@ -76,7 +74,12 @@ public class ReservationService {
         reservation.setUser(user);
         reservation.setEndTime(reservation.getStartTime().plusMinutes(ReservationConfig.MATCH_DURATION_MINUTES));
         validateReservation(reservation);
-        return reservationRepository.save(reservation);
+        reservationRepository.save(reservation);
+        Payment payment = new Payment();
+        payment.setUser(user);
+        payment.setReservation(reservation);
+        paymentService.createPayment(payment);
+        return reservation;
 
     }
 
@@ -128,13 +131,6 @@ public class ReservationService {
     }
 
     @Transactional
-    public Reservation markReservationAsPaidById(Long id) {
-        Reservation reservation = getReservationById(id);
-        reservation.setPaid(true);
-        return reservationRepository.save(reservation);
-    }
-
-    @Transactional
     public Reservation cancelReservationById(Long id) {
         Reservation reservation = getReservationById(id);
         if (reservation.getStatus() == ReservationStatus.COMPLETED) {
@@ -142,14 +138,9 @@ public class ReservationService {
         }
         reservation.setStatus(ReservationStatus.CANCELLED);
         reservation.setPaid(false);
-        List<Payment> paymentsByReservation = paymentRepository.findByReservation(reservation);
-        if (!paymentsByReservation.isEmpty()) {
-            for (Payment p : paymentsByReservation) {
-                p.setStatus(PaymentStatus.CANCELLED);
-                paymentRepository.save(p);
-            }
-        }
-        return reservationRepository.save(reservation);
+        reservationRepository.save(reservation);
+        paymentService.cancelPaymentsByReservationId(id);
+        return reservation;
     }
 
     @Transactional

@@ -1,4 +1,4 @@
-C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\PaymentReservationCompletedException.java
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\NotPendingPaymentException.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\Match4padelApiApplication.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\enums\WorkerRole.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\utils\TimeSlotsGenerator.java
@@ -9,10 +9,12 @@ C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\co
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\repositories\PaymentRepository.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\config\ReservationConfig.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\Match.java
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\MatchNotFoundException.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\services\ReservationService.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\AccountInfo.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\enums\CourtType.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\config\SecurityConfig.java
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\repositories\MatchRepository.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\enums\MatchStatus.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\services\UserService.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\enums\Level.java
@@ -38,6 +40,7 @@ C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\co
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\controllers\PaymentController.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\CancelledReservationException.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\enums\PaymentMethod.java
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\services\MatchService.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\PastDateTimeException.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\services\PaymentService.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\ReservationTimeNotValidException.java

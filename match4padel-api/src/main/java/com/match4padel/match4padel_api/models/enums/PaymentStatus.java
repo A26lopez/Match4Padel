@@ -6,6 +6,6 @@ import javax.smartcardio.Card;
 public enum PaymentStatus {
     PENDING,
     COMPLETED,
-    FAILED,
+    REFUNDED,
     CANCELLED
 }

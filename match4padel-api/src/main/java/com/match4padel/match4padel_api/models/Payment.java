@@ -46,8 +46,6 @@ public class Payment {
     private BigDecimal amount;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    @NotNull(message = "Elige un método de pago.")
     private PaymentMethod method;
 
     @Enumerated(EnumType.STRING)

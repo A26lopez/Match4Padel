@@ -37,7 +37,7 @@ public class ReservationController {
 
     @GetMapping("/user/{userId}")
     public ResponseEntity<List<Reservation>> getReservationsByUserIdAndStatus(@PathVariable Long userId,
-            @RequestParam(value = "reservations", required = false) ReservationStatus status) {
+            @RequestParam(value = "status", required = false) ReservationStatus status) {
         if (status == null) {
             return ResponseEntity.ok(reservationService.getReservationsByUserId(userId));
         } else {
@@ -65,11 +65,6 @@ public class ReservationController {
     public ResponseEntity<List<LocalTime>> getFreeHoursByCourtIdAndDate(@PathVariable Long courtId,
             @RequestParam("date") LocalDate date) {
         return ResponseEntity.ok(reservationService.getFreeHoursByCourtIdAndDate(courtId, date));
-    }
-
-    @PutMapping("/{id}/mark-paid")
-    public Reservation markReservationAsPaidById(@PathVariable Long id) {
-        return reservationService.markReservationAsPaidById(id);
     }
 
     @PatchMapping("/{id}/cancel")
