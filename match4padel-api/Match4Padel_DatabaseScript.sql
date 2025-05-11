@@ -63,18 +63,6 @@ CREATE TABLE users (
     FOREIGN KEY (account_security_id) REFERENCES account_security(id)
 );
 
--- Tabla de Trabajadores
-CREATE TABLE workers (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    account_info_id INT UNIQUE NOT NULL,
-    contact_info_id INT UNIQUE NOT NULL,
-    account_security_id INT UNIQUE NOT NULL,
-    work_info_id INT UNIQUE NOT NULL,
-    FOREIGN KEY (account_info_id) REFERENCES account_info(id),
-    FOREIGN KEY (contact_info_id) REFERENCES contact_info(id),
-    FOREIGN KEY (account_security_id) REFERENCES account_security(id),
-    FOREIGN KEY (work_info_id) REFERENCES work_info(id)
-);
 
 -- Tabla de Reservas
 CREATE TABLE reservations (
@@ -102,7 +90,7 @@ CREATE TABLE matches (
     player_1_id INT,
     player_2_id INT,
     player_3_id INT,
-    status ENUM('OPEN', 'CONFIRMED', 'COMPLETED', 'CANCELLED') NOT NULL DEFAULT 'OPEN',
+    status ENUM('OPEN', 'CLOSED') NOT NULL DEFAULT 'OPEN',
     level ENUM('BEGINNER', 'INTERMEDIATE', 'ADVANCED', 'EXPERT') NOT NULL,
     FOREIGN KEY (reservation_id) REFERENCES reservations(id),
     FOREIGN KEY (owner_id) REFERENCES users(id),
@@ -173,4 +161,19 @@ AÑADIR RESERVA
     },
     "date": "2025-05-02",
     "start_time": "18:30:00"
+}
+
+AÑADIR MATCH
+{
+  "reservation": {
+    "court": {
+      "id": 3
+    },
+    "date": "2025-05-09",
+    "start_time": "20:00:00"
+  },
+  "level": "INTERMEDIATE",
+  "owner": {
+      "id": 1
+    }
 }

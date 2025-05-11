@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\view\\loginview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\loginview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\resources\\dictionaries\\colors\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\resources\\dictionaries\\colors\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\view\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\view\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\view\\loginview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\loginview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\resources\\dictionaries\\styles\\buttons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\resources\\dictionaries\\styles\\buttons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\resources\\dictionaries\\styles\\texts.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -23,8 +31,8 @@
       "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\resources\\dictionaries\\styles\\textboxes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\resources\\dictionaries\\styles\\buttons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\resources\\dictionaries\\styles\\buttons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\resources\\dictionaries\\colors\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\resources\\dictionaries\\colors\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\resources\\dictionaries\\appstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -51,43 +59,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginView.xaml",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\LoginView.xaml",
-              "RelativeDocumentMoniker": "match4padel-staff\\View\\LoginView.xaml",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\LoginView.xaml",
-              "RelativeToolTip": "match4padel-staff\\View\\LoginView.xaml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-13T16:44:08.472Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Texts.xaml",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Texts.xaml",
-              "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Texts.xaml",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Texts.xaml",
-              "RelativeToolTip": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Texts.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-11T17:46:11.947Z",
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\ViewModel\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\LoginViewModel.cs",
+              "RelativeToolTip": "match4padel-staff\\ViewModel\\LoginViewModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAIwBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T13:44:53.47Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Colors.xaml",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Colors\\Colors.xaml",
-              "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\Colors\\Colors.xaml",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Colors\\Colors.xaml",
-              "RelativeToolTip": "match4padel-staff\\Resources\\Dictionaries\\Colors\\Colors.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-11T18:04:08.3Z",
+              "Title": "LoginView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\LoginView.xaml.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\View\\LoginView.xaml.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\LoginView.xaml.cs",
+              "RelativeToolTip": "match4padel-staff\\View\\LoginView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T13:37:37.821Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "TextBoxes.xaml",
               "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\TextBoxes.xaml",
               "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\Styles\\TextBoxes.xaml",
@@ -99,7 +96,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "LoginView.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\LoginView.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\View\\LoginView.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\LoginView.xaml",
+              "RelativeToolTip": "match4padel-staff\\View\\LoginView.xaml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAF4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-13T16:44:08.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Buttons.xaml",
               "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Buttons.xaml",
               "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Buttons.xaml",
@@ -111,7 +121,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
+              "Title": "Texts.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Texts.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Texts.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Texts.xaml",
+              "RelativeToolTip": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Texts.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-11T17:46:11.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Colors.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Colors\\Colors.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\Colors\\Colors.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Colors\\Colors.xaml",
+              "RelativeToolTip": "match4padel-staff\\Resources\\Dictionaries\\Colors\\Colors.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-11T18:04:08.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AppStyles.xaml",
               "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\AppStyles.xaml",
               "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\AppStyles.xaml",

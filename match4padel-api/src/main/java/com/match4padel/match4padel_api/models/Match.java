@@ -13,7 +13,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -38,20 +37,20 @@ public class Match {
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    @NotBlank(message = "El partido tiene que tener un creador.")
+    @NotNull(message = "El partido tiene que tener un creador.")
     private User owner;
 
     @ManyToOne
     @JoinColumn
-    private User player1;
+    private User player_1;
 
     @ManyToOne
     @JoinColumn
-    private User player2;
+    private User player_2;
 
     @ManyToOne
     @JoinColumn
-    private User player3;
+    private User player_3;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -59,6 +58,6 @@ public class Match {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    @NotBlank(message = "Elige un nivel.")
+    @NotNull(message = "Elige un nivel.")
     private Level level;
 }

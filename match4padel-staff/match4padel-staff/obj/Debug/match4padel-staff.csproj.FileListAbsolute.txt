@@ -15,7 +15,6 @@ C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-st
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\MainView.g.cs
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\LoginView.baml
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\MainView.baml
-C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\match4padel-staff.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\match4padel-staff.csproj.Fody.CopyLocal.cache
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\match4padel-staff.csproj.Fody.RuntimeCopyLocal.cache
@@ -27,3 +26,4 @@ C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-st
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\Resources\Dictionaries\Styles\Texts.baml
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\Resources\Dictionaries\Colors\Colors.baml
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\match4padel-staff_MarkupCompile.lref
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\Resources\Dictionaries\Styles\Triggers.baml

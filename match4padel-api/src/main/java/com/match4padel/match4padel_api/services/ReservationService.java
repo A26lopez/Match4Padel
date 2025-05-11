@@ -3,15 +3,19 @@ package com.match4padel.match4padel_api.services;
 import com.match4padel.match4padel_api.config.ReservationConfig;
 import com.match4padel.match4padel_api.exceptions.ClubClosedException;
 import com.match4padel.match4padel_api.exceptions.CourtOccupiedException;
+import com.match4padel.match4padel_api.exceptions.MatchNotFoundException;
 import com.match4padel.match4padel_api.exceptions.PastDateTimeException;
 import com.match4padel.match4padel_api.exceptions.ReservationAlreadyCompletedException;
 import com.match4padel.match4padel_api.exceptions.ReservationNotFoundException;
 import com.match4padel.match4padel_api.exceptions.ReservationTimeNotValidException;
 import com.match4padel.match4padel_api.models.Court;
+import com.match4padel.match4padel_api.models.Match;
 import com.match4padel.match4padel_api.models.Payment;
 import com.match4padel.match4padel_api.models.Reservation;
 import com.match4padel.match4padel_api.models.User;
+import com.match4padel.match4padel_api.models.enums.MatchStatus;
 import com.match4padel.match4padel_api.models.enums.ReservationStatus;
+import com.match4padel.match4padel_api.repositories.MatchRepository;
 import com.match4padel.match4padel_api.repositories.ReservationRepository;
 import com.match4padel.match4padel_api.utils.TimeSlotsGenerator;
 import java.time.LocalDate;
@@ -37,6 +41,9 @@ public class ReservationService {
 
     @Autowired
     PaymentService paymentService;
+
+    @Autowired
+    MatchRepository matchRepository;
 
     public List<Reservation> getAllReservations() {
         return reservationRepository.findAll();
@@ -80,7 +87,6 @@ public class ReservationService {
         payment.setReservation(reservation);
         paymentService.createPayment(payment);
         return reservation;
-
     }
 
     public List<Reservation> getReservationsByCourtIdAndDate(Long courtId, LocalDate date) {
@@ -140,6 +146,12 @@ public class ReservationService {
         reservation.setPaid(false);
         reservationRepository.save(reservation);
         paymentService.cancelPaymentsByReservationId(id);
+        if (reservation.isMatch()) {
+            Match match = matchRepository.findByReservation(reservation)
+                    .orElseThrow(() -> new MatchNotFoundException("reservation", reservation.getId().toString()));
+            match.setStatus(MatchStatus.CLOSED);
+            matchRepository.save(match);
+        }
         return reservation;
     }
 

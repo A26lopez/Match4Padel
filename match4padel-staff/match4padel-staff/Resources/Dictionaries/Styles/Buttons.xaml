@@ -7,7 +7,7 @@
         <Setter Property="FontFamily"
         Value="Roboto"/>
         <Setter Property="FontSize"
-        Value="13"/>
+        Value="16"/>
         <Setter Property="HorizontalAlignment"
         Value="Center"/>
         <Setter Property="Width"

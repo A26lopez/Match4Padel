@@ -7,9 +7,11 @@ com\match4padel\match4padel_api\exceptions\CourtOccupiedException.class
 com\match4padel\match4padel_api\models\enums\ReservationStatus.class
 com\match4padel\match4padel_api\controllers\ReservationController.class
 com\match4padel\match4padel_api\exceptions\PaymentsNumberException.class
+com\match4padel\match4padel_api\exceptions\CompletedMatchException.class
 com\match4padel\match4padel_api\exceptions\GlobalExceptionHandler.class
 com\match4padel\match4padel_api\exceptions\ReservationTimeNotValidException.class
 com\match4padel\match4padel_api\schedulers\ReservationScheduler.class
+com\match4padel\match4padel_api\exceptions\IncorrectPasswordException.class
 com\match4padel\match4padel_api\exceptions\UserNotFoundException.class
 com\match4padel\match4padel_api\services\PaymentService.class
 com\match4padel\match4padel_api\models\AccountSecurity.class
@@ -17,7 +19,9 @@ com\match4padel\match4padel_api\repositories\UserRepository.class
 com\match4padel\match4padel_api\models\AccountInfo.class
 com\match4padel\match4padel_api\models\Court.class
 com\match4padel\match4padel_api\models\WorkInfo.class
+com\match4padel\match4padel_api\services\AuthService.class
 com\match4padel\match4padel_api\models\enums\PaymentMethod.class
+com\match4padel\match4padel_api\models\AuthRequest.class
 com\match4padel\match4padel_api\models\enums\PaymentStatus.class
 com\match4padel\match4padel_api\repositories\CourtRepository.class
 com\match4padel\match4padel_api\controllers\CourtController.class
@@ -28,12 +32,16 @@ com\match4padel\match4padel_api\exceptions\CancelledReservationException.class
 com\match4padel\match4padel_api\exceptions\DuplicateException.class
 com\match4padel\match4padel_api\exceptions\PastDateTimeException.class
 com\match4padel\match4padel_api\utils\TimeSlotsGenerator.class
+com\match4padel\match4padel_api\exceptions\ReservationNotAvailableException.class
 com\match4padel\match4padel_api\config\ReservationConfig.class
 com\match4padel\match4padel_api\models\enums\WorkerRole.class
 com\match4padel\match4padel_api\Match4padelApiApplication.class
 com\match4padel\match4padel_api\exceptions\ClubClosedException.class
+com\match4padel\match4padel_api\models\AuthResponse.class
 com\match4padel\match4padel_api\controllers\UserController.class
 com\match4padel\match4padel_api\controllers\PaymentController.class
+com\match4padel\match4padel_api\exceptions\AlreadyJoinedMatchException.class
+com\match4padel\match4padel_api\controllers\MatchController.class
 com\match4padel\match4padel_api\models\Reservation.class
 com\match4padel\match4padel_api\models\Match.class
 com\match4padel\match4padel_api\models\enums\CourtType.class
@@ -41,6 +49,7 @@ com\match4padel\match4padel_api\models\enums\MatchStatus.class
 com\match4padel\match4padel_api\repositories\ReservationRepository.class
 com\match4padel\match4padel_api\models\Worker.class
 com\match4padel\match4padel_api\config\SecurityConfig.class
+com\match4padel\match4padel_api\controllers\AuthController.class
 com\match4padel\match4padel_api\repositories\MatchRepository.class
 com\match4padel\match4padel_api\models\Payment.class
 com\match4padel\match4padel_api\services\MatchService.class
@@ -48,5 +57,6 @@ com\match4padel\match4padel_api\exceptions\PaymentNotFoundException.class
 com\match4padel\match4padel_api\services\UserService.class
 com\match4padel\match4padel_api\repositories\PaymentRepository.class
 com\match4padel\match4padel_api\models\enums\Level.class
+com\match4padel\match4padel_api\exceptions\PlayerNotInMatchException.class
 com\match4padel\match4padel_api\exceptions\MatchNotFoundException.class
 com\match4padel\match4padel_api\exceptions\CourtNotFoundException.class
