@@ -16,6 +16,7 @@ C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\co
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\services\ReservationService.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\AccountInfo.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\enums\CourtType.java
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\EmptyFieldsException.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\config\SecurityConfig.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\repositories\MatchRepository.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\enums\MatchStatus.java

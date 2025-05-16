@@ -7,10 +7,9 @@
         mc:Ignorable="d"
         Title="{StaticResource AppName}"
         Height="576"
-        Width="1080"
+        Width="1024"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize">
-
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -26,13 +25,14 @@
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="6"/>
                 <RowDefinition Height="40"/>
+                <RowDefinition Height="6"/>
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="6"/>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="6"/>
-                <RowDefinition Height="14"/>
-                <RowDefinition Height="14"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="14"/>
                 <RowDefinition Height="20"/>
@@ -56,44 +56,58 @@
                        Text="USUARIO"
                        Style="{StaticResource headers_text_style}"/>
 
-            <TextBox x:Name="username_textBox" 
+            <TextBox x:Name="username_textBox"
+                    Text="{Binding Username}"
                     Grid.Row="5"
                     Grid.Column="1"
                     Style="{StaticResource textBox}"
                     Tag="Escribe tu nombre de usuario..."/>
 
-            <TextBlock Grid.Row="7"
+            <TextBlock Grid.Row="8"
                        Grid.Column="1"
                        Text="CONTRASEÑA"
                        Style="{StaticResource headers_text_style}"/>
 
             <PasswordBox x:Name="password_textBox"
-                     Grid.Row="9"
-                     Password=""
+                     Grid.Row="10"
                      Grid.Column="1"
                      Style="{StaticResource passwordBox}"
-                     Tag="Escribe tu contraseña..."/>
-
-            <Button x:Name="login_button"
-                    Grid.Row="13"
-                    Grid.Column="1"
-                    Style="{StaticResource login_button_style}"
-                    Content="Iniciar sesión"/>
+                     Tag="Escribe tu contraseña..."
+                     PasswordChanged="PasswordBox_PasswordChanged"/>
 
             <TextBlock x:Name="rememberPassword"
-                       Grid.Row="11"
+                       Grid.Row="12"
                        Grid.Column="1"
                        Text="¿Has olvidado tu contraseña?"
                        Style="{StaticResource normal_text_style}"
-                       TextAlignment="Left"/>
+                       TextAlignment="Right"/>
+
+            <TextBlock x:Name="loginError"
+                       Grid.Row="13"
+                       Grid.Column="1"
+                       Text="{Binding ErrorMessage}"
+                       Style="{StaticResource normal_text_style}"
+                       Foreground="Red"
+                       TextAlignment="Center"/>
+
+
+            <Button x:Name="login_button"
+                    IsDefault="True"
+                    Grid.Row="14"
+                    Grid.Column="1"
+                    Style="{StaticResource normal_button_style}"
+                    Content="Iniciar sesión"
+                    Command="{Binding LoginCommand}"
+                    CommandParameter="{Binding ElementName=password_textBox}"/>
+
 
             <TextBlock x:Name="signUp"
-                       Grid.Row="15"
+                       Grid.Row="16"
                        Grid.Column="1"
                        Text="Regístrate aquí"
                        Style="{StaticResource special_text_style}"
                        TextAlignment="Center"/>
-            
+
         </Grid>
         <Grid Grid.Column="1"
              Background="{StaticResource GrayLightDecoration}">

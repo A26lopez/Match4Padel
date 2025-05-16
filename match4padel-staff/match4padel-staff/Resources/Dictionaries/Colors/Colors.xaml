@@ -4,7 +4,8 @@
     <!-- Corporative colors -->
     <SolidColorBrush x:Key="BluePrimaryColor">#515CAC</SolidColorBrush>
     <SolidColorBrush x:Key="BlueSecondaryColor">#B8BCD7</SolidColorBrush>
-    
+    <SolidColorBrush x:Key="BlueDarkColor">#304775</SolidColorBrush>
+
     <!-- Decoration colors -->
     <SolidColorBrush x:Key="YellowDetails">#E3EA6A</SolidColorBrush>
     <SolidColorBrush x:Key="GrayDarkDecoration">#8F8E8E</SolidColorBrush>

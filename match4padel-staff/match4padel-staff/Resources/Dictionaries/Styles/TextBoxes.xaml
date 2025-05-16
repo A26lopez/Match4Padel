@@ -102,8 +102,6 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                            </MultiTrigger.Conditions>
                             <Setter Property="Visibility"
                                     Value="Visible"
                                     TargetName="placeholder"/>

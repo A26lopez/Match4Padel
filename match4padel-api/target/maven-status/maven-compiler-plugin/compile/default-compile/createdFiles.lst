@@ -28,6 +28,7 @@ com\match4padel\match4padel_api\controllers\CourtController.class
 com\match4padel\match4padel_api\models\User.class
 com\match4padel\match4padel_api\exceptions\NotPendingPaymentException.class
 com\match4padel\match4padel_api\exceptions\ReservationNotFoundException.class
+com\match4padel\match4padel_api\exceptions\EmptyFieldsException.class
 com\match4padel\match4padel_api\exceptions\CancelledReservationException.class
 com\match4padel\match4padel_api\exceptions\DuplicateException.class
 com\match4padel\match4padel_api\exceptions\PastDateTimeException.class

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using match4padel_staff.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +20,26 @@ namespace match4padel_staff.Views
     /// </summary>
     public partial class LoginView : Window
     {
+        private LoginViewModel viewModel;
         public LoginView()
         {
             InitializeComponent();
+            viewModel = new LoginViewModel();
+            DataContext = viewModel;
         }
 
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            var passwordBox = sender as PasswordBox;
+            viewModel.Password = passwordBox.Password;
+            if (passwordBox.Password.Length == 0)
+            {
+                passwordBox.Tag = "Escribe tu contraseña...";
+            }
+            else
+            {
+                passwordBox.Tag = "";
+            }
+        }
     }
 }

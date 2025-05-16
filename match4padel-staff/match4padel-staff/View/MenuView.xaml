@@ -1,0 +1,165 @@
+﻿<Window x:Class="match4padel_staff.View.MenuView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:match4padel_staff.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="{StaticResource AppName}"
+        Height="720" Width="1280"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
+    <Window.Resources>
+        <Storyboard x:Key="OpenMenuBar">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)"
+                                           Storyboard.TargetName="GridMenuBar">
+                <EasingDoubleKeyFrame KeyTime="0" Value="40"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="256"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CloseMenuBar">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)"
+                                           Storyboard.TargetName="GridMenuBar">
+                <EasingDoubleKeyFrame KeyTime="0" Value="256"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="40"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="144"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER  -->
+        <Grid Background="{DynamicResource BluePrimaryColor}" Grid.Row="0">
+        </Grid>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <ContentControl Grid.Row="1"
+                        x:Name="main_content">
+        </ContentControl>
+        
+        <!-- BARRA LATERAL -->
+        <Grid x:Name="GridMenuBar"
+              Width="40"
+              HorizontalAlignment="Left"
+              Grid.RowSpan="2"
+              Background="{DynamicResource BluePrimaryColor}"
+              Panel.ZIndex="1">
+
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard Storyboard="{StaticResource OpenMenuBar}"/>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard Storyboard="{StaticResource CloseMenuBar}"/>
+                </EventTrigger>
+            </Grid.Triggers>
+
+            <StackPanel>
+                <Grid Height="144" Background="White">
+                    <ContentControl Content="{StaticResource logo}"
+                                    Margin="20 0 20 14"
+                                    HorizontalAlignment="Right"/>
+                    <materialDesign:PackIcon Kind="Menu"
+                                             VerticalAlignment="Bottom"
+                                             Style="{StaticResource menubar_icons_style}"
+                                             Margin="6.5"
+                                             Foreground="{StaticResource BluePrimaryColor}"/>
+                </Grid>
+                
+                
+                <!-- BOTONES -->
+                <StackPanel>
+
+                    <!--INICIO -->
+                    <Button Style="{StaticResource menubar_buttons_style}">
+                        <StackPanel Orientation="Horizontal"
+                                    Background="Transparent">
+                            <materialDesign:PackIcon Kind="ViewDashboard"
+                                                     Style="{StaticResource menubar_icons_style}"/>
+                            <TextBlock Text="Inicio"
+                                       Style="{StaticResource menubar_text_style}"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- RESERVAR PISTA -->
+                    <Button Style="{StaticResource menubar_buttons_style}">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Tennis"
+                                                     Style="{StaticResource menubar_icons_style}"/>
+                            <TextBlock Text="Reservar pista"
+                                       Style="{StaticResource menubar_text_style}"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- MIS RESERVAS -->
+                    <Button Style="{StaticResource menubar_buttons_style}">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CalendarCheck"
+                                                     Style="{StaticResource menubar_icons_style}"/>
+                            <TextBlock Text="Mis reservas"
+                                       Style="{StaticResource menubar_text_style}"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- CREAR PARTIDO -->
+                    <Button Style="{StaticResource menubar_buttons_style}">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CalendarPlus"
+                                                     Style="{StaticResource menubar_icons_style}"/>
+                            <TextBlock Text="Crear partido"
+                                       Style="{StaticResource menubar_text_style}"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- MIS PARTIDOS -->
+                    <Button Style="{StaticResource menubar_buttons_style}">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="TennisBall"
+                                                     Style="{StaticResource menubar_icons_style}"/>
+                            <TextBlock Text="Mis partidos"
+                                       Style="{StaticResource menubar_text_style}"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- PARTIDOS ABIERTOS -->
+                    <Button Style="{StaticResource menubar_buttons_style}">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CalendarSearch"
+                                                     Style="{StaticResource menubar_icons_style}"/>
+                            <TextBlock Text="Partidos abiertos"
+                                       Style="{StaticResource menubar_text_style}"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- MI PERFIL -->
+                    <Button Style="{StaticResource menubar_buttons_style}">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="AccountCircle"
+                                                     Style="{StaticResource menubar_icons_style}"/>
+                            <TextBlock Text="Mi perfil"
+                                       Style="{StaticResource menubar_text_style}"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- CONFIGURACION -->
+                    <Button Style="{StaticResource menubar_buttons_style}">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Cog"
+                                                     Style="{StaticResource menubar_icons_style}"/>
+                            <TextBlock Text="Configuración"
+                                       Style="{StaticResource menubar_text_style}"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>
