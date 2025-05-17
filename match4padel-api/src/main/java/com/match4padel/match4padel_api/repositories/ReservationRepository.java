@@ -17,9 +17,9 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
 
     List<Reservation> findByCourt(Court court);
 
-    List<Reservation> findByUser(User user);
+    List<Reservation> findByUserOrderByCreatedAtDesc(User user);
 
-    List<Reservation> findByUserAndStatus(User user, ReservationStatus status);
+    List<Reservation> findByUserAndStatusOrderByCreatedAtDesc(User user, ReservationStatus status);
 
     List<Reservation> findByDate(LocalDate date);
 

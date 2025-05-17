@@ -44,7 +44,7 @@ namespace match4padel_staff.ViewModel
                 OpenMainWindow();
                 var loginWindow = Application.Current.MainWindow;
                 loginWindow.Close();
- 
+                
             }
             else if (result is ErrorResponse error)
             {

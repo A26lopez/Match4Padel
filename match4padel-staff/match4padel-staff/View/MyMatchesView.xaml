@@ -1,0 +1,224 @@
+﻿<UserControl x:Class="match4padel_staff.View.MyMatchesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:match4padel_staff.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="560.04" d:DesignWidth="1240">
+    <Grid Background="{StaticResource main_menu_background}">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Mis partidos"
+                           Style="{StaticResource view_headers_style}"
+                           Grid.Column="0"></TextBlock>
+                <StackPanel Grid.Column="2"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Orientation="Horizontal">
+                    <TextBlock Text="Filtrar por:"
+                               FontSize="22"
+                               Margin="0 0 10 0"
+                               FontFamily="Roboto"
+                               Foreground="{StaticResource BlueDarkColor}"></TextBlock>
+                    <ComboBox 
+                          FontSize="18"
+                          Width="200"
+                          FontFamily="Roboto"
+                          Foreground="{StaticResource BlueDarkColor}">
+                        <ComboBoxItem>
+                            Confirmados
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            Completados
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            Cancelados
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            Abiertos
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            Cerrados
+                        </ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+
+
+
+            </Grid>
+            <DataGrid Grid.Row="1"
+                      ItemsSource="{Binding Matches}"
+                      AutoGenerateColumns="False"
+                      Background="Transparent"
+                      BorderBrush="{StaticResource BluePrimaryColor}"
+                      BorderThickness="1"
+                      FontSize="20"
+                      CanUserAddRows="False"
+                      CanUserDeleteRows="False"
+                      CanUserResizeRows="False"
+                      CanUserReorderColumns="True"
+                      CanUserSortColumns="True"
+                      IsReadOnly="True"
+                      SelectionMode="Single"
+                      SelectionUnit="FullRow"
+                      HeadersVisibility="Column"
+                      GridLinesVisibility="Horizontal">
+                <DataGrid.Resources>
+
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="{StaticResource BluePrimaryColor}" />
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="FontFamily" Value="Roboto" />
+                        <Setter Property="Padding" Value="10" />
+                        <Setter Property="BorderBrush" Value="{StaticResource GrayLightDecoration}"/>
+                        <Setter Property="BorderThickness" Value="0,0,1,0"/>
+                        <Setter Property="VerticalContentAlignment" Value="Top"/>
+                    </Style>
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="FontFamily" Value="Roboto"/>
+                        <Setter Property="Foreground" Value="{StaticResource DarkText}" />
+                        <Setter Property="Padding" Value="10"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{StaticResource LightText}"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                </DataGrid.Resources>
+
+                <DataGrid.Columns>
+                    <!--FECHA-->
+                    <DataGridTextColumn Header="Fecha" Binding="{Binding Reservation.Date, StringFormat=dd/MM/yyyy}" Width="120" />
+
+                    <!--PISTA-->
+                    <DataGridTemplateColumn Width="120" >
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Pista"/>
+                                    <TextBlock Text="Zona"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="{Binding Reservation.Court.Name}"/>
+                                    <TextBlock Text="{Binding Reservation.Court.Zone}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <!--HORA INICIO / FIN -->
+                    <DataGridTemplateColumn Width="120" >
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Hora inicio"/>
+                                    <TextBlock Text="Hora fin"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="{Binding Reservation.StartTime, StringFormat=hh\\:mm}"/>
+                                    <TextBlock Text="{Binding Reservation.EndTime, StringFormat=hh\\:mm}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <!--ESTADO RESERVA / PARTIDO-->
+                    <DataGridTemplateColumn Width="165" >
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Estado Reserva"/>
+                                    <TextBlock Text="Estado Partido"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="{Binding Reservation.Status}"/>
+                                    <TextBlock Text="{Binding Status}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <!--DURACION-->
+                    <DataGridTemplateColumn Width="115" >
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Duración"/>
+                                    <TextBlock Text="(Minutos)"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="{Binding Reservation.Duration}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    
+                    <!--FECHA CREACION-->
+                    <DataGridTextColumn Header="Fecha creación" Binding="{Binding Reservation.CreatedAt, StringFormat=dd/MM/yyyy}" Width="160" />
+
+                    <!--NIVEL-->
+                    <DataGridTextColumn Header="Nivel" Binding="{Binding Level}" Width="160" />
+
+                    <!--JUGADORES-->
+                    <DataGridTemplateColumn Width="*" >
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Creador"/>
+                                    <TextBlock Text="Jugadores"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding Owner.AccountInfo.Username}"/>
+                                            <TextBlock Text="🎖️"/>
+                                        </StackPanel>
+                                        <TextBlock Text="{Binding Player1.AccountInfo.Username}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock Text="{Binding Player2.AccountInfo.Username}"/>
+                                        <TextBlock Text="{Binding Player3.AccountInfo.Username}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+
+
+    </Grid>
+</UserControl>

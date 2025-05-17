@@ -116,14 +116,14 @@ CREATE TABLE payments (
 -- Insert Pistas --
 INSERT INTO courts (name, description, court_zone, court_type, price_per_match)
 VALUES 
-('1', 'Pista cubierta de pádel con superficie dura, ideal para todo clima.', 'INDOOR', 'HARD_COURT', 20.00),
-('2', 'Pista cubierta de pádel con superficie dura, ideal para todo clima.', 'INDOOR', 'HARD_COURT', 20.00),
-('3', 'Pista cubierta de pádel con césped artificial, cómoda y protegida del clima.', 'INDOOR', 'ARTIFICIAL_GRASS', 22.00),
-('4', 'Pista cubierta de pádel con césped artificial, cómoda y protegida del clima.', 'INDOOR', 'ARTIFICIAL_GRASS', 22.00),
-('5', 'Pista exterior de pádel con superficie dura, perfecta para días soleados.', 'OUTDOOR', 'HARD_COURT', 16.00),
-('6', 'Pista exterior de pádel con superficie dura, perfecta para días soleados.', 'OUTDOOR', 'HARD_COURT', 16.00),
-('7', 'Pista exterior de pádel con césped artificial, ideal para jugar al aire libre.', 'OUTDOOR', 'ARTIFICIAL_GRASS', 18.00),
-('8', 'Pista exterior de pádel con césped artificial, ideal para jugar al aire libre.', 'OUTDOOR', 'ARTIFICIAL_GRASS', 18.00);
+('Pista 1', 'Pista cubierta de pádel con superficie dura, ideal para todo clima.', 'court1', 'INDOOR', 'HARD_COURT', 20.00),
+('Pista 2', 'Pista cubierta de pádel con superficie dura, ideal para todo clima.', 'court1','INDOOR', 'HARD_COURT', 20.00),
+('Pista 3', 'Pista cubierta de pádel con césped artificial, cómoda y protegida del clima.', 'court2','INDOOR', 'ARTIFICIAL_GRASS', 22.00),
+('Pista 4', 'Pista cubierta de pádel con césped artificial, cómoda y protegida del clima.', 'court2','INDOOR', 'ARTIFICIAL_GRASS', 22.00),
+('Pista 5', 'Pista exterior de pádel con superficie dura, perfecta para días soleados.', 'court3','OUTDOOR', 'HARD_COURT', 16.00),
+('Pista 6', 'Pista exterior de pádel con superficie dura, perfecta para días soleados.', 'court3', 'OUTDOOR', 'HARD_COURT', 16.00),
+('Pista 7', 'Pista exterior de pádel con césped artificial, ideal para jugar al aire libre.', 'court4','OUTDOOR', 'ARTIFICIAL_GRASS', 18.00),
+('Pista 8', 'Pista exterior de pádel con césped artificial, ideal para jugar al aire libre.', 'court4','OUTDOOR', 'ARTIFICIAL_GRASS', 18.00);
 
 
 

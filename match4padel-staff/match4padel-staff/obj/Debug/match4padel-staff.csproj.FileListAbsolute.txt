@@ -66,3 +66,7 @@ C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-st
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\HomeView.g.cs
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\HomeView.baml
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\MyReservationsView.g.cs
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\MyReservationsView.baml
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\MyMatchesView.g.cs
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\MyMatchesView.baml

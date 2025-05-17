@@ -1,4 +1,5 @@
-﻿using System;
+﻿using match4padel_staff.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +20,12 @@ namespace match4padel_staff.View
     /// </summary>
     public partial class MenuView : Window
     {
+        private MenuViewModel viewModel;
         public MenuView()
         {
             InitializeComponent();
-            main_content.Content = new HomeView();
+            viewModel = new MenuViewModel();
+            DataContext = viewModel;
         }
             
     }

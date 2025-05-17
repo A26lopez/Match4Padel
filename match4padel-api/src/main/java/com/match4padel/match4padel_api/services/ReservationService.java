@@ -61,12 +61,12 @@ public class ReservationService {
 
     public List<Reservation> getReservationsByUserId(Long userId) {
         User user = userService.getUserById(userId);
-        return reservationRepository.findByUser(user);
+        return reservationRepository.findByUserOrderByCreatedAtDesc(user);
     }
 
     public List<Reservation> getReservationsByUserIdAndStatus(Long userId, ReservationStatus status) {
         User user = userService.getUserById(userId);
-        return reservationRepository.findByUserAndStatus(user, status);
+        return reservationRepository.findByUserAndStatusOrderByCreatedAtDesc(user, status);
     }
 
     public List<Reservation> getReservationsByDate(LocalDate date) {

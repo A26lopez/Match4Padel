@@ -116,21 +116,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\AccountInfo.cs" />
+    <Compile Include="Model\AccountSecurity.cs" />
+    <Compile Include="Model\ContactInfo.cs" />
     <Compile Include="Model\Court.cs" />
-    <Compile Include="Model\Enums\CourtZone.cs" />
-    <Compile Include="Model\Enums\CourtType.cs" />
+    <Compile Include="Model\Match.cs" />
+    <Compile Include="Model\Reservation.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Service\CourtService.cs" />
     <Compile Include="Service\HttpClientService.cs" />
+    <Compile Include="Service\MatchService.cs" />
+    <Compile Include="Service\ReservationService.cs" />
     <Compile Include="Service\UserService.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
+    <Compile Include="ViewModel\MyMatchesViewModel.cs" />
+    <Compile Include="ViewModel\MyReservationsViewModel.cs" />
     <Compile Include="View\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MyMatchesView.xaml.cs">
+      <DependentUpon>MyMatchesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MyReservationsView.xaml.cs">
+      <DependentUpon>MyReservationsView.xaml</DependentUpon>
     </Compile>
     <Page Include="Resources\Dictionaries\Images\Images.xaml">
       <SubType>Designer</SubType>
@@ -189,6 +202,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\MyMatchesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MyReservationsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -241,13 +262,13 @@
     <Resource Include="Resources\Images\logo_nobg.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\Images\main_menu_background.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Resources\Images\Courts\court1.png" />
     <Resource Include="Resources\Images\Courts\court2.png" />
     <Resource Include="Resources\Images\Courts\court3.png" />
     <Resource Include="Resources\Images\Courts\court4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Images\main_menu_background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.6.6.4\build\Fody.targets" Condition="Exists('..\packages\Fody.6.6.4\build\Fody.targets')" />

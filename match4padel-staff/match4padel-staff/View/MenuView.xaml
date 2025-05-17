@@ -15,14 +15,14 @@
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)"
                                            Storyboard.TargetName="GridMenuBar">
                 <EasingDoubleKeyFrame KeyTime="0" Value="40"></EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="256"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="256"></EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="CloseMenuBar">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)"
                                            Storyboard.TargetName="GridMenuBar">
                 <EasingDoubleKeyFrame KeyTime="0" Value="256"></EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="40"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="40"></EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
@@ -38,10 +38,23 @@
         </Grid>
 
         <!-- CONTENIDO PRINCIPAL -->
-        <ContentControl Grid.Row="1"
-                        x:Name="main_content">
-        </ContentControl>
-        
+        <Grid Grid.Row="1"
+              Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ContentControl Grid.Column="1"
+                        x:Name="main_content"
+                            Content="{Binding CurrentView}">
+            </ContentControl>
+
+        </Grid>
+
+
+
+
+
         <!-- BARRA LATERAL -->
         <Grid x:Name="GridMenuBar"
               Width="40"
@@ -70,13 +83,14 @@
                                              Margin="6.5"
                                              Foreground="{StaticResource BluePrimaryColor}"/>
                 </Grid>
-                
-                
+
+
                 <!-- BOTONES -->
                 <StackPanel>
 
                     <!--INICIO -->
-                    <Button Style="{StaticResource menubar_buttons_style}">
+                    <Button Style="{StaticResource menubar_buttons_style}"
+                            Command="{Binding HomeCommand}">
                         <StackPanel Orientation="Horizontal"
                                     Background="Transparent">
                             <materialDesign:PackIcon Kind="ViewDashboard"
@@ -97,7 +111,8 @@
                     </Button>
 
                     <!-- MIS RESERVAS -->
-                    <Button Style="{StaticResource menubar_buttons_style}">
+                    <Button Style="{StaticResource menubar_buttons_style}"
+                            Command="{Binding MyReservationsCommand}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="CalendarCheck"
                                                      Style="{StaticResource menubar_icons_style}"/>
@@ -117,7 +132,8 @@
                     </Button>
 
                     <!-- MIS PARTIDOS -->
-                    <Button Style="{StaticResource menubar_buttons_style}">
+                    <Button Style="{StaticResource menubar_buttons_style}"
+                            Command="{Binding MyMatchesCommand}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="TennisBall"
                                                      Style="{StaticResource menubar_icons_style}"/>

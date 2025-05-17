@@ -18,7 +18,6 @@ namespace match4padel_staff.Service
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await HttpClientService.Instance.PostAsync("http://localhost:8080/match4padel/api/auth/login", content);
             var responseJson = await response.Content.ReadAsStringAsync();
-
             if (response.IsSuccessStatusCode)
             {
                 return JsonSerializer.Deserialize<LoginResponse>(responseJson, new JsonSerializerOptions
