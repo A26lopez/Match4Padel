@@ -67,7 +67,7 @@ public class ReservationController {
         return ResponseEntity.ok(reservationService.getFreeHoursByCourtIdAndDate(courtId, date));
     }
 
-    @PatchMapping("/{id}/cancel")
+    @PostMapping("/{id}/cancel")
     public ResponseEntity<Reservation> cancelReservationById(@PathVariable Long id) {
         return ResponseEntity.ok(reservationService.cancelReservationById(id));
     }

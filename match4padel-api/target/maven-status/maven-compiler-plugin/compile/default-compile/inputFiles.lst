@@ -46,6 +46,7 @@ C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\co
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\Reservation.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\WorkInfo.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\DuplicateException.java
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\ReservationAlreadyCancelledException.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\models\Court.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\controllers\PaymentController.java
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-api\src\main\java\com\match4padel\match4padel_api\exceptions\CancelledReservationException.java

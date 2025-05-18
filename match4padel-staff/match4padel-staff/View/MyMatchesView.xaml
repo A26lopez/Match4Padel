@@ -19,36 +19,30 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Mis partidos"
-                           Style="{StaticResource view_headers_style}"
-                           Grid.Column="0"></TextBlock>
+                         Style="{StaticResource view_headers_style}"
+                         Grid.Column="0"></TextBlock>
                 <StackPanel Grid.Column="2"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Center"
-                            Orientation="Horizontal">
+                          HorizontalAlignment="Right"
+                          VerticalAlignment="Center"
+                          Orientation="Horizontal">
                     <TextBlock Text="Filtrar por:"
-                               FontSize="22"
-                               Margin="0 0 10 0"
-                               FontFamily="Roboto"
-                               Foreground="{StaticResource BlueDarkColor}"></TextBlock>
+                             FontSize="22"
+                             Margin="0 0 10 0"
+                             FontFamily="Roboto"
+                             Foreground="{StaticResource BlueDarkColor}"></TextBlock>
                     <ComboBox 
-                          FontSize="18"
-                          Width="200"
-                          FontFamily="Roboto"
-                          Foreground="{StaticResource BlueDarkColor}">
+                        FontSize="18"
+                        Width="200"
+                        FontFamily="Roboto"
+                        Foreground="{StaticResource BlueDarkColor}">
                         <ComboBoxItem>
-                            Confirmados
+                            Confirmadas
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            Completados
+                            Completadas
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            Cancelados
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            Abiertos
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            Cerrados
+                            Canceladas
                         </ComboBoxItem>
                     </ComboBox>
                 </StackPanel>
@@ -57,69 +51,15 @@
 
             </Grid>
             <DataGrid Grid.Row="1"
-                      ItemsSource="{Binding Matches}"
-                      AutoGenerateColumns="False"
-                      Background="Transparent"
-                      BorderBrush="{StaticResource BluePrimaryColor}"
-                      BorderThickness="1"
-                      FontSize="20"
-                      CanUserAddRows="False"
-                      CanUserDeleteRows="False"
-                      CanUserResizeRows="False"
-                      CanUserReorderColumns="True"
-                      CanUserSortColumns="True"
-                      IsReadOnly="True"
-                      SelectionMode="Single"
-                      SelectionUnit="FullRow"
-                      HeadersVisibility="Column"
-                      GridLinesVisibility="Horizontal">
-                <DataGrid.Resources>
-
-                    <Style TargetType="DataGridColumnHeader">
-                        <Setter Property="Background" Value="{StaticResource BluePrimaryColor}" />
-                        <Setter Property="Foreground" Value="White" />
-                        <Setter Property="FontFamily" Value="Roboto" />
-                        <Setter Property="Padding" Value="10" />
-                        <Setter Property="BorderBrush" Value="{StaticResource GrayLightDecoration}"/>
-                        <Setter Property="BorderThickness" Value="0,0,1,0"/>
-                        <Setter Property="VerticalContentAlignment" Value="Top"/>
-                    </Style>
-                    <Style TargetType="DataGridRow">
-                        <Setter Property="FontFamily" Value="Roboto"/>
-                        <Setter Property="Foreground" Value="{StaticResource DarkText}" />
-                        <Setter Property="Padding" Value="10"/>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="{StaticResource LightText}"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-
-                </DataGrid.Resources>
-
+                    ItemsSource="{Binding Matches}"
+                    Style="{StaticResource dataGrid_style}"
+                    ColumnHeaderStyle="{StaticResource dataGrid_headers}"
+                    RowStyle="{StaticResource dataGrid_rows}">
                 <DataGrid.Columns>
                     <!--FECHA-->
-                    <DataGridTextColumn Header="Fecha" Binding="{Binding Reservation.Date, StringFormat=dd/MM/yyyy}" Width="120" />
-
-                    <!--PISTA-->
-                    <DataGridTemplateColumn Width="120" >
-                        <DataGridTemplateColumn.HeaderTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Vertical">
-                                    <TextBlock Text="Pista"/>
-                                    <TextBlock Text="Zona"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.HeaderTemplate>
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Vertical">
-                                    <TextBlock Text="{Binding Reservation.Court.Name}"/>
-                                    <TextBlock Text="{Binding Reservation.Court.Zone}"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Fecha"
+                                      Binding="{Binding Reservation.Date, StringFormat=dd/MM/yyyy}"
+                                      Width="125" />
 
                     <!--HORA INICIO / FIN -->
                     <DataGridTemplateColumn Width="120" >
@@ -141,28 +81,8 @@
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
 
-                    <!--ESTADO RESERVA / PARTIDO-->
-                    <DataGridTemplateColumn Width="165" >
-                        <DataGridTemplateColumn.HeaderTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Vertical">
-                                    <TextBlock Text="Estado Reserva"/>
-                                    <TextBlock Text="Estado Partido"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.HeaderTemplate>
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Vertical">
-                                    <TextBlock Text="{Binding Reservation.Status}"/>
-                                    <TextBlock Text="{Binding Status}"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-
                     <!--DURACION-->
-                    <DataGridTemplateColumn Width="115" >
+                    <DataGridTemplateColumn Width="110" >
                         <DataGridTemplateColumn.HeaderTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Vertical">
@@ -180,11 +100,50 @@
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                     
-                    <!--FECHA CREACION-->
-                    <DataGridTextColumn Header="Fecha creación" Binding="{Binding Reservation.CreatedAt, StringFormat=dd/MM/yyyy}" Width="160" />
+                    <!--PISTA-->
+                    <DataGridTemplateColumn Width="90">
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Pista"/>
+                                    <TextBlock Text="Zona"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="{Binding Reservation.Court.Name}"/>
+                                    <TextBlock Text="{Binding Reservation.Court.Zone}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <!-- ESTADO -->
+                    <DataGridTemplateColumn Width="120" >
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Estado"/>
+                                    <TextBlock Text="Partido"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="{Binding Reservation.Status}"/>
+                                    <TextBlock Text="{Binding Status}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
 
                     <!--NIVEL-->
-                    <DataGridTextColumn Header="Nivel" Binding="{Binding Level}" Width="160" />
+                    <DataGridTextColumn Header="Nivel"
+                                      Binding="{Binding Level}"
+                                      Width="120" />
 
                     <!--JUGADORES-->
                     <DataGridTemplateColumn Width="*" >
@@ -198,27 +157,110 @@
                         </DataGridTemplateColumn.HeaderTemplate>
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <StackPanel Orientation="Vertical">
-                                        <StackPanel Orientation="Horizontal">
-                                            <TextBlock Text="{Binding Owner.AccountInfo.Username}"/>
-                                            <TextBlock Text="🎖️"/>
-                                        </StackPanel>
-                                        <TextBlock Text="{Binding Player1.AccountInfo.Username}"/>
-                                    </StackPanel>
-                                    <StackPanel Orientation="Vertical">
-                                        <TextBlock Text="{Binding Player2.AccountInfo.Username}"/>
-                                        <TextBlock Text="{Binding Player3.AccountInfo.Username}"/>
-                                    </StackPanel>
+                                <Grid Margin="4 0 4 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Text="{Binding Owner.AccountInfo.Username}"
+                                               Grid.Column="0"
+                                               Grid.Row="0"/>
+                                    <TextBlock Text="{Binding Player1.AccountInfo.Username}"
+                                               Grid.Column="0"
+                                               Grid.Row="1"/>
+                                    <TextBlock Text="{Binding Player2.AccountInfo.Username}"
+                                               HorizontalAlignment="Right"
+                                               Grid.Column="1"
+                                               Grid.Row="0"/>
+                                    <TextBlock Text="{Binding Player3.AccountInfo.Username}"
+                                                   HorizontalAlignment="Right"
+                                               Grid.Column="1"
+                                               Grid.Row="1"/>
+                                </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    
+                    <!--FECHA CREACION-->
+                    <DataGridTemplateColumn Width="125" >
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Fecha"/>
+                                    <TextBlock Text="Creación"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="{Binding Reservation.CreatedAt, StringFormat=dd/MM/yyyy}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
+
+                    <!--CANCELAR-->
+                    <DataGridTemplateColumn Header="Opciones"
+                                          Width="120">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Width="100"
+                                        Height="30">
+                                    <Button.Style>
+                                        <Style TargetType="Button" BasedOn="{StaticResource grid_button_style}">
+                                            <Setter Property="IsEnabled" Value="True"/>
+                                            <Style.Triggers>
+                                                <!-- Es owner y está cancelado -->
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding IsUserOwner}" Value="True"/>
+                                                        <Condition Binding="{Binding Reservation.Status}" Value="CANCELLED"/>
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                    <Setter Property="Content" Value="Cancelado"/>
+                                                </MultiDataTrigger>
+                                                <!-- No está en el partido -->
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding IsUserJoined}" Value="False"/>
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                    <Setter Property="Content" Value="Abandonado"/>
+                                                </MultiDataTrigger>
+                                                <!-- Es owner y no está cancelado -->
+                                                <DataTrigger Binding="{Binding IsUserOwner}" Value="True">
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                    <Setter Property="Command" Value="{Binding DataContext.CancelMatchCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
+                                                    <Setter Property="CommandParameter" Value="{Binding}"/>
+                                                    <Setter Property="Content" Value="Cancelar"/>
+                                                </DataTrigger>
+                                                <!-- Es player y no esta abandonado -->
+                                                <DataTrigger Binding="{Binding IsUserPlayer}" Value="True">
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                    <Setter Property="Command" Value="{Binding DataContext.LeaveMatchCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
+                                                    <Setter Property="CommandParameter" Value="{Binding}"/>
+                                                    <Setter Property="Content" Value="Abandonar"/>
+                                                </DataTrigger>
+
+
+
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-
-
 
     </Grid>
 </UserControl>

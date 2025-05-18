@@ -5,6 +5,7 @@ import com.match4padel.match4padel_api.exceptions.ClubClosedException;
 import com.match4padel.match4padel_api.exceptions.CourtOccupiedException;
 import com.match4padel.match4padel_api.exceptions.MatchNotFoundException;
 import com.match4padel.match4padel_api.exceptions.PastDateTimeException;
+import com.match4padel.match4padel_api.exceptions.ReservationAlreadyCancelledException;
 import com.match4padel.match4padel_api.exceptions.ReservationAlreadyCompletedException;
 import com.match4padel.match4padel_api.exceptions.ReservationNotFoundException;
 import com.match4padel.match4padel_api.exceptions.ReservationTimeNotValidException;
@@ -61,12 +62,12 @@ public class ReservationService {
 
     public List<Reservation> getReservationsByUserId(Long userId) {
         User user = userService.getUserById(userId);
-        return reservationRepository.findByUserOrderByCreatedAtDesc(user);
+        return reservationRepository.findByUserOrdered(user);
     }
 
     public List<Reservation> getReservationsByUserIdAndStatus(Long userId, ReservationStatus status) {
         User user = userService.getUserById(userId);
-        return reservationRepository.findByUserAndStatusOrderByCreatedAtDesc(user, status);
+        return reservationRepository.findByUserAndStatusOrdered(user, status);
     }
 
     public List<Reservation> getReservationsByDate(LocalDate date) {
@@ -141,6 +142,9 @@ public class ReservationService {
         Reservation reservation = getReservationById(id);
         if (reservation.getStatus() == ReservationStatus.COMPLETED) {
             throw new ReservationAlreadyCompletedException(reservation);
+        }
+        if (reservation.getStatus() == ReservationStatus.CANCELLED) {
+            throw new ReservationAlreadyCancelledException(reservation);
         }
         reservation.setStatus(ReservationStatus.CANCELLED);
         reservation.setPaid(false);

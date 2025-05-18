@@ -7,106 +7,6 @@
              xmlns:model="clr-namespace:match4padel_staff.Model"
              mc:Ignorable="d"
              d:DesignHeight="560.04" d:DesignWidth="1240">
-    <UserControl.Resources>
-        <DropShadowEffect x:Key="DropShadowEffect" Color="Black" Direction="320" ShadowDepth="5" Opacity="0.3" BlurRadius="10" />
-        <Style x:Key="HoverScaleBorderStyle" TargetType="Border">
-            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
-            <Setter Property="RenderTransform">
-                <Setter.Value>
-                    <ScaleTransform ScaleX="1" ScaleY="1"/>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Trigger.EnterActions>
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                             To="1.20" Duration="0:0:0.2" />
-                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                             To="1.20" Duration="0:0:0.2" />
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </Trigger.EnterActions>
-                    <Trigger.ExitActions>
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                             To="1" Duration="0:0:0.2" />
-                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                             To="1" Duration="0:0:0.2" />
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </Trigger.ExitActions>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-        <DataTemplate x:Key="CourtCardTemplate" DataType="{x:Type model:Court}">
-            <Border 
-                Style="{StaticResource HoverScaleBorderStyle}"
-            CornerRadius="10" 
-            Background="White" 
-            BorderBrush="Gray" 
-            BorderThickness="1" 
-            Padding="10" 
-            Margin="5"
-                Effect="{StaticResource DropShadowEffect}">
-                <StackPanel>
-                    <TextBlock Text="{Binding Name}"
-                                   FontSize="20"
-                                   FontFamily="Roboto"
-                                   Foreground="{StaticResource DarkText}"></TextBlock>
-                        <Image Source="{Binding PictureFullPath}"
-                           Margin="0 2 0 2"></Image>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Zona:"
-                                   FontSize="12"
-                                   FontFamily="Roboto"
-                                   Foreground="{StaticResource DarkText}"
-                                   Margin="0 0 4 0"
-                                   FontWeight="DemiBold"
-/>
-                        <TextBlock Text="{Binding Zone}"
-                                  FontSize="12"
-                                   FontFamily="Roboto"
-                                   Foreground="{StaticResource DarkText}"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Suelo:"
-                                   FontSize="12"
-                                   FontFamily="Roboto"
-                                   Foreground="{StaticResource DarkText}"
-                                   Margin="0 0 4 0"
-                                   FontWeight="DemiBold"/>
-                        <TextBlock Text="{Binding Type}"
-                                   FontSize="12"
-                                   FontFamily="Roboto"
-                                   Foreground="{StaticResource DarkText}"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Precio:"
-                                   FontSize="12"
-                                   FontFamily="Roboto"
-                                   Foreground="{StaticResource DarkText}"
-                                   Margin="0 0 4 0"
-                                   FontWeight="DemiBold"/>
-                        <TextBlock Text="{Binding Price}"
-                                   FontSize="12"
-                                   FontFamily="Roboto"
-                                   Foreground="{StaticResource DarkText}"
-                                   Margin="0 0 4 0"/>
-                        <TextBlock Text="€"
-                                   FontSize="12"
-                                   FontFamily="Roboto"
-                                   Foreground="{StaticResource DarkText}"/>
-                    </StackPanel>
-
-
-                </StackPanel>
-            </Border>
-        </DataTemplate>
-       
-    </UserControl.Resources>
     <Grid Background="{StaticResource main_menu_background}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -128,35 +28,43 @@
         </Grid.RowDefinitions>
         <ContentControl Grid.Column="1"
                         Grid.Row="1"
-            Content="{Binding court1}" ContentTemplate="{StaticResource CourtCardTemplate}" />
+                        Content="{Binding court1}"
+                        ContentTemplate="{StaticResource CourtCardTemplate}" />
 
         <ContentControl Grid.Column="3"
-                Grid.Row="1"
-    Content="{Binding court2}" ContentTemplate="{StaticResource CourtCardTemplate}" />
+                        Grid.Row="1"
+                        Content="{Binding court2}"
+                        ContentTemplate="{StaticResource CourtCardTemplate}" />
 
         <ContentControl Grid.Column="5"
-                Grid.Row="1"
-    Content="{Binding court3}" ContentTemplate="{StaticResource CourtCardTemplate}" />
+                        Grid.Row="1"
+                        Content="{Binding court3}"
+                        ContentTemplate="{StaticResource CourtCardTemplate}" />
 
         <ContentControl Grid.Column="7"
-                Grid.Row="1"
-    Content="{Binding court4}" ContentTemplate="{StaticResource CourtCardTemplate}" />
+                        Grid.Row="1"
+                        Content="{Binding court4}"
+                        ContentTemplate="{StaticResource CourtCardTemplate}" />
 
         <ContentControl Grid.Column="1"
-                Grid.Row="3"
-    Content="{Binding court5}" ContentTemplate="{StaticResource CourtCardTemplate}" />
+                        Grid.Row="3"
+                        Content="{Binding court5}"
+                        ContentTemplate="{StaticResource CourtCardTemplate}" />
 
         <ContentControl Grid.Column="3"
-                Grid.Row="3"
-    Content="{Binding court6}" ContentTemplate="{StaticResource CourtCardTemplate}" />
+                        Grid.Row="3"
+                        Content="{Binding court6}"
+                        ContentTemplate="{StaticResource CourtCardTemplate}" />
 
         <ContentControl Grid.Column="5"
-                Grid.Row="3"
-    Content="{Binding court7}" ContentTemplate="{StaticResource CourtCardTemplate}" />
+                        Grid.Row="3"
+                        Content="{Binding court7}"
+                        ContentTemplate="{StaticResource CourtCardTemplate}" />
 
         <ContentControl Grid.Column="7"
-                Grid.Row="3"
-    Content="{Binding court8}" ContentTemplate="{StaticResource CourtCardTemplate}" />
+                        Grid.Row="3"
+                        Content="{Binding court8}"
+                        ContentTemplate="{StaticResource CourtCardTemplate}" />
 
     </Grid>
 </UserControl>

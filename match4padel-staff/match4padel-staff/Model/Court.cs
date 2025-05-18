@@ -30,7 +30,7 @@ namespace match4padel_staff.Model
         {
             get
             {
-                return $"../Resources/Images/Courts/{PictureUrl}.png";
+                return $"../../Images/Courts/{PictureUrl}.png";
             }
         }
 

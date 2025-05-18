@@ -43,17 +43,17 @@ public class MatchController {
         return ResponseEntity.ok(matchService.createMatch(match));
     }
 
-    @GetMapping("/user")
+    @GetMapping("/user/{id}")
     public List<Match> getMatchesByUserAndRole(
-            @RequestParam Long userId,
-            @RequestParam(required = false, defaultValue = "joined") String role) {
+            @PathVariable Long id,
+            @RequestParam(required = false, value = "role") String role) {
 
         if ("owner".equalsIgnoreCase(role)) {
-            return matchService.getOwnMatchesByUserId(userId);
+            return matchService.getOwnMatchesByUserId(id);
         } else if ("player".equalsIgnoreCase(role)) {
-            return matchService.getJoinedMatchesByUserId(userId);
+            return matchService.getJoinedMatchesByUserId(id);
         }
-        return matchService.getAllMatchesByUserId(userId);
+        return matchService.getAllMatchesByUserId(id);
     }
 
     @GetMapping("/status/{status}")

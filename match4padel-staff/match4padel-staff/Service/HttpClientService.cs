@@ -10,6 +10,8 @@ namespace match4padel_staff.Service
     public class HttpClientService
     {
         private static HttpClient _instance;
+
+        public static string ApiUrl { get; } = "http://localhost:8080/match4padel/api";
         public static HttpClient Instance
         {
             get

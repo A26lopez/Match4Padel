@@ -70,3 +70,10 @@ C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-st
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\MyReservationsView.baml
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\MyMatchesView.g.cs
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\MyMatchesView.baml
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\Resources\Dictionaries\Styles\Templates.baml
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\bin\Debug\CommunityToolkit.Mvvm.dll
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\bin\Debug\CommunityToolkit.Mvvm.pdb
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\bin\Debug\CommunityToolkit.Mvvm.xml
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\OpenMatchesView.g.cs
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\OpenMatchesView.baml

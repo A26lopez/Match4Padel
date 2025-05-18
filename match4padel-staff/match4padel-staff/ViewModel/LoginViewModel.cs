@@ -9,10 +9,10 @@ using System.Windows.Input;
 using System.Windows;
 using System.Xml.Linq;
 using match4padel_staff.Service;
-using match4padel_staff.Util;
 using System.Windows.Controls;
 using match4padel_staff.Model;
 using match4padel_staff.View;
+using CommunityToolkit.Mvvm.Input;
 
 namespace match4padel_staff.ViewModel
 {
@@ -22,7 +22,7 @@ namespace match4padel_staff.ViewModel
         public string Username { get; set; }
         public string Password { get; set; }
         public string ErrorMessage { get; set; }
-        public ICommand LoginCommand { get; }
+        public IAsyncRelayCommand LoginCommand { get; }
         public ICommand RememberPasswordCommand { get; }
         public ICommand SignUpCommand { get; }
 
@@ -32,10 +32,10 @@ namespace match4padel_staff.ViewModel
             Password = "";
             ErrorMessage = "";
             loginService = new LoginService();
-            LoginCommand = new RelayCommand(Login);
+            LoginCommand = new AsyncRelayCommand(Login);
         }
 
-        private async void Login(Object obj)
+        private async Task Login()
         {
             var result = await loginService.LoginAsync(Username, Password);
             if (result is LoginResponse login)

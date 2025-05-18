@@ -145,7 +145,6 @@ public class MatchService {
     private boolean addPlayerToMatch(Match match, User user) {
         if (match.getPlayer_1() == null) {
             match.setPlayer_1(user);
-            System.out.println(user.getId() + "2");
             return true;
         } else if (match.getPlayer_2() == null) {
             match.setPlayer_2(user);

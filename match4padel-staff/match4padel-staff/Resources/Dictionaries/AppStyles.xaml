@@ -18,6 +18,8 @@
         <!-- ICONS-->
         <ResourceDictionary Source="Styles/Icons.xaml"/>
 
+        <!-- TEMPLATES-->
+        <ResourceDictionary Source="Styles/Templates.xaml"/>
 
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

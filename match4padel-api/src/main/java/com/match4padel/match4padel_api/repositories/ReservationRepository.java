@@ -17,9 +17,29 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
 
     List<Reservation> findByCourt(Court court);
 
-    List<Reservation> findByUserOrderByCreatedAtDesc(User user);
+    @Query("""
+    SELECT r FROM Reservation r
+    WHERE r.user = :user
+    ORDER BY 
+        CASE WHEN r.status = 'CONFIRMED' THEN 0 ELSE 1 END,
+        CASE WHEN r.status = 'CONFIRMED' THEN r.date ELSE NULL END ASC,
+        CASE WHEN r.status IN ('CANCELLED', 'COMPLETED') THEN r.date ELSE NULL END DESC,
+        r.startTime ASC,
+        r.court.name ASC
+""")
+    List<Reservation> findByUserOrdered(@Param("user") User user);
 
-    List<Reservation> findByUserAndStatusOrderByCreatedAtDesc(User user, ReservationStatus status);
+    @Query("""
+    SELECT r FROM Reservation r 
+    WHERE r.user = :user AND r.status = :status
+    ORDER BY 
+        CASE WHEN r.status = 'CONFIRMED' THEN 0 ELSE 1 END,
+        CASE WHEN r.status = 'CONFIRMED' THEN r.date ELSE NULL END ASC,
+        CASE WHEN r.status IN ('CANCELLED', 'COMPLETED') THEN r.date ELSE NULL END DESC,
+        r.court.name ASC,
+        r.startTime ASC
+""")
+    List<Reservation> findByUserAndStatusOrdered(User user, ReservationStatus status);
 
     List<Reservation> findByDate(LocalDate date);
 

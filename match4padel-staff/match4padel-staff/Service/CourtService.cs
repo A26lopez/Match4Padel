@@ -15,7 +15,7 @@ namespace match4padel_staff.Service
     {
         public async Task<object> getAllCourtsAsync()
         {
-            var response = await HttpClientService.Instance.GetAsync("http://localhost:8080/match4padel/api/courts");
+            var response = await HttpClientService.Instance.GetAsync($"{HttpClientService.ApiUrl}/courts");
             var responseJson = await response.Content.ReadAsStringAsync();
             if (response.IsSuccessStatusCode)
             {

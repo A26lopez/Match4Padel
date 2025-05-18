@@ -1,5 +1,5 @@
-﻿using match4padel_staff.Service;
-using match4padel_staff.Util;
+﻿using CommunityToolkit.Mvvm.Input;
+using match4padel_staff.Service;
 using match4padel_staff.View;
 using System;
 using System.Collections.Generic;
@@ -29,21 +29,27 @@ namespace match4padel_staff.ViewModel
             HomeCommand = new RelayCommand(OpenHomeView);
             MyReservationsCommand = new RelayCommand(OpenMyReservationsView);
             MyMatchesCommand = new RelayCommand(OpenMyMatchesView);
+            OpenMatchesCommand = new RelayCommand(OpenOpenMatchesView);
         }
 
-        private void OpenHomeView(Object obj)
+        private void OpenHomeView()
         {
             CurrentView = new HomeView();
         }
 
-        private void OpenMyReservationsView(Object obj)
+        private void OpenMyReservationsView()
         {
             CurrentView = new MyReservationsView();
         }
 
-        private void OpenMyMatchesView(Object obj)
+        private void OpenMyMatchesView()
         {
             CurrentView = new MyMatchesView();
+        }
+
+        private void OpenOpenMatchesView()
+        {
+            CurrentView = new OpenMatchesView();
         }
     }
 }

@@ -143,7 +143,8 @@
                     </Button>
 
                     <!-- PARTIDOS ABIERTOS -->
-                    <Button Style="{StaticResource menubar_buttons_style}">
+                    <Button Style="{StaticResource menubar_buttons_style}"
+                            Command="{Binding OpenMatchesCommand}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="CalendarSearch"
                                                      Style="{StaticResource menubar_icons_style}"/>
