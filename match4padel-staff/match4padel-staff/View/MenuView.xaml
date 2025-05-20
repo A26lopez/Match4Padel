@@ -101,7 +101,8 @@
                     </Button>
 
                     <!-- RESERVAR PISTA -->
-                    <Button Style="{StaticResource menubar_buttons_style}">
+                    <Button Style="{StaticResource menubar_buttons_style}"
+                            Command="{Binding ReservateCourtCommand}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Tennis"
                                                      Style="{StaticResource menubar_icons_style}"/>

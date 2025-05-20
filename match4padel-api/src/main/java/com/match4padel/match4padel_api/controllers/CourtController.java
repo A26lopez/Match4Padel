@@ -32,7 +32,7 @@ public class CourtController {
 
     @GetMapping("/free")
     public ResponseEntity<List<Court>> getFreeCourtsByDateAndTime(@RequestParam("date") LocalDate date,
-            @RequestParam("startTime") LocalTime startTime) {
+            @RequestParam("starttime") LocalTime startTime) {
         return ResponseEntity.ok(courtService.getFreeCourtsByDateAndTime(date, startTime));
     }
 

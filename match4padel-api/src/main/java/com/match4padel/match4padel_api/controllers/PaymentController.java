@@ -50,7 +50,7 @@ public class PaymentController {
         return ResponseEntity.ok(paymentService.createPayment(payment));
     }
 
-    @PatchMapping("/{id}/complete")
+    @PostMapping("/{id}/complete")
     public ResponseEntity<Payment> completePaymentById(@PathVariable Long id,
             @RequestParam(value = "method", required = true) PaymentMethod method) {
         return ResponseEntity.ok(paymentService.completePaymentByIdAndMethod(id, method));

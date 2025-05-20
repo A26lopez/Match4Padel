@@ -58,7 +58,7 @@ public class MatchController {
 
     @GetMapping("/status/{status}")
     public List<Match> getMatchesByStatus(@PathVariable MatchStatus status) {
-        return matchService.getMatchesByState(status);
+        return matchService.getMatchesByStatus(status);
     }
 
     @GetMapping("/level/{level}")

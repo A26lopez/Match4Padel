@@ -187,7 +187,7 @@
                     </DataGridTemplateColumn>
                     
                     <!--FECHA CREACION-->
-                    <DataGridTemplateColumn Width="125" >
+                    <DataGridTemplateColumn Width="140" >
                         <DataGridTemplateColumn.HeaderTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Vertical">
@@ -216,15 +216,28 @@
                                         <Style TargetType="Button" BasedOn="{StaticResource grid_button_style}">
                                             <Setter Property="IsEnabled" Value="True"/>
                                             <Style.Triggers>
-                                                <!-- Es owner y está cancelado -->
-                                                <MultiDataTrigger>
-                                                    <MultiDataTrigger.Conditions>
-                                                        <Condition Binding="{Binding IsUserOwner}" Value="True"/>
-                                                        <Condition Binding="{Binding Reservation.Status}" Value="CANCELLED"/>
-                                                    </MultiDataTrigger.Conditions>
+
+                                                <!-- Es owner y no está cancelado -->
+                                                <DataTrigger Binding="{Binding IsUserOwner}" Value="True">
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                    <Setter Property="Command" Value="{Binding DataContext.CancelMatchCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
+                                                    <Setter Property="CommandParameter" Value="{Binding}"/>
+                                                    <Setter Property="Content" Value="Cancelar"/>
+                                                </DataTrigger>
+                                                
+                                                <!-- Es player y no esta abandonado -->
+                                                <DataTrigger Binding="{Binding IsUserPlayer}" Value="True">
+                                                    <Setter Property="Command" Value="{Binding DataContext.LeaveMatchCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
+                                                    <Setter Property="CommandParameter" Value="{Binding}"/>
+                                                    <Setter Property="Content" Value="Abandonar"/>
+                                                </DataTrigger>
+                               
+                                                <!-- Si el partido está cancelado -->
+                                                <DataTrigger Binding="{Binding Reservation.Status}" Value="CANCELLED">
                                                     <Setter Property="IsEnabled" Value="False"/>
-                                                    <Setter Property="Content" Value="Cancelado"/>
-                                                </MultiDataTrigger>
+                                                    <Setter Property="Visibility" Value="Hidden"/>
+                                                </DataTrigger>
+
                                                 <!-- No está en el partido -->
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
@@ -233,22 +246,6 @@
                                                     <Setter Property="IsEnabled" Value="False"/>
                                                     <Setter Property="Content" Value="Abandonado"/>
                                                 </MultiDataTrigger>
-                                                <!-- Es owner y no está cancelado -->
-                                                <DataTrigger Binding="{Binding IsUserOwner}" Value="True">
-                                                    <Setter Property="IsEnabled" Value="True"/>
-                                                    <Setter Property="Command" Value="{Binding DataContext.CancelMatchCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
-                                                    <Setter Property="CommandParameter" Value="{Binding}"/>
-                                                    <Setter Property="Content" Value="Cancelar"/>
-                                                </DataTrigger>
-                                                <!-- Es player y no esta abandonado -->
-                                                <DataTrigger Binding="{Binding IsUserPlayer}" Value="True">
-                                                    <Setter Property="IsEnabled" Value="True"/>
-                                                    <Setter Property="Command" Value="{Binding DataContext.LeaveMatchCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
-                                                    <Setter Property="CommandParameter" Value="{Binding}"/>
-                                                    <Setter Property="Content" Value="Abandonar"/>
-                                                </DataTrigger>
-
-
 
                                             </Style.Triggers>
                                         </Style>

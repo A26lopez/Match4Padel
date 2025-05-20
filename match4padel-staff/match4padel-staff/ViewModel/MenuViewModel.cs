@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace match4padel_staff.ViewModel
 {
-    class MenuViewModel : BaseViewModel
+    public class MenuViewModel : BaseViewModel
     {
         public object CurrentView { get; set; }
         public string Username { get; set; }
@@ -27,14 +27,21 @@ namespace match4padel_staff.ViewModel
         {
             CurrentView = new HomeView();
             HomeCommand = new RelayCommand(OpenHomeView);
+            ReservateCourtCommand = new RelayCommand(OpenReservateCourtView);
             MyReservationsCommand = new RelayCommand(OpenMyReservationsView);
             MyMatchesCommand = new RelayCommand(OpenMyMatchesView);
             OpenMatchesCommand = new RelayCommand(OpenOpenMatchesView);
+
         }
 
         private void OpenHomeView()
         {
             CurrentView = new HomeView();
+        }
+
+        private void OpenReservateCourtView()
+        {
+            CurrentView = new ReservateCourtView();
         }
 
         private void OpenMyReservationsView()

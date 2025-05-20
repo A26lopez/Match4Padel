@@ -22,7 +22,10 @@ import com.match4padel.match4padel_api.utils.TimeSlotsGenerator;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -97,6 +100,10 @@ public class ReservationService {
     }
 
     public List<LocalTime> getFreeHoursByCourtIdAndDate(Long courtId, LocalDate date) {
+        if (date.isBefore(LocalDate.now())) {
+            return Collections.emptyList();
+        }
+
         List<Reservation> reservations = getReservationsByCourtIdAndDate(courtId, date);
         List<LocalTime> allSlots = new ArrayList<>(TimeSlotsGenerator.VALID_TIME_SLOTS);
 
@@ -111,6 +118,19 @@ public class ReservationService {
         }
 
         return allSlots;
+    }
+
+    public List<LocalTime> getFreeHoursByDate(LocalDate date) {
+        Set<LocalTime> horasDisponibles = new HashSet<>();
+
+        for (Court c : courtService.getAllCourts()) {
+            List<LocalTime> horas = getFreeHoursByCourtIdAndDate(c.getId(), date);
+            horasDisponibles.addAll(horas);
+        }
+
+        return horasDisponibles.stream()
+                .sorted()
+                .collect(Collectors.toList());
     }
 
     private boolean isInRange(LocalTime slot, Reservation reservation) {
@@ -141,7 +161,7 @@ public class ReservationService {
     public Reservation cancelReservationById(Long id) {
         Reservation reservation = getReservationById(id);
         if (reservation.getStatus() == ReservationStatus.COMPLETED) {
-            throw new ReservationAlreadyCompletedException(reservation);
+            throw new ReservationAlreadyCompletedException();
         }
         if (reservation.getStatus() == ReservationStatus.CANCELLED) {
             throw new ReservationAlreadyCancelledException(reservation);

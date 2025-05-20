@@ -33,7 +33,7 @@ namespace match4padel_staff.ViewModel
 
         private async Task LoadAllCourtsAsync()
         {
-            var result = await courtService.getAllCourtsAsync();
+            var result = await courtService.getAllCourts();
             if (result is List<Court> courtList)
             {
                 court1 = courtList[0];

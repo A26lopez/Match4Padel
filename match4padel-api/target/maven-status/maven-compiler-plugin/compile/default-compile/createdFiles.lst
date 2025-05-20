@@ -4,10 +4,12 @@ com\match4padel\match4padel_api\models\ContactInfo.class
 com\match4padel\match4padel_api\exceptions\ReservationAlreadyCompletedException.class
 com\match4padel\match4padel_api\services\ReservationService.class
 com\match4padel\match4padel_api\exceptions\CourtOccupiedException.class
+com\match4padel\match4padel_api\exceptions\MatchAlreadyCompletedException.class
 com\match4padel\match4padel_api\exceptions\ReservationAlreadyCancelledException.class
 com\match4padel\match4padel_api\models\enums\ReservationStatus.class
 com\match4padel\match4padel_api\controllers\ReservationController.class
 com\match4padel\match4padel_api\exceptions\PaymentsNumberException.class
+com\match4padel\match4padel_api\exceptions\MatchAlreadyCancelledException.class
 com\match4padel\match4padel_api\exceptions\CompletedMatchException.class
 com\match4padel\match4padel_api\exceptions\GlobalExceptionHandler.class
 com\match4padel\match4padel_api\exceptions\ReservationTimeNotValidException.class

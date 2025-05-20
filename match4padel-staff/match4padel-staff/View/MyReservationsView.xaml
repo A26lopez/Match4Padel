@@ -137,8 +137,7 @@
                                             Width="120">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Cancelar"
-                                        Command="{Binding DataContext.CancelReservationCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                <Button  Command="{Binding DataContext.CancelReservationCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
                                         CommandParameter="{Binding}"
                                         Width="100"
                                         Height="30">
@@ -146,8 +145,12 @@
                                         <Style TargetType="Button" BasedOn="{StaticResource grid_button_style}">
                                             <Setter Property="IsEnabled" Value="True"/>
                                             <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Status}" Value="CONFIRMED">
+                                                    <Setter Property="Content" Value="Cancelar"/>
+                                                    <Setter Property="IsEnabled" Value="True"/>
+                                                </DataTrigger>
                                                 <DataTrigger Binding="{Binding Status}" Value="CANCELLED">
-                                                    <Setter Property="Content" Value="Cancelada"/>
+                                                    <Setter Property="Visibility" Value="Hidden"/>
                                                     <Setter Property="IsEnabled" Value="False"/>
                                                 </DataTrigger>
                                             </Style.Triggers>
@@ -157,7 +160,6 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\App.xaml
-151282598850
+19-387049520
 
-341642713510
-371716237357
-Resources\Dictionaries\Images\Images.xaml;Resources\Dictionaries\Strings\Strings.xaml;Resources\Dictionaries\AppStyles.xaml;Resources\Dictionaries\Styles\Templates.xaml;Resources\Dictionaries\Styles\Icons.xaml;Resources\Dictionaries\Styles\Buttons.xaml;Resources\Dictionaries\Styles\TextBoxes.xaml;Resources\Dictionaries\Styles\Texts.xaml;View\HomeView.xaml;View\LoginView.xaml;Resources\Dictionaries\Colors\Colors.xaml;View\MenuView.xaml;View\MyMatchesView.xaml;View\MyReservationsView.xaml;View\OpenMatchesView.xaml;
+41-1233898399
+421989798770
+Resources\Dictionaries\Images\Images.xaml;Resources\Dictionaries\Strings\Strings.xaml;Resources\Dictionaries\AppStyles.xaml;Resources\Dictionaries\Styles\Templates.xaml;Resources\Dictionaries\Styles\Icons.xaml;Resources\Dictionaries\Styles\Buttons.xaml;Resources\Dictionaries\Styles\TextBoxes.xaml;Resources\Dictionaries\Styles\Texts.xaml;View\CreateMatchView.xaml;View\HomeView.xaml;View\LoginView.xaml;Resources\Dictionaries\Colors\Colors.xaml;View\MenuView.xaml;View\MyMatchesView.xaml;View\MyReservationsView.xaml;View\OpenMatchesView.xaml;View\ReservateCourtView.xaml;View\ReservationCreatedWindow.xaml;View\ReservationWindowView.xaml;
 
 True
 

@@ -71,4 +71,9 @@ public class ReservationController {
     public ResponseEntity<Reservation> cancelReservationById(@PathVariable Long id) {
         return ResponseEntity.ok(reservationService.cancelReservationById(id));
     }
+
+    @GetMapping("/free/{date}")
+    public ResponseEntity<List<LocalTime>> getFreeHoursByDate(@PathVariable LocalDate date) {
+        return ResponseEntity.ok(reservationService.getFreeHoursByDate(date));
+    }
 }

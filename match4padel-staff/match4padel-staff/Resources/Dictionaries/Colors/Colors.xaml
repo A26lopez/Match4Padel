@@ -17,4 +17,8 @@
     <SolidColorBrush x:Key="PlainTextSecondary">#B8B9BB</SolidColorBrush>
     <SolidColorBrush x:Key="LightText">#C7C7C7</SolidColorBrush>
 
+    <!-- Status colors -->
+    <SolidColorBrush x:Key="Confirmed_status">#ccffd2</SolidColorBrush>
+    <SolidColorBrush x:Key="Completed_status">#e0e0e0</SolidColorBrush>
+    <SolidColorBrush x:Key="Cancelled_status">#ffdbdb</SolidColorBrush>
 </ResourceDictionary>

@@ -3,7 +3,79 @@
   "WorkspaceRootPath": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\service\\matchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\viewmodel\\reservatecourtviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\viewmodel\\reservatecourtviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\view\\reservationcreatedwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\reservationcreatedwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\view\\reservationwindowview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\reservationwindowview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\viewmodel\\openmatchesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\viewmodel\\openmatchesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\view\\reservationcreatedwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\reservationcreatedwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\view\\reservatecourtview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\reservatecourtview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\view\\reservatecourtview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\reservatecourtview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\service\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\service\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\view\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\model\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\model\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\view\\reservationwindowview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\reservationwindowview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\view\\openmatchesview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\openmatchesview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\model\\court.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\model\\court.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\resources\\dictionaries\\styles\\templates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\resources\\dictionaries\\styles\\templates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\service\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\service\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\model\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\model\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\service\\matchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\service\\matchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,16 +83,8 @@
       "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\viewmodel\\mymatchesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\view\\mymatchesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\view\\mymatchesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\mymatchesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\view\\openmatchesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\openmatchesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\viewmodel\\openmatchesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\viewmodel\\openmatchesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\viewmodel\\myreservationsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,28 +95,43 @@
       "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\myreservationsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\model\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\model\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\model\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\resources\\dictionaries\\styles\\buttons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\resources\\dictionaries\\styles\\buttons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\resources\\dictionaries\\styles\\buttons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\service\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\service\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\view\\openmatchesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\openmatchesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\model\\court.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\model\\court.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\resources\\dictionaries\\colors\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\resources\\dictionaries\\colors\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\view\\openmatchesview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\openmatchesview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|c:\\users\\alexl\\onedrive\\desktop\\tfg\\match4padel\\match4padel-staff\\match4padel-staff\\service\\courtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\service\\courtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\view\\menuview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\menuview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\resources\\dictionaries\\appstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\resources\\dictionaries\\appstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alexl\\AppData\\Local\\Temp\\.vsdbgsrc\\c824721cd7d9c028e31d9faa77b348c59e49e6a99818a102ec7b7f9254f84219\\PropertyPathWorker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\viewmodel\\menuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,82 +140,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\view\\menuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\menuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\view\\myreservationsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\myreservationsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\view\\mymatchesview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\mymatchesview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\resources\\dictionaries\\styles\\templates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\resources\\dictionaries\\styles\\templates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\model\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\model\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\view\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\view\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\service\\courtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\service\\courtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\service\\httpclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\service\\httpclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\view\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\resources\\dictionaries\\appstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\resources\\dictionaries\\appstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\resources\\dictionaries\\styles\\icons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\resources\\dictionaries\\styles\\icons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\model\\contactinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\model\\contactinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\model\\accountsecurity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\model\\accountsecurity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\model\\accountinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1687DD-BF48-4ED0-B3A7-234FFDF0E18D}|match4padel-staff\\match4padel-staff.csproj|solutionrelative:match4padel-staff\\model\\accountinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -146,7 +149,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 189,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -158,413 +161,443 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OpenMatchesView.xaml",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\OpenMatchesView.xaml",
-              "RelativeDocumentMoniker": "match4padel-staff\\View\\OpenMatchesView.xaml",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\OpenMatchesView.xaml",
-              "RelativeToolTip": "match4padel-staff\\View\\OpenMatchesView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-18T17:58:32.54Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MyReservationsView.xaml",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MyReservationsView.xaml",
-              "RelativeDocumentMoniker": "match4padel-staff\\View\\MyReservationsView.xaml",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MyReservationsView.xaml",
-              "RelativeToolTip": "match4padel-staff\\View\\MyReservationsView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-17T18:08:56.082Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MatchService.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\MatchService.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\Service\\MatchService.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\MatchService.cs",
-              "RelativeToolTip": "match4padel-staff\\Service\\MatchService.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAkwGAAAABKAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\PaymentService.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\Service\\PaymentService.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\PaymentService.cs",
+              "RelativeToolTip": "match4padel-staff\\Service\\PaymentService.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAowCUAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T18:22:09.57Z",
+              "WhenOpened": "2025-05-20T19:40:13.173Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MyMatchesView.xaml",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MyMatchesView.xaml",
-              "RelativeDocumentMoniker": "match4padel-staff\\View\\MyMatchesView.xaml",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MyMatchesView.xaml",
-              "RelativeToolTip": "match4padel-staff\\View\\MyMatchesView.xaml",
+              "Title": "ReservationWindowView.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\ReservationWindowView.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\View\\ReservationWindowView.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\ReservationWindowView.xaml",
+              "RelativeToolTip": "match4padel-staff\\View\\ReservationWindowView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-17T18:08:53.348Z",
+              "WhenOpened": "2025-05-20T16:46:01.027Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MyMatchesViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\MyMatchesViewModel.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\ViewModel\\MyMatchesViewModel.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\MyMatchesViewModel.cs",
-              "RelativeToolTip": "match4padel-staff\\ViewModel\\MyMatchesViewModel.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAswEQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T18:27:10.758Z",
+              "Title": "ReservationCreatedWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\ReservationCreatedWindow.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\View\\ReservationCreatedWindow.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\ReservationCreatedWindow.xaml",
+              "RelativeToolTip": "match4padel-staff\\View\\ReservationCreatedWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T21:46:19.412Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "ReservateCourtViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\ReservateCourtViewModel.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\ViewModel\\ReservateCourtViewModel.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\ReservateCourtViewModel.cs",
+              "RelativeToolTip": "match4padel-staff\\ViewModel\\ReservateCourtViewModel.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAowD4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T21:13:20.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReservateCourtView.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\ReservateCourtView.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\View\\ReservateCourtView.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\ReservateCourtView.xaml",
+              "RelativeToolTip": "match4padel-staff\\View\\ReservateCourtView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-19T16:10:20.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "OpenMatchesViewModel.cs",
               "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\OpenMatchesViewModel.cs",
               "RelativeDocumentMoniker": "match4padel-staff\\ViewModel\\OpenMatchesViewModel.cs",
               "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\OpenMatchesViewModel.cs",
               "RelativeToolTip": "match4padel-staff\\ViewModel\\OpenMatchesViewModel.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAA7wDUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T18:06:28.733Z",
+              "WhenOpened": "2025-05-20T16:32:39.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "View\\ReservationCreatedWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\ReservationCreatedWindow.xaml.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\View\\ReservationCreatedWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\ReservationCreatedWindow.xaml.cs",
+              "RelativeToolTip": "match4padel-staff\\View\\ReservationCreatedWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T21:51:14.111Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MyReservationsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\MyReservationsViewModel.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\ViewModel\\MyReservationsViewModel.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\MyReservationsViewModel.cs",
-              "RelativeToolTip": "match4padel-staff\\ViewModel\\MyReservationsViewModel.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAqwBEAAABLAAAAAAAAAA==",
+              "Title": "ReservateCourtView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\ReservateCourtView.xaml.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\View\\ReservateCourtView.xaml.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\ReservateCourtView.xaml.cs",
+              "RelativeToolTip": "match4padel-staff\\View\\ReservateCourtView.xaml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwB8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T18:27:12.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Match.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\Match.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\Model\\Match.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\Match.cs",
-              "RelativeToolTip": "match4padel-staff\\Model\\Match.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAYwD4AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T18:12:20.167Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Buttons.xaml",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Buttons.xaml",
-              "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Buttons.xaml",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Buttons.xaml",
-              "RelativeToolTip": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Buttons.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-18T09:12:18.502Z",
+              "WhenOpened": "2025-05-19T16:10:10.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "ReservationService.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\ReservationService.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\Service\\ReservationService.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\ReservationService.cs",
-              "RelativeToolTip": "match4padel-staff\\Service\\ReservationService.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T18:22:12.971Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Court.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\Court.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\Model\\Court.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\Court.cs",
-              "RelativeToolTip": "match4padel-staff\\Model\\Court.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAADwvyAAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T18:16:25.207Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "OpenMatchesView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\OpenMatchesView.xaml.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\View\\OpenMatchesView.xaml.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\OpenMatchesView.xaml.cs",
-              "RelativeToolTip": "match4padel-staff\\View\\OpenMatchesView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T18:09:38.277Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MenuView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MenuView.xaml.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\View\\MenuView.xaml.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MenuView.xaml.cs",
-              "RelativeToolTip": "match4padel-staff\\View\\MenuView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T17:58:07.508Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MyReservationsView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MyReservationsView.xaml.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\View\\MyReservationsView.xaml.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MyReservationsView.xaml.cs",
-              "RelativeToolTip": "match4padel-staff\\View\\MyReservationsView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T18:30:33.513Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MenuViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\MenuViewModel.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\ViewModel\\MenuViewModel.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\MenuViewModel.cs",
-              "RelativeToolTip": "match4padel-staff\\ViewModel\\MenuViewModel.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA7wC8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T18:31:51.136Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "MenuView.xaml",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MenuView.xaml",
-              "RelativeDocumentMoniker": "match4padel-staff\\View\\MenuView.xaml",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MenuView.xaml",
-              "RelativeToolTip": "match4padel-staff\\View\\MenuView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-17T18:32:54.204Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "MyMatchesView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MyMatchesView.xaml.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\View\\MyMatchesView.xaml.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MyMatchesView.xaml.cs",
-              "RelativeToolTip": "match4padel-staff\\View\\MyMatchesView.xaml.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T18:30:26.732Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\ViewModel\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\LoginViewModel.cs",
-              "RelativeToolTip": "match4padel-staff\\ViewModel\\LoginViewModel.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAA3wAoAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T10:22:37.143Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "HomeView.xaml",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\HomeView.xaml",
-              "RelativeDocumentMoniker": "match4padel-staff\\View\\HomeView.xaml",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\HomeView.xaml",
-              "RelativeToolTip": "match4padel-staff\\View\\HomeView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-18T09:36:52.943Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Icons.xaml",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Icons.xaml",
-              "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Icons.xaml",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Icons.xaml",
-              "RelativeToolTip": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Icons.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-18T09:20:14.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "AppStyles.xaml",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\AppStyles.xaml",
-              "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\AppStyles.xaml",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\AppStyles.xaml",
-              "RelativeToolTip": "match4padel-staff\\Resources\\Dictionaries\\AppStyles.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-18T09:31:15.054Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Reservation.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\Reservation.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\Model\\Reservation.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\Reservation.cs",
-              "RelativeToolTip": "match4padel-staff\\Model\\Reservation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T19:12:32.509Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Templates.xaml",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Templates.xaml",
-              "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Templates.xaml",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Templates.xaml",
-              "RelativeToolTip": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Templates.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-18T09:26:28.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "LoginService.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\LoginService.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\Service\\LoginService.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\LoginService.cs",
-              "RelativeToolTip": "match4padel-staff\\Service\\LoginService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T10:37:04.976Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "HomeViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\HomeViewModel.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\ViewModel\\HomeViewModel.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\HomeViewModel.cs",
-              "RelativeToolTip": "match4padel-staff\\ViewModel\\HomeViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T10:34:19.949Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CourtService.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\CourtService.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\Service\\CourtService.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\CourtService.cs",
-              "RelativeToolTip": "match4padel-staff\\Service\\CourtService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T18:08:28.142Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
               "Title": "LoginView.xaml",
               "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\LoginView.xaml",
               "RelativeDocumentMoniker": "match4padel-staff\\View\\LoginView.xaml",
               "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\LoginView.xaml",
               "RelativeToolTip": "match4padel-staff\\View\\LoginView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-18T10:55:29.089Z"
+              "WhenOpened": "2025-05-20T21:27:18.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\Reservation.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\Model\\Reservation.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\Reservation.cs",
+              "RelativeToolTip": "match4padel-staff\\Model\\Reservation.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T21:13:01.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\LoginService.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\Service\\LoginService.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\LoginService.cs",
+              "RelativeToolTip": "match4padel-staff\\Service\\LoginService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T19:08:09.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OpenMatchesView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\OpenMatchesView.xaml.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\View\\OpenMatchesView.xaml.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\OpenMatchesView.xaml.cs",
+              "RelativeToolTip": "match4padel-staff\\View\\OpenMatchesView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T19:25:29.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Court.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\Court.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\Model\\Court.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\Court.cs",
+              "RelativeToolTip": "match4padel-staff\\Model\\Court.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAA/wCAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T17:03:36.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\Payment.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\Model\\Payment.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\Payment.cs",
+              "RelativeToolTip": "match4padel-staff\\Model\\Payment.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T19:39:06.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "View\\ReservationWindowView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\ReservationWindowView.xaml.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\View\\ReservationWindowView.xaml.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\ReservationWindowView.xaml.cs",
+              "RelativeToolTip": "match4padel-staff\\View\\ReservationWindowView.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAUwB8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:53:46.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MyMatchesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\MyMatchesViewModel.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\ViewModel\\MyMatchesViewModel.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\MyMatchesViewModel.cs",
+              "RelativeToolTip": "match4padel-staff\\ViewModel\\MyMatchesViewModel.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T16:05:48.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Templates.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Templates.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Templates.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Templates.xaml",
+              "RelativeToolTip": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Templates.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-19T19:31:25.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ReservationService.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\ReservationService.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\Service\\ReservationService.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\ReservationService.cs",
+              "RelativeToolTip": "match4padel-staff\\Service\\ReservationService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T20:49:01.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\ViewModel\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\LoginViewModel.cs",
+              "RelativeToolTip": "match4padel-staff\\ViewModel\\LoginViewModel.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T19:19:35.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MyReservationsView.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MyReservationsView.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\View\\MyReservationsView.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MyReservationsView.xaml",
+              "RelativeToolTip": "match4padel-staff\\View\\MyReservationsView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-19T15:59:49.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MatchService.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\MatchService.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\Service\\MatchService.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\MatchService.cs",
+              "RelativeToolTip": "match4padel-staff\\Service\\MatchService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T07:19:24.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MyMatchesView.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MyMatchesView.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\View\\MyMatchesView.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MyMatchesView.xaml",
+              "RelativeToolTip": "match4padel-staff\\View\\MyMatchesView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T08:50:54.143Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "LoginView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\LoginView.xaml.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\View\\LoginView.xaml.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\LoginView.xaml.cs",
-              "RelativeToolTip": "match4padel-staff\\View\\LoginView.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "MyReservationsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\MyReservationsViewModel.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\ViewModel\\MyReservationsViewModel.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\MyReservationsViewModel.cs",
+              "RelativeToolTip": "match4padel-staff\\ViewModel\\MyReservationsViewModel.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwEAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T10:55:32.424Z"
+              "WhenOpened": "2025-05-19T15:59:52.426Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\UserService.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\Service\\UserService.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\UserService.cs",
-              "RelativeToolTip": "match4padel-staff\\Service\\UserService.cs",
+              "Title": "Match.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\Match.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\Model\\Match.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\Match.cs",
+              "RelativeToolTip": "match4padel-staff\\Model\\Match.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T10:44:01.743Z"
+              "WhenOpened": "2025-05-20T17:03:35.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "HomeView.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\HomeView.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\View\\HomeView.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\HomeView.xaml",
+              "RelativeToolTip": "match4padel-staff\\View\\HomeView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T10:08:12.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Colors.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Colors\\Colors.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\Colors\\Colors.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Colors\\Colors.xaml",
+              "RelativeToolTip": "match4padel-staff\\Resources\\Dictionaries\\Colors\\Colors.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T09:33:21.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Buttons.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Buttons.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Buttons.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\Styles\\Buttons.xaml",
+              "RelativeToolTip": "match4padel-staff\\Resources\\Dictionaries\\Styles\\Buttons.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T09:18:05.353Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "HttpClientService.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\HttpClientService.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\Service\\HttpClientService.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\HttpClientService.cs",
-              "RelativeToolTip": "match4padel-staff\\Service\\HttpClientService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "Title": "OpenMatchesView.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\OpenMatchesView.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\View\\OpenMatchesView.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\OpenMatchesView.xaml",
+              "RelativeToolTip": "match4padel-staff\\View\\OpenMatchesView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-20T06:53:14.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AppStyles.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\AppStyles.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\Resources\\Dictionaries\\AppStyles.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Resources\\Dictionaries\\AppStyles.xaml",
+              "RelativeToolTip": "match4padel-staff\\Resources\\Dictionaries\\AppStyles.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-19T18:32:54.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CourtService.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\CourtService.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\Service\\CourtService.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Service\\CourtService.cs",
+              "RelativeToolTip": "match4padel-staff\\Service\\CourtService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA0wCEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T10:41:43.373Z"
+              "WhenOpened": "2025-05-20T07:19:10.218Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\User.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\Model\\User.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\User.cs",
-              "RelativeToolTip": "match4padel-staff\\Model\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAArAAAAAAAAAA==",
+              "Title": "PropertyPathWorker.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\AppData\\Local\\Temp\\.vsdbgsrc\\c824721cd7d9c028e31d9faa77b348c59e49e6a99818a102ec7b7f9254f84219\\PropertyPathWorker.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\c824721cd7d9c028e31d9faa77b348c59e49e6a99818a102ec7b7f9254f84219\\PropertyPathWorker.cs",
+              "ToolTip": "C:\\Users\\alexl\\AppData\\Local\\Temp\\.vsdbgsrc\\c824721cd7d9c028e31d9faa77b348c59e49e6a99818a102ec7b7f9254f84219\\PropertyPathWorker.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\c824721cd7d9c028e31d9faa77b348c59e49e6a99818a102ec7b7f9254f84219\\PropertyPathWorker.cs",
+              "ViewState": "AgIAAKcEAAAAAAAAAAAswLcEAAAEAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T18:14:44.174Z"
+              "WhenOpened": "2025-05-19T22:18:14.807Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "ContactInfo.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\ContactInfo.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\Model\\ContactInfo.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\ContactInfo.cs",
-              "RelativeToolTip": "match4padel-staff\\Model\\ContactInfo.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAAFAAAAAAAAAA==",
+              "Title": "HomeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\HomeViewModel.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\ViewModel\\HomeViewModel.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\HomeViewModel.cs",
+              "RelativeToolTip": "match4padel-staff\\ViewModel\\HomeViewModel.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA9wCEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T18:18:34.813Z"
+              "WhenOpened": "2025-05-19T19:20:26.799Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "AccountSecurity.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\AccountSecurity.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\Model\\AccountSecurity.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\AccountSecurity.cs",
-              "RelativeToolTip": "match4padel-staff\\Model\\AccountSecurity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T18:17:57.347Z"
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\App.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\App.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\App.xaml",
+              "RelativeToolTip": "match4padel-staff\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-19T18:33:08.562Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
-              "Title": "AccountInfo.cs",
-              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\AccountInfo.cs",
-              "RelativeDocumentMoniker": "match4padel-staff\\Model\\AccountInfo.cs",
-              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\Model\\AccountInfo.cs",
-              "RelativeToolTip": "match4padel-staff\\Model\\AccountInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAUAAAAAAAAAA==",
+              "Title": "MenuViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\MenuViewModel.cs",
+              "RelativeDocumentMoniker": "match4padel-staff\\ViewModel\\MenuViewModel.cs",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\ViewModel\\MenuViewModel.cs",
+              "RelativeToolTip": "match4padel-staff\\ViewModel\\MenuViewModel.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAA2wCkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T18:15:31.14Z"
+              "WhenOpened": "2025-05-19T16:16:02.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "MenuView.xaml",
+              "DocumentMoniker": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MenuView.xaml",
+              "RelativeDocumentMoniker": "match4padel-staff\\View\\MenuView.xaml",
+              "ToolTip": "C:\\Users\\alexl\\OneDrive\\Desktop\\TFG\\Match4Padel\\match4padel-staff\\match4padel-staff\\View\\MenuView.xaml",
+              "RelativeToolTip": "match4padel-staff\\View\\MenuView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-19T16:17:04.243Z",
+              "EditorCaption": ""
             }
           ]
         }

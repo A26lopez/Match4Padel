@@ -83,7 +83,8 @@
 
     <!-- grid buttons -->
     <Style x:Key="grid_button_style" TargetType="Button">
-        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0 8 0 0"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="FontFamily" Value="Roboto"/>
         <Setter Property="FontSize" Value="16"/>

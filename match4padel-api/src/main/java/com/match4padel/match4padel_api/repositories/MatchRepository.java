@@ -21,8 +21,14 @@ public interface MatchRepository extends JpaRepository<Match, Long> {
        OR m.player_1 = :user
        OR m.player_2 = :user
        OR m.player_3 = :user
+    ORDER BY 
+            CASE WHEN m.reservation.status = 'CONFIRMED' THEN 0 ELSE 1 END,
+            CASE WHEN m.reservation.status = 'CONFIRMED' THEN m.reservation.date ELSE NULL END ASC,
+            CASE WHEN m.reservation.status IN ('CANCELLED', 'COMPLETED') THEN m.reservation.date ELSE NULL END DESC,
+            m.reservation.court.name ASC,
+            m.reservation.startTime ASC
     """)
-    List<Match> findByUser(User user);
+    List<Match> findByUserOrdered(User user);
 
     List<Match> findByOwner(User user);
 
@@ -31,12 +37,23 @@ public interface MatchRepository extends JpaRepository<Match, Long> {
     WHERE m.player_1 = :user
        OR m.player_2 = :user
        OR m.player_3 = :user
+    ORDER BY 
+        CASE WHEN m.reservation.status = 'CONFIRMED' THEN 0 ELSE 1 END,
+        CASE WHEN m.reservation.status = 'CONFIRMED' THEN m.reservation.date ELSE NULL END ASC,
+        CASE WHEN m.reservation.status IN ('CANCELLED', 'COMPLETED') THEN m.reservation.date ELSE NULL END DESC,
+        m.reservation.court.name ASC,
+        m.reservation.startTime ASC
     """)
-    List<Match> findByJoined(@Param("user") User user);
-    
+    List<Match> findByJoinedOrdered(@Param("user") User user);
+
     Optional<Match> findByReservation(Reservation reservation);
 
-    List<Match> findByStatus(MatchStatus status);
+    @Query("""
+    SELECT m FROM Match m 
+    WHERE m.status = :status
+    ORDER BY m.reservation.date ASC, m.reservation.startTime ASC, m.reservation.court ASC
+    """)
+    List<Match> findByStatusOrdered(@Param("status") MatchStatus status);
 
     List<Match> findByLevel(Level level);
 

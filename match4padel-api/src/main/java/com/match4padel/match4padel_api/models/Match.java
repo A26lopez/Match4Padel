@@ -58,6 +58,5 @@ public class Match {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    @NotNull(message = "Elige un nivel.")
     private Level level;
 }

@@ -2,6 +2,7 @@ package com.match4padel.match4padel_api.services;
 
 import com.match4padel.match4padel_api.exceptions.AlreadyJoinedMatchException;
 import com.match4padel.match4padel_api.exceptions.CompletedMatchException;
+import com.match4padel.match4padel_api.exceptions.MatchAlreadyCancelledException;
 import com.match4padel.match4padel_api.exceptions.MatchNotFoundException;
 import com.match4padel.match4padel_api.exceptions.PlayerNotInMatchException;
 import com.match4padel.match4padel_api.exceptions.ReservationNotAvailableException;
@@ -45,7 +46,7 @@ public class MatchService {
 
     public List<Match> getAllMatchesByUserId(Long userId) {
         User user = userService.getUserById(userId);
-        return matchRepository.findByUser(user);
+        return matchRepository.findByUserOrdered(user);
     }
 
     public List<Match> getOwnMatchesByUserId(Long userId) {
@@ -55,11 +56,11 @@ public class MatchService {
 
     public List<Match> getJoinedMatchesByUserId(Long UserId) {
         User user = userService.getUserById(UserId);
-        return matchRepository.findByJoined(user);
+        return matchRepository.findByJoinedOrdered(user);
     }
 
-    public List<Match> getMatchesByState(MatchStatus status) {
-        return matchRepository.findByStatus(status);
+    public List<Match> getMatchesByStatus(MatchStatus status) {
+        return matchRepository.findByStatusOrdered(status);
     }
 
     public List<Match> getMatchesByLevel(Level level) {
@@ -75,7 +76,7 @@ public class MatchService {
         reservationService.createReservation(reservation);
         match.setReservation(reservation);
         match.setOwner(owner);
-        match.setLevel(match.getLevel());
+        match.setLevel(owner.getLevel());
         return matchRepository.save(match);
     }
 
@@ -120,6 +121,12 @@ public class MatchService {
     public Match removePlayerByMatchIdAndUserId(Long matchId, Long userId) {
         Match match = getMatchById(matchId);
         Reservation reservation = match.getReservation();
+        if (reservation.getStatus() == ReservationStatus.CANCELLED) {
+            throw new MatchAlreadyCancelledException();
+        }
+        if (reservation.getStatus() == ReservationStatus.COMPLETED) {
+            throw new MatchAlreadyCancelledException();
+        }
         User player = userService.getUserById(userId);
         List<Payment> payments = paymentService.getPaymentsByReservationId(reservation.getId());
         for (Payment p : payments) {

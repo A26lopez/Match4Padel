@@ -129,7 +129,7 @@ public class PaymentService {
             throw new PaymentsNumberException();
         }
         if (reservation.getStatus() == ReservationStatus.COMPLETED) {
-            throw new ReservationAlreadyCompletedException(reservation);
+            throw new ReservationAlreadyCompletedException();
         }
         if (reservation.getStatus() == ReservationStatus.CANCELLED) {
             throw new CancelledReservationException();
