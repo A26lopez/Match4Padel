@@ -33,5 +33,26 @@ namespace match4padel_staff.Model
 
         [JsonPropertyName("paid")]
         public bool IsPaid { get; set; } = false;
+
+        public string FormatedStatus
+        {
+            get
+            {
+                switch (Status)
+                {
+                    case "CONFIRMED":
+                        return "Confirmado";
+                        break;
+                    case "COMPLETED":
+                        return "Completado";
+                        break;
+                    case "CANCELLED":
+                        return "Cancelado";
+                        break;
+                    default:
+                        return Status;
+                }
+            }
+        }
     }
 }

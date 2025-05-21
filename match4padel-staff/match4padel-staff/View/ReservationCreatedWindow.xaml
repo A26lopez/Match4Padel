@@ -14,7 +14,7 @@
         BorderThickness="2">
     <Grid>
         <StackPanel VerticalAlignment="Center">
-            <TextBlock Text="Reserva realizada con éxito."
+            <TextBlock Text="Reserva realizada con éxito"
                    FontFamily="Roboto"
                    FontSize="20"
                    HorizontalAlignment="Center"
@@ -24,7 +24,9 @@
             <Button Style="{StaticResource normal_button_style}"
                     Content="OK"
                     Click="Button_Click"
-                    Width="80"/>
+                    Width="80"
+                    Height="24"
+                    IsDefault="True"/>
         </StackPanel>
     </Grid>
 </Window>

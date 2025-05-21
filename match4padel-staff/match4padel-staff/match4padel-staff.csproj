@@ -145,6 +145,7 @@
     <Compile Include="Model\Match.cs" />
     <Compile Include="Model\Payment.cs" />
     <Compile Include="Model\Reservation.cs" />
+    <Compile Include="Model\Responses\ValidationsResponse.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Service\CourtService.cs" />
     <Compile Include="Service\HttpClientService.cs" />
@@ -153,17 +154,31 @@
     <Compile Include="Service\ReservationService.cs" />
     <Compile Include="Service\UserService.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\CreateMatchViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\MyMatchesViewModel.cs" />
     <Compile Include="ViewModel\MyReservationsViewModel.cs" />
     <Compile Include="ViewModel\OpenMatchesViewModel.cs" />
     <Compile Include="ViewModel\ReservateCourtViewModel.cs" />
+    <Compile Include="ViewModel\SignUpViewModel.cs" />
     <Compile Include="View\CreateMatchView.xaml.cs">
       <DependentUpon>CreateMatchView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\JoinedMatchWindow.xaml.cs">
+      <DependentUpon>JoinedMatchWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\JoinMatchWindowView.xaml.cs">
+      <DependentUpon>JoinMatchWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MatchCreatedWindow.xaml.cs">
+      <DependentUpon>MatchCreatedWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MatchWindowView.xaml.cs">
+      <DependentUpon>MatchWindowView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
@@ -185,6 +200,12 @@
     </Compile>
     <Compile Include="View\ReservationWindowView.xaml.cs">
       <DependentUpon>ReservationWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SignUpWindow.xaml.cs">
+      <DependentUpon>SignUpWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserCreatedWindow.xaml.cs">
+      <DependentUpon>UserCreatedWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Resources\Dictionaries\Images\Images.xaml">
       <SubType>Designer</SubType>
@@ -226,6 +247,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\JoinedMatchWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\JoinMatchWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -243,6 +272,14 @@
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
     <Page Include="Resources\Dictionaries\Colors\Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MatchCreatedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MatchWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -271,6 +308,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ReservationWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SignUpWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserCreatedWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

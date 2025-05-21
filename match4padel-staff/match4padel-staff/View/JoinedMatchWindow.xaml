@@ -1,0 +1,32 @@
+﻿<Window x:Class="match4padel_staff.View.JoinedMatchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:match4padel_staff.View"
+        mc:Ignorable="d" Height="160" Width="300"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        Topmost="True"
+        WindowStyle="None"
+        BorderBrush="{StaticResource BlueDarkColor}"
+        BorderThickness="2">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Text="Te has unido al partido"
+                   FontFamily="Roboto"
+                   FontSize="20"
+                   HorizontalAlignment="Center"
+                       Foreground="{StaticResource BlueDarkColor}"/>
+            <Separator Height="20"
+                       Background="White"></Separator>
+            <Button Style="{StaticResource normal_button_style}"
+                    Content="OK"
+                    Click="Button_Click"
+                    Width="80"
+                    Height="24"
+                    IsDefault="True"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -133,8 +133,8 @@
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock Text="{Binding Reservation.Status}"/>
-                                    <TextBlock Text="{Binding Status}"/>
+                                    <TextBlock Text="{Binding Reservation.FormatedStatus}"/>
+                                    <TextBlock Text="{Binding FormatedStatus}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
@@ -142,7 +142,7 @@
 
                     <!--NIVEL-->
                     <DataGridTextColumn Header="Nivel"
-                                      Binding="{Binding Level}"
+                                      Binding="{Binding FormatedLevel}"
                                       Width="120" />
 
                     <!--JUGADORES-->

@@ -124,7 +124,7 @@
 
                     <!-- ESTADO -->
                     <DataGridTextColumn Header="Estado"
-                                        Binding="{Binding Status}"
+                                        Binding="{Binding FormatedStatus}"
                                         Width="*" />
 
                     <!--FECHA CREACION-->
@@ -150,6 +150,10 @@
                                                     <Setter Property="IsEnabled" Value="True"/>
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Binding Status}" Value="CANCELLED">
+                                                    <Setter Property="Visibility" Value="Hidden"/>
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Status}" Value="COMPLETED">
                                                     <Setter Property="Visibility" Value="Hidden"/>
                                                     <Setter Property="IsEnabled" Value="False"/>
                                                 </DataTrigger>

@@ -35,6 +35,17 @@
 
         <!-- HEADER  -->
         <Grid Background="{DynamicResource BluePrimaryColor}" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="256"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="1"
+                       Text="{Binding LoggedUser.AccountInfo.Username}"
+                       Foreground="White"
+                       FontSize="60"/>
         </Grid>
 
         <!-- CONTENIDO PRINCIPAL -->
@@ -123,7 +134,8 @@
                     </Button>
 
                     <!-- CREAR PARTIDO -->
-                    <Button Style="{StaticResource menubar_buttons_style}">
+                    <Button Style="{StaticResource menubar_buttons_style}"
+                            Command="{Binding CreateMatchCommand}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="CalendarPlus"
                                                      Style="{StaticResource menubar_icons_style}"/>

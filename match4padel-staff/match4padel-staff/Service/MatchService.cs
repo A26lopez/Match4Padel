@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -110,6 +111,43 @@ namespace match4padel_staff.Service
                 });
             }
 
+        }
+
+        public async Task<object> CreateMatch(long userId, long courtId, string level, DateTime date, TimeSpan startTime)
+        {
+            var data = new
+            {
+                reservation = new
+                {
+                    court = new { id = courtId },
+                    date = date.ToString("yyyy-MM-dd"),
+                    start_time = startTime.ToString(@"hh\:mm\:ss")
+                },
+                level = level,
+                owner = new { id = userId }
+            };
+
+            var json = JsonSerializer.Serialize(data);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await HttpClientService.Instance.PostAsync($"{HttpClientService.ApiUrl}/matches", content);
+
+            var responseJson = await response.Content.ReadAsStringAsync();
+            
+            if (response.IsSuccessStatusCode)
+            {
+                return JsonSerializer.Deserialize<Match>(responseJson, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+            }
+            else
+            {
+                return JsonSerializer.Deserialize<ErrorResponse>(responseJson, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+            }
         }
 
     }

@@ -1,0 +1,194 @@
+﻿<Window x:Class="match4padel_staff.View.JoinMatchWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:match4padel_staff.View"
+        mc:Ignorable="d"
+        Title="Proceder al pago"
+        Height="330" Width="640"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        Topmost="True"
+        WindowStyle="SingleBorderWindow">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition Width="340"></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition Width="220"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="2"
+                    Grid.Row="1"
+                    Grid.RowSpan="9"
+                    Width="2"
+                    Background="{DynamicResource BluePrimaryColor}"></StackPanel>
+        <Image Grid.Column="1"
+                Grid.Row="1"
+                Grid.RowSpan="9"
+               Source="{Binding SelectedMatch.Reservation.Court.PictureFullPath}"
+               Stretch="UniformToFill"/>
+        <TextBlock Grid.Column="3"
+                   Grid.Row="1"
+                   FontSize="30"
+                   Text="{Binding SelectedMatch.Reservation.Court.Name}"
+                   FontFamily="Roboto"
+                   FontWeight="Bold"
+                   Foreground="{DynamicResource BlueDarkColor}"
+                   VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="3"
+                   Grid.Row="2"
+                   Grid.ColumnSpan="2"
+                   TextWrapping="Wrap"
+                   FontSize="13"
+                   Text="{Binding SelectedMatch.Reservation.Court.Description}"
+                   FontFamily="Roboto"
+                   Foreground="{DynamicResource BlueDarkColor}"
+                   VerticalAlignment="Top"/>
+        <StackPanel Grid.Column="3"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    Height="1"
+                    Background="{DynamicResource BluePrimaryColor}"
+                    VerticalAlignment="Top"></StackPanel>
+        <TextBlock Grid.Column="3"
+                   Grid.Row="4"
+                   FontSize="18"
+                   Text="{Binding SelectedMatch.Reservation.Court.Zone}"
+                   FontFamily="Roboto"
+                   Foreground="{DynamicResource BlueDarkColor}"
+                   VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="3"
+                   Grid.Row="5"
+                   FontSize="18"
+                   Text="{Binding SelectedMatch.Reservation.Court.Type}"
+                   FontFamily="Roboto"
+                   Foreground="{DynamicResource BlueDarkColor}"
+                   VerticalAlignment="Top"/>
+        <StackPanel Grid.Column="3"
+            Grid.Row="6"
+             Orientation="Horizontal">
+            <TextBlock FontSize="18"
+            Text="{Binding SelectedMatch.Reservation.Date, StringFormat='{}{0:dd/MM/yyyy}'}"
+            FontFamily="Roboto"
+            Foreground="{DynamicResource BlueDarkColor}"
+            VerticalAlignment="Top"/>
+            <TextBlock
+            FontSize="18"
+            Text=" - "
+            FontFamily="Roboto"
+            Foreground="{DynamicResource BlueDarkColor}"
+            VerticalAlignment="Top"/>
+            <TextBlock
+            FontSize="18"
+            Text="{Binding SelectedMatch.Reservation.StartTime, StringFormat='{}{0:hh\\:mm}'}"
+            FontFamily="Roboto"
+            Foreground="{DynamicResource BlueDarkColor}"
+            VerticalAlignment="Top"/>
+        </StackPanel>
+        <TextBlock Grid.Column="3"
+                   Grid.Row="7"
+                   FontSize="18"
+                   Text="{Binding SelectedMatch.FormatedLevel}"
+                   FontFamily="Roboto"
+                   Foreground="{DynamicResource BlueDarkColor}"
+                   VerticalAlignment="Top"/>
+        <StackPanel Grid.Column="3"
+                   Grid.Row="8"
+                    Orientation="Horizontal">
+            <TextBlock FontSize="18"
+                   Text="{Binding SelectedMatch.Reservation.Court.Price}"
+                   FontFamily="Roboto"
+                   Foreground="{DynamicResource BlueDarkColor}"
+                   VerticalAlignment="Top"/>
+            <TextBlock FontSize="18"
+                   Text=" €"
+                   FontFamily="Roboto"
+                   Foreground="{DynamicResource BlueDarkColor}"
+                   VerticalAlignment="Top"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="3"
+                   Grid.Row="9"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Bottom">
+            <TextBlock FontSize="18"
+                   Text="Total a pagar: "
+                   FontFamily="Roboto"
+                   Foreground="{DynamicResource BlueDarkColor}"
+                   VerticalAlignment="Top"/>
+            <TextBlock FontSize="18"
+                   Text="{Binding SelectedMatch.Reservation.Court.PricePerPlayer}"
+                   FontFamily="Roboto"
+                   Foreground="{DynamicResource BlueDarkColor}"
+                   VerticalAlignment="Top"/>
+            <TextBlock FontSize="18"
+                   Text=" €"
+                   FontFamily="Roboto"
+                   Foreground="{DynamicResource BlueDarkColor}"
+                   VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1"
+                  Grid.Row="11"
+                   Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+            <TextBlock Grid.Column="3"
+                 Grid.Row="7"
+                 FontSize="20"
+                 Text="Método de pago:  "
+                 FontFamily="Roboto"
+                 Foreground="{DynamicResource BlueDarkColor}"
+                 VerticalAlignment="Center"/>
+            <ComboBox Width="140"
+                  Height="24"
+                  VerticalAlignment="Center"
+                  HorizontalAlignment="Left"
+                  Foreground="{StaticResource BlueDarkColor}"
+                  FontSize="14"
+                  FontFamily="Roboto"
+                  MaxDropDownHeight="140"
+                  ItemsSource="{Binding PaymentMethods}"
+                  SelectedItem="{Binding SelectedMethod, Mode=TwoWay}">
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="3"
+                    Grid.Row="11"
+                    Orientation="Horizontal"
+                    Grid.ColumnSpan="2">
+            <Button Style="{DynamicResource normal_button_style}"
+                    Width="100"
+                    Content="Aceptar"
+                    Click="Acept_Button_Click"
+                    Margin="0 0 30 0"/>
+            <Button Style="{DynamicResource normal_button_style}"
+                    Content="Cancelar"
+                    Width="100"
+                    Click="Cancel_Button_Click"
+                    IsDefault="True"/>
+        </StackPanel>
+
+
+
+
+    </Grid>
+</Window>

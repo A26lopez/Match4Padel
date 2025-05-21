@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using match4padel_staff.Model;
 using match4padel_staff.Service;
 using match4padel_staff.View;
 using System;
@@ -13,11 +14,12 @@ namespace match4padel_staff.ViewModel
     public class MenuViewModel : BaseViewModel
     {
         public object CurrentView { get; set; }
-        public string Username { get; set; }
+        public User LoggedUser { get; set; }
+        private readonly UserService userService;
         public ICommand HomeCommand { get; }
         public ICommand ReservateCourtCommand { get; }
         public ICommand MyReservationsCommand { get; }
-        public ICommand CreateMatchLoginCommand { get; }
+        public ICommand CreateMatchCommand { get; }
         public ICommand MyMatchesCommand { get; }
         public ICommand OpenMatchesCommand { get; }
         public ICommand MyProfileCommand { get; }
@@ -25,13 +27,15 @@ namespace match4padel_staff.ViewModel
 
         public MenuViewModel()
         {
+            userService = new UserService();
             CurrentView = new HomeView();
             HomeCommand = new RelayCommand(OpenHomeView);
             ReservateCourtCommand = new RelayCommand(OpenReservateCourtView);
             MyReservationsCommand = new RelayCommand(OpenMyReservationsView);
+            CreateMatchCommand = new RelayCommand(OpenCreateMatchView);
             MyMatchesCommand = new RelayCommand(OpenMyMatchesView);
             OpenMatchesCommand = new RelayCommand(OpenOpenMatchesView);
-
+            GetUserLogged();
         }
 
         private void OpenHomeView()
@@ -49,6 +53,11 @@ namespace match4padel_staff.ViewModel
             CurrentView = new MyReservationsView();
         }
 
+        private void OpenCreateMatchView()
+        {
+            CurrentView = new CreateMatchView();
+        }
+
         private void OpenMyMatchesView()
         {
             CurrentView = new MyMatchesView();
@@ -57,6 +66,15 @@ namespace match4padel_staff.ViewModel
         private void OpenOpenMatchesView()
         {
             CurrentView = new OpenMatchesView();
+        }
+
+        private async Task GetUserLogged()
+        {
+            var response = await userService.getUserById(SessionService.Instance.UserId);
+            if (response is User user)
+            {
+                LoggedUser = user;
+            }
         }
     }
 }

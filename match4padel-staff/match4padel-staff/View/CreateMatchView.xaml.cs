@@ -1,4 +1,5 @@
-﻿using System;
+﻿using match4padel_staff.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,12 @@ namespace match4padel_staff.View
     /// </summary>
     public partial class CreateMatchView : UserControl
     {
+        private readonly CreateMatchViewModel viewModel;
         public CreateMatchView()
         {
             InitializeComponent();
+            viewModel = new CreateMatchViewModel();
+            DataContext = viewModel;
         }
     }
 }

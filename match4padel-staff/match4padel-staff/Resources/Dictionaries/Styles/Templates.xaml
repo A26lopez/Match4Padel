@@ -167,6 +167,95 @@
         </Border>
     </DataTemplate>
 
+    <!-- CARD MATCHES -->
+    <DataTemplate x:Key="CreateMatches_template" DataType="{x:Type model:Court}">
+        <Border 
+     Style="{DynamicResource HoverScaleBorderStyle}"
+     CornerRadius="10" 
+     Background="White" 
+     BorderBrush="Gray" 
+     BorderThickness="1" 
+     Padding="10" 
+     Margin="14"
+     Effect="{DynamicResource DropShadowEffect}">
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="220"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Source="{Binding PictureFullPath}" 
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="4"
+                    VerticalAlignment="Center"/>
+
+                    <StackPanel Grid.Row="0"
+                         Grid.Column="1"
+                         VerticalAlignment="Center"
+                         Margin="4">
+                        <TextBlock Text="{Binding Name}" FontSize="18"
+                            FontWeight="Bold"
+                            Foreground="{DynamicResource DarkText}" />
+                        <Separator/>
+                        <TextBlock Text="{Binding Description}" FontSize="10"
+                            Foreground="{DynamicResource DarkText}"
+                            TextWrapping="Wrap"/>
+                        <Separator/>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Zona:"
+                                Style="{StaticResource LabelTextStyle}"
+                                    FontSize="14"/>
+                            <TextBlock Text="{Binding Zone}"
+                                Style="{StaticResource ValueTextStyle}"
+                                    FontSize="14"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Tipo:"
+                                Style="{StaticResource LabelTextStyle}"
+                                    FontSize="14"/>
+                            <TextBlock Text="{Binding Type}"
+                                Style="{StaticResource ValueTextStyle}"
+                                    FontSize="14"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Precio:"
+                                Style="{StaticResource LabelTextStyle}"
+                                    FontSize="14"/>
+                            <TextBlock Text="{Binding Price}"
+                                Style="{StaticResource ValueTextStyle}" 
+                                    FontSize="14"/>
+                            <TextBlock Text="€" Style="{StaticResource ValueTextStyle}"
+                                    FontSize="14"/>
+                        </StackPanel>
+
+
+                    </StackPanel>
+
+                </Grid>
+                <Button Content="Crear partido"
+                     Margin="0 5 0 0"
+                     HorizontalAlignment="Right"
+                     Width="120"
+                     Height="30"
+                     Grid.Row="1" Grid.ColumnSpan="2" 
+                     Style="{DynamicResource normal_button_style}"
+                     Cursor="Hand"
+                     Command="{Binding DataContext.CreateMatchCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                     CommandParameter="{Binding}"/>
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+
     <!-- DATA GRID -->
     <Style x:Key="dataGrid_style" TargetType="DataGrid">
         <Setter Property="AutoGenerateColumns" Value="False"/>

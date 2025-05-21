@@ -69,6 +69,17 @@ namespace match4padel_staff.ViewModel
         {
             if (match == null) return;
 
+            var boxResult = MessageBox.Show(
+                                "¿Estás seguro de que deseas abandonar este partido?",
+                                "Confirmar",
+                                MessageBoxButton.YesNo,
+                                MessageBoxImage.Warning
+                            );
+
+            if (boxResult != MessageBoxResult.Yes)
+                return;
+
+
             var result = await matchService.leaveMatch(match.Id, SessionService.Instance.UserId);
 
             if (result is Match m)

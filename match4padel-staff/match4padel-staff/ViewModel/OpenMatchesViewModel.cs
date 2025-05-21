@@ -18,14 +18,23 @@ namespace match4padel_staff.ViewModel
     {
         public ObservableCollection<Match> Matches { get; set; }
         public IAsyncRelayCommand joinMatchCommand { get; }
+        public Match SelectedMatch { get; set; }
+        public string SelectedLevel { get; set; }
+        public List<string> PaymentMethods { get; set; }
+        public string SelectedMethod { get; set; }
+
 
         private readonly MatchService matchService;
+        private readonly PaymentService paymentService;
 
         public OpenMatchesViewModel()
         {
             matchService = new MatchService();
+            paymentService = new PaymentService();
             Matches = new ObservableCollection<Match>();
             joinMatchCommand = new AsyncRelayCommand<Match>(joinMatch);
+            PaymentMethods = new List<string> { "Tarjeta", "Efectivo", "ApplePay" };
+            SelectedMethod = PaymentMethods.First();
             LoadMatches();
         }
 
@@ -48,31 +57,68 @@ namespace match4padel_staff.ViewModel
         private async Task joinMatch(Match match)
         {
             if (match == null) return;
-
-            var result = await matchService.joinMatch(match.Id, SessionService.Instance.UserId);
-
-            if (result is Match m)
+            SelectedMatch = match;
+            var window = new JoinMatchWindowView
             {
-                if (m.Player1 != null)
-                {
-                    match.Player1 = m.Player1;
-                }
-                if (m.Player2 != null)
-                {
-                    match.Player2 = m.Player2;
-                }
-                if (m.Player2 != null)
-                {
-                    match.Player3 = m.Player3;
-                }
-                match.Status = m.Status;
-            }
-            else if (result is ErrorResponse e)
+                Owner = Application.Current.MainWindow,
+                DataContext = this
+            };
+
+            bool? windowResult = window.ShowDialog();
+            if (windowResult == true)
             {
-                MessageBox.Show(e.Error, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                var result = await matchService.joinMatch(match.Id, SessionService.Instance.UserId);
+
+                if (result is Match m)
+                {
+                    var paymentResult = await paymentService.getPaymentByReservationId(match.Reservation.Id);
+                    if (paymentResult is List<Payment> payments)
+                    {
+                        foreach (Payment p in payments)
+                        {
+                            if (p.User.Id == SessionService.Instance.UserId && p.Status == "PENDING")
+                            {
+                                switch (SelectedMethod)
+                                {
+                                    case "Tarjeta":
+                                        SelectedMethod = "CARD";
+                                        break;
+                                    case "Efectivo":
+                                        SelectedMethod = "CASH";
+                                        break;
+                                    case "ApplePay":
+                                        SelectedMethod = "APPLE_PAY";
+                                        break;
+
+                                }
+                                await paymentService.completePayment(p.Id, SelectedMethod);
+
+                                var okWindow = new JoinedMatchWindow
+                                {
+                                    Owner = Application.Current.MainWindow
+                                };
+                                okWindow.ShowDialog();
+                                if (m.Player1 != null)
+                                {
+                                    match.Player1 = m.Player1;
+                                }
+                                if (m.Player2 != null)
+                                {
+                                    match.Player2 = m.Player2;
+                                }
+                                if (m.Player2 != null)
+                                {
+                                    match.Player3 = m.Player3;
+                                }
+                                match.Status = m.Status;
+                            }
+                        }
+
+                    }
+                }
             }
+
+
         }
-
-
     }
 }

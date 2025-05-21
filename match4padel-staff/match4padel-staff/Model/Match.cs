@@ -63,6 +63,49 @@ namespace match4padel_staff.Model
                        Player3?.Id == userId;
             }
         }
+
+        public string FormatedStatus
+        {
+            get
+            {
+                switch (Status)
+                {
+                    case "OPEN":
+                        return "Abierto";
+                        break;
+                    case "CLOSED":
+                        return "Cerrado";
+                        break;
+                    default:
+                        return Status;
+                }
+            }
+        }
+
+        public string FormatedLevel
+        {
+            get
+            {
+                switch (Level)
+                {
+                    case "BEGINNER":
+                        return "Principiante";
+                        break;
+                    case "INTERMEDIATE":
+                        return "Intermedio";
+                        break;
+                    case "ADVANCED":
+                        return "Avanzado";
+                        break;
+                    case "EXPERT":
+                        return "Experto";
+                        break;
+                    default:
+                        return Level;
+
+                }
+            }
+        }
     }
 
 

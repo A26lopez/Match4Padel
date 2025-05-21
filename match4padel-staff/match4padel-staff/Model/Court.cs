@@ -24,6 +24,14 @@ namespace match4padel_staff.Model
         public string CourtType { get; set; }
         [JsonPropertyName("price_per_match")]
         public decimal PricePerMatch { get; set; }
+        
+        public string PricePerPlayer
+        {
+            get
+            {
+                return (PricePerMatch / 4).ToString("F1");
+            }
+        }
 
         [JsonIgnore]
         public string PictureFullPath

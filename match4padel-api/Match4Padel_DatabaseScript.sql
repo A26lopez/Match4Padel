@@ -114,7 +114,7 @@ CREATE TABLE payments (
 
 
 -- Insert Pistas --
-INSERT INTO courts (name, description, court_zone, court_type, price_per_match)
+INSERT INTO courts (name, description, picture_url, court_zone, court_type, price_per_match)
 VALUES 
 ('Pista 1', 'Pista cubierta de pádel con superficie dura, ideal para todo clima.', 'court1', 'INDOOR', 'HARD_COURT', 20.00),
 ('Pista 2', 'Pista cubierta de pádel con superficie dura, ideal para todo clima.', 'court1','INDOOR', 'HARD_COURT', 20.00),
@@ -135,8 +135,8 @@ AÑADIR USER
 
 {
   "account_info": {
-    "username": "Alex92"
-  },
+    "username": "Alex92"                   
+  },  
   "account_security": {
     "password": "Djales1992."
   },

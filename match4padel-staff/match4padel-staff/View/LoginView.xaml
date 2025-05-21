@@ -16,7 +16,7 @@
             <ColumnDefinition Width="2px"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid x:Name="login_form_grid" Grid.Column="0"
+        <Grid      Grid.Column="0"
                    Background="{StaticResource login_screen_background}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -35,7 +35,7 @@
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="14"/>
-                <RowDefinition Height="20"/>
+                <RowDefinition Height="24"/>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
@@ -101,12 +101,20 @@
                     CommandParameter="{Binding ElementName=password_textBox}"/>
 
 
-            <TextBlock x:Name="signUp"
-                       Grid.Row="16"
-                       Grid.Column="1"
-                       Text="Regístrate aquí"
-                       Style="{StaticResource special_text_style}"
-                       TextAlignment="Center"/>
+            
+            <Button Grid.Row="16"
+                       Content="Registrate aquí"
+                        Grid.Column="1"
+                        FontSize="14"
+                         Width="100"
+                    Height="20"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Foreground="{StaticResource BlueDarkColor}"
+                    FontFamily="Roboto"
+                    Cursor="Hand"
+                    Command="{Binding OpenSignUpWindowCommand}">
+            </Button>
 
         </Grid>
         <Grid Grid.Column="1"

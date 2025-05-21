@@ -103,3 +103,15 @@ C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-st
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\ReservationWindowView.baml
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\ReservationCreatedWindow.g.cs
 C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\ReservationCreatedWindow.baml
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\MatchWindowView.g.cs
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\MatchWindowView.baml
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\MatchCreatedWindow.g.cs
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\MatchCreatedWindow.baml
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\JoinMatchWindowView.g.cs
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\JoinMatchWindowView.baml
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\JoinedMatchWindow.g.cs
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\JoinedMatchWindow.baml
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\SignUpWindow.g.cs
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\SignUpWindow.baml
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\UserCreatedWindow.g.cs
+C:\Users\alexl\OneDrive\Desktop\TFG\Match4Padel\match4padel-staff\match4padel-staff\obj\Debug\View\UserCreatedWindow.baml

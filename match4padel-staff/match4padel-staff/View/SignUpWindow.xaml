@@ -1,0 +1,239 @@
+﻿<Window x:Class="match4padel_staff.View.SignUpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:match4padel_staff.View"
+        mc:Ignorable="d"
+        Title="Registrate" Height="700" Width="576"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="SingleBorderWindow">
+    <Grid Background="{StaticResource login_screen_background}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition> 
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Regístrate"
+                   FontSize="38"
+                         Style="{StaticResource view_headers_style}"
+                         Grid.Column="1"
+                  Grid.Row="1"
+                   Grid.ColumnSpan="3"></TextBlock>
+
+        <!-- NOMBRE -->
+        <StackPanel Grid.Column="1"
+                    Grid.Row="3">
+            <TextBlock Text="Nombre"
+                     Style="{StaticResource headers_text_style}"/>
+            <TextBox Style="{StaticResource textBox}"
+                     Text="{Binding FirstName, Mode=TwoWay}"/>
+            <TextBlock Style="{StaticResource normal_text_style}"
+                       Text="{Binding FirstNameError, Mode=TwoWay}"
+                       FontSize="12"
+                       TextWrapping="Wrap"
+                       Foreground="Red"/>
+        </StackPanel>
+        
+        <!-- APELLIDOS -->
+        <StackPanel Grid.Column="3"
+                    Grid.Row="3">
+            <TextBlock Text="Apellidos"
+                     Style="{StaticResource headers_text_style}"/>
+            <TextBox Style="{StaticResource textBox}"
+                     Text="{Binding LastName, Mode=TwoWay}"/>
+            <TextBlock Style="{StaticResource normal_text_style}"
+                       Text="{Binding LastNameError, Mode=TwoWay}"
+                       FontSize="12"
+                       TextWrapping="Wrap"
+                       Foreground="Red"/>
+        </StackPanel>
+
+        <!-- USUARIO -->
+        <StackPanel Grid.Column="1"
+                    Grid.Row="5">
+            <TextBlock Text="Nombre de usuario"
+                     Style="{StaticResource headers_text_style}"/>
+            <TextBox Style="{StaticResource textBox}"
+                     Text="{Binding Username, Mode=TwoWay}"/>
+            <TextBlock Style="{StaticResource normal_text_style}"
+                       Text="{Binding UsernameError, Mode=TwoWay}"
+                       FontSize="12"
+                       TextWrapping="Wrap"
+                       Foreground="Red"/>
+        </StackPanel>
+
+        <!-- EMAIL -->
+        <StackPanel Grid.Column="3"
+                    Grid.Row="5">
+            <TextBlock Text="Email"
+                     Style="{StaticResource headers_text_style}"/>
+            <TextBox Style="{StaticResource textBox}"
+                     Text="{Binding Email, Mode=TwoWay}"/>
+            <TextBlock Style="{StaticResource normal_text_style}"
+                       Text="{Binding EmailError, Mode=TwoWay}"
+                       FontSize="12"
+                       TextWrapping="Wrap"
+                       Foreground="Red"/>
+        </StackPanel>
+
+        <!-- CONTRASEÑA -->
+        <StackPanel Grid.Column="1"
+                    Grid.Row="7">
+            <TextBlock Text="Contraseña"
+                     Style="{StaticResource headers_text_style}"/>
+            <PasswordBox Style="{StaticResource passwordBox}"
+                         PasswordChanged="PasswordBox_PasswordChanged"/>
+            <TextBlock Style="{StaticResource normal_text_style}"
+                       Text="{Binding PasswordError, Mode=TwoWay}"
+                       FontSize="12"
+                       TextWrapping="Wrap"
+                       Foreground="Red"/>
+        </StackPanel>
+
+        <!-- CONFIRMAR CONTRASEÑA -->
+        <StackPanel Grid.Column="3"
+                    Grid.Row="7">
+            <TextBlock Text="Confirmar contraseña"
+                     Style="{StaticResource headers_text_style}"/>
+            <PasswordBox Style="{StaticResource passwordBox}"
+                         PasswordChanged="ConfirmPasswordBox_PasswordChanged"/>
+            <TextBlock Style="{StaticResource normal_text_style}"
+                       Text="{Binding ConfirmPasswordError, Mode=TwoWay}"
+                       FontSize="12"
+                       TextWrapping="Wrap"
+                       Foreground="Red"/>
+        </StackPanel>
+
+        <!-- NUMERO TELEFONO -->
+        <StackPanel Grid.Column="1"
+                    Grid.Row="9">
+            <TextBlock Text="Número de teléfono"
+                     Style="{StaticResource headers_text_style}"/>
+            <TextBox Style="{StaticResource textBox}"
+                     Text="{Binding PhoneNumber, Mode=TwoWay}"/>
+            <TextBlock Style="{StaticResource normal_text_style}"
+                       Text="{Binding PhoneNumberError, Mode=TwoWay}"
+                       FontSize="12"
+                       TextWrapping="Wrap"
+                       Foreground="Red"/>
+        </StackPanel>
+
+        <!-- NIF -->
+        <StackPanel Grid.Column="3"
+                    Grid.Row="9">
+            <TextBlock Text="N.I.F."
+                     Style="{StaticResource headers_text_style}"/>
+            <TextBox Style="{StaticResource textBox}"
+                     Text="{Binding Nif, Mode=TwoWay}"/>
+            <TextBlock Style="{StaticResource normal_text_style}"
+                       Text="{Binding NifError, Mode=TwoWay}"
+                       FontSize="12"
+                       TextWrapping="Wrap"
+                       Foreground="Red"/>
+        </StackPanel>
+
+
+        <!-- FECHA DE NACIMIENTO -->
+        <StackPanel Grid.Column="1"
+                    Grid.Row="11">
+            <TextBlock Text="Fecha de nacimiento"
+                     Style="{StaticResource headers_text_style}"/>
+            <DatePicker x:Name="reservations_calendar"
+                        Width="210"
+                          FontFamily="Roboto"
+                          Foreground="{StaticResource DarkText}"
+                          FontSize="16"
+                          SelectedDate="{Binding BirthDate, Mode=TwoWay}"
+                          HorizontalAlignment="Left"
+                          BorderThickness="0"
+                          Background="{StaticResource GrayLightDecoration}"
+                          BorderBrush="{StaticResource BluePrimaryColor}"
+                        Height="25"
+                        Margin="0 2 0 0">
+                <DatePicker.Resources>
+                    <Style TargetType="DatePickerTextBox">
+                        <Setter Property="Foreground" Value="{StaticResource BlueDarkColor}"/>
+                        <Setter Property="Text" Value=" " />
+                        <Setter Property="IsHitTestVisible" Value="False"/>
+                        <Setter Property="IsReadOnly" Value="True"/>
+                    </Style>
+                </DatePicker.Resources>
+            </DatePicker>
+            <TextBlock Style="{StaticResource normal_text_style}"
+                       Text="{Binding BirthDateError, Mode=TwoWay}"
+                       FontSize="12"
+                       TextWrapping="Wrap"
+                       Foreground="Red"/>
+        </StackPanel>
+
+        <!-- NIVEL -->
+        <StackPanel Grid.Column="3"
+                    Grid.Row="11">
+            <TextBlock Text="Nivel"
+                     Style="{StaticResource headers_text_style}"/>
+            <ComboBox Width="204"
+                      BorderBrush="{StaticResource GrayDarkDecoration}"
+                      BorderThickness="1"
+                      FontFamily="Roboto"
+                      Foreground="{StaticResource DarkText}"
+                      FontSize="16"
+                      HorizontalAlignment="Left"
+                      Background="{StaticResource GrayLightDecoration}"
+                      Height="25"
+                      Margin="0 2 0 0"
+                      SelectedValue="{Binding Level, Mode=TwoWay}"
+                      SelectedValuePath="Content">
+                <ComboBoxItem Content="Principiante"></ComboBoxItem>
+                <ComboBoxItem Content="Intermedio"></ComboBoxItem>
+                <ComboBoxItem Content="Avanzado"></ComboBoxItem>
+                <ComboBoxItem Content="Experto"></ComboBoxItem>
+            </ComboBox>
+            <TextBlock Style="{StaticResource normal_text_style}"
+                       Text="{Binding LevelError, Mode=TwoWay}"
+                       FontSize="12"
+                       TextWrapping="Wrap"
+                       Foreground="Red"/>
+        </StackPanel>
+        <TextBlock Style="{StaticResource normal_text_style}"
+                   FontSize="16"
+                   Grid.Column="1"
+                   Grid.Row="12"
+                   Grid.ColumnSpan="3"
+                   Text="{Binding Error}"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Foreground="Red"/>
+
+        <Button Style="{StaticResource normal_button_style}"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="13"
+                Height="30"
+                Click="Button_Click"
+                Content="Registrarse"
+                Command="{Binding SignUpCommand}"/>
+    </Grid>
+    
+</Window>

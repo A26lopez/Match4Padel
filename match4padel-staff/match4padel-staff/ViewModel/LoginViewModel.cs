@@ -24,6 +24,7 @@ namespace match4padel_staff.ViewModel
         public string ErrorMessage { get; set; }
         public IAsyncRelayCommand LoginCommand { get; }
         public ICommand RememberPasswordCommand { get; }
+        public ICommand OpenSignUpWindowCommand { get; }
         public ICommand SignUpCommand { get; }
 
         public LoginViewModel()
@@ -33,6 +34,7 @@ namespace match4padel_staff.ViewModel
             ErrorMessage = "";
             loginService = new LoginService();
             LoginCommand = new AsyncRelayCommand(Login);
+            OpenSignUpWindowCommand = new RelayCommand(OpenSignUpWindow);
         }
 
         private async Task Login()
@@ -48,7 +50,7 @@ namespace match4padel_staff.ViewModel
             }
             else if (result is ErrorResponse error)
             {
-                ErrorMessage = $"❗ {error.Error}";
+                ErrorMessage = $"❗{error.Error}";
             }
         }
 
@@ -58,7 +60,19 @@ namespace match4padel_staff.ViewModel
             menuView.Show();
         }
 
+        private void OpenSignUpWindow()
+        {
+            var signUpWindow = new SignUpWindow();
+            signUpWindow.Owner = Application.Current.MainWindow;
+            bool? windowResult = signUpWindow.ShowDialog();
+            if (windowResult == true)
+            {
+                var userCreatedWindow = new UserCreatedWindow();
+                userCreatedWindow.Owner = Application.Current.MainWindow;
+                userCreatedWindow.ShowDialog();
+            }
 
+        }
 
     }
 

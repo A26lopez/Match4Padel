@@ -76,7 +76,6 @@ public class MatchService {
         reservationService.createReservation(reservation);
         match.setReservation(reservation);
         match.setOwner(owner);
-        match.setLevel(owner.getLevel());
         return matchRepository.save(match);
     }
 

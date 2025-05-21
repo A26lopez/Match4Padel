@@ -30,21 +30,19 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="20"></RowDefinition>
             <RowDefinition Height="30"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
 
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="2"
                     Grid.Row="1"
-                    Grid.RowSpan="8"
+                    Grid.RowSpan="7"
                     Width="2"
                     Background="{DynamicResource BluePrimaryColor}"></StackPanel>
         <Image Grid.Column="1"
                 Grid.Row="1"
-                Grid.RowSpan="8"
+                Grid.RowSpan="7"
                Source="{Binding SelectedCourt.PictureFullPath}"
                Stretch="UniformToFill"/>
         <TextBlock Grid.Column="3"
@@ -88,6 +86,27 @@
                    Grid.Row="6"
                     Orientation="Horizontal">
             <TextBlock FontSize="18"
+                   Text="{Binding SelectedDate, StringFormat='{}{0:dd/MM/yyyy}'}"
+                   FontFamily="Roboto"
+                   Foreground="{DynamicResource BlueDarkColor}"
+                   VerticalAlignment="Top"/>
+            <TextBlock
+                   FontSize="18"
+                   Text=" - "
+                   FontFamily="Roboto"
+                   Foreground="{DynamicResource BlueDarkColor}"
+                   VerticalAlignment="Top"/>
+            <TextBlock
+                   FontSize="18"
+                   Text="{Binding SelectedHour, StringFormat='{}{0:hh\\:mm}'}"
+                   FontFamily="Roboto"
+                   Foreground="{DynamicResource BlueDarkColor}"
+                   VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel Grid.Column="3"
+                   Grid.Row="7"
+                    Orientation="Horizontal">
+            <TextBlock FontSize="18"
                    Text="{Binding SelectedCourt.Price}"
                    FontFamily="Roboto"
                    Foreground="{DynamicResource BlueDarkColor}"
@@ -98,26 +117,11 @@
                    Foreground="{DynamicResource BlueDarkColor}"
                    VerticalAlignment="Top"/>
         </StackPanel>
-        <TextBlock Grid.Column="3"
-                   Grid.Row="7"
-                   FontSize="18"
-                   Text="{Binding SelectedDate, StringFormat='{}{0:dd/MM/yyyy}'}"
-                   FontFamily="Roboto"
-                   Foreground="{DynamicResource BlueDarkColor}"
-                   VerticalAlignment="Top"/>
-        <TextBlock Grid.Column="3"
-                   Grid.Row="8"
-                   FontSize="18"
-                   Text="{Binding SelectedHour, StringFormat='{}{0:hh\\:mm}'}"
-                   FontFamily="Roboto"
-                   Foreground="{DynamicResource BlueDarkColor}"
-                   VerticalAlignment="Top"/>
         <StackPanel Grid.Column="1"
-                  Grid.Row="11"
+                  Grid.Row="9"
                    Orientation="Horizontal"
                     HorizontalAlignment="Right">
             <TextBlock Grid.Column="3"
-                 Grid.Row="6"
                  FontSize="20"
                  Text="Método de pago:  "
                  FontFamily="Roboto"
@@ -137,17 +141,19 @@
         </StackPanel>
 
         <StackPanel Grid.Column="3"
-                    Grid.Row="11"
-                    Orientation="Horizontal">
+                    Grid.Row="9"
+                    Orientation="Horizontal"
+                    Grid.ColumnSpan="2">
             <Button Style="{DynamicResource normal_button_style}"
                     Width="100"
                     Content="Aceptar"
                     Click="Acept_Button_Click"
-                    Margin="0 0 20 0"/>
+                    Margin="0 0 30 0"/>
             <Button Style="{DynamicResource normal_button_style}"
                     Content="Cancelar"
                     Width="100"
-                    Click="Cancel_Button_Click"/>
+                    Click="Cancel_Button_Click"
+                    IsDefault="True"/>
         </StackPanel>
 
 
