@@ -1,18 +1,10 @@
-﻿using PropertyChanged;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using System.Windows;
-using System.Xml.Linq;
-using match4padel_staff.Service;
-using System.Windows.Controls;
+﻿using CommunityToolkit.Mvvm.Input;
 using match4padel_staff.Model;
+using match4padel_staff.Service;
 using match4padel_staff.View;
-using CommunityToolkit.Mvvm.Input;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 
 namespace match4padel_staff.ViewModel
 {
@@ -46,7 +38,7 @@ namespace match4padel_staff.ViewModel
                 OpenMainWindow();
                 var loginWindow = Application.Current.MainWindow;
                 loginWindow.Close();
-                
+
             }
             else if (result is ErrorResponse error)
             {

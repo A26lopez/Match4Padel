@@ -1,13 +1,9 @@
 ﻿using match4padel_staff.Model;
 using match4padel_staff.Model.Responses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace match4padel_staff.Service
 {
@@ -40,7 +36,7 @@ namespace match4padel_staff.Service
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await HttpClientService.Instance.PostAsync($"{HttpClientService.ApiUrl}/users", content);
             var responseJson = await response.Content.ReadAsStringAsync();
-            
+
             if (response.IsSuccessStatusCode)
             {
                 return JsonSerializer.Deserialize<User>(responseJson, new JsonSerializerOptions

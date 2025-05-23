@@ -1,12 +1,10 @@
 ﻿using match4padel_staff.Model;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using System.Windows;
 
 namespace match4padel_staff.Service
 {
@@ -71,7 +69,7 @@ namespace match4padel_staff.Service
                 });
             }
         }
-    
+
         public async Task<object> joinMatch(long matchId, long userId)
         {
             var response = await HttpClientService.Instance.PostAsync($"{HttpClientService.ApiUrl}/matches/{matchId}/add/{userId}", null);
@@ -133,7 +131,7 @@ namespace match4padel_staff.Service
             var response = await HttpClientService.Instance.PostAsync($"{HttpClientService.ApiUrl}/matches", content);
 
             var responseJson = await response.Content.ReadAsStringAsync();
-            
+
             if (response.IsSuccessStatusCode)
             {
                 return JsonSerializer.Deserialize<Match>(responseJson, new JsonSerializerOptions

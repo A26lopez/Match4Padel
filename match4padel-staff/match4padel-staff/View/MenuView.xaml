@@ -42,10 +42,24 @@
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Column="1"
-                       Text="{Binding LoggedUser.AccountInfo.Username}"
-                       Foreground="White"
-                       FontSize="60"/>
+            <StackPanel Orientation="Horizontal"
+                        Grid.Column="1">
+                <TextBlock Grid.Column="1"
+                           Text="¡Bienvenido, "
+                           Foreground="White"
+                           FontSize="40"
+            VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="1"
+            Text="{Binding LoggedUser.AccountInfo.Username}"
+            Foreground="White"
+            FontSize="40"
+            VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="1"
+                            Text="!"
+                            Foreground="White"
+                            FontSize="40"
+                            VerticalAlignment="Center"/>
+            </StackPanel>
         </Grid>
 
         <!-- CONTENIDO PRINCIPAL -->

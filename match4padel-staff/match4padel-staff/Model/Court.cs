@@ -1,12 +1,5 @@
-﻿
-using match4padel_staff.Properties;
-using PropertyChanged;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using PropertyChanged;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace match4padel_staff.Model
 {
@@ -24,7 +17,7 @@ namespace match4padel_staff.Model
         public string CourtType { get; set; }
         [JsonPropertyName("price_per_match")]
         public decimal PricePerMatch { get; set; }
-        
+
         public string PricePerPlayer
         {
             get

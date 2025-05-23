@@ -2,14 +2,10 @@
 using match4padel_staff.Model;
 using match4padel_staff.Service;
 using match4padel_staff.View;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Input;
 
 namespace match4padel_staff.ViewModel
 {

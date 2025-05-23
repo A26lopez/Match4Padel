@@ -1,11 +1,6 @@
 ﻿using match4padel_staff.Service;
 using PropertyChanged;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace match4padel_staff.Model
 {

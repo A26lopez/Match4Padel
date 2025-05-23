@@ -1,10 +1,8 @@
 ﻿using match4padel_staff.Model;
 using System.Net.Http;
-using System.Text.Json;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
-using System;
-using System.Windows;
 
 namespace match4padel_staff.Service
 {
