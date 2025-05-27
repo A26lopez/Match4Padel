@@ -1,15 +1,11 @@
 ﻿using match4padel_staff.Model;
-using match4padel_staff.Model.Responses;
-using System.Net.Http;
-using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace match4padel_staff.Service
 {
-    class UserService
+    public static class UserService
     {
-        public async Task<object> CreateUser(User user)
+        public static async Task<object> CreateUser(User user)
         {
             var data = new
             {
@@ -32,46 +28,13 @@ namespace match4padel_staff.Service
                 },
                 level = user.FormatedLevel
             };
-            var json = JsonSerializer.Serialize(data);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await HttpClientService.Instance.PostAsync($"{HttpClientService.ApiUrl}/users", content);
-            var responseJson = await response.Content.ReadAsStringAsync();
 
-            if (response.IsSuccessStatusCode)
-            {
-                return JsonSerializer.Deserialize<User>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
-            else
-            {
-                return JsonSerializer.Deserialize<ValidationsResponse>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
+            return await HttpClientService.SafePostAsync<User>("/users", data);
         }
 
-        public async Task<object> getUserById(long userId)
+        public static async Task<object> GetUserById(long userId)
         {
-            var response = await HttpClientService.Instance.GetAsync($"{HttpClientService.ApiUrl}/users/{userId}");
-            var responseJson = await response.Content.ReadAsStringAsync();
-            if (response.IsSuccessStatusCode)
-            {
-                return JsonSerializer.Deserialize<User>(responseJson, new JsonSerializerOptions
-                {
-
-                    PropertyNameCaseInsensitive = true
-                });
-            }
-            else
-            {
-                return JsonSerializer.Deserialize<ErrorResponse>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
+            return await HttpClientService.SafeGetAsync<User>($"/users/{userId}");
         }
     }
 }

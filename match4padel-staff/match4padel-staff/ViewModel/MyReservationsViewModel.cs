@@ -14,11 +14,9 @@ namespace match4padel_staff.ViewModel
         public ObservableCollection<Reservation> Reservations { get; set; }
         public IAsyncRelayCommand CancelReservationCommand { get; }
 
-        private readonly ReservationService reservationService;
 
         public MyReservationsViewModel()
         {
-            reservationService = new ReservationService();
             Reservations = new ObservableCollection<Reservation>();
             CancelReservationCommand = new AsyncRelayCommand<Reservation>(CancelReservation);
             LoadReservations();
@@ -26,7 +24,7 @@ namespace match4padel_staff.ViewModel
 
         private async Task LoadReservations()
         {
-            var result = await reservationService.getReservationsByUserId(SessionService.Instance.UserId);
+            var result = await ReservationService.GetReservationsByUserId(SessionService.Instance.UserId);
             if (result is List<Reservation> reservationList)
             {
                 foreach (var r in reservationList)
@@ -40,7 +38,7 @@ namespace match4padel_staff.ViewModel
             }
         }
 
-        private async Task CancelReservation(Reservation reservation)
+        private static async Task CancelReservation(Reservation reservation)
         {
             if (reservation == null) return;
 
@@ -54,9 +52,9 @@ namespace match4padel_staff.ViewModel
             if (boxResult != MessageBoxResult.Yes)
                 return;
 
-            var result = await reservationService.cancelReservationById(reservation.Id);
+            var result = await ReservationService.CancelReservationById(reservation.Id);
 
-            if (result is Reservation r)
+            if (result is Reservation)
             {
                 reservation.Status = "CANCELLED";
             }

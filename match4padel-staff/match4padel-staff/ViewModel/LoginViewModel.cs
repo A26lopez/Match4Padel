@@ -10,7 +10,6 @@ namespace match4padel_staff.ViewModel
 {
     public class LoginViewModel : BaseViewModel
     {
-        private readonly LoginService loginService;
         public string Username { get; set; }
         public string Password { get; set; }
         public string ErrorMessage { get; set; }
@@ -24,14 +23,13 @@ namespace match4padel_staff.ViewModel
             Username = "";
             Password = "";
             ErrorMessage = "";
-            loginService = new LoginService();
             LoginCommand = new AsyncRelayCommand(Login);
             OpenSignUpWindowCommand = new RelayCommand(OpenSignUpWindow);
         }
 
         private async Task Login()
         {
-            var result = await loginService.LoginAsync(Username, Password);
+            var result = await LoginService.LoginAsync(Username, Password);
             if (result is LoginResponse login)
             {
                 SessionService.Instance.SetSession(login.Token, login.UserId);
@@ -52,18 +50,11 @@ namespace match4padel_staff.ViewModel
             menuView.Show();
         }
 
-        private void OpenSignUpWindow()
+        private static void OpenSignUpWindow()
         {
             var signUpWindow = new SignUpWindow();
             signUpWindow.Owner = Application.Current.MainWindow;
-            bool? windowResult = signUpWindow.ShowDialog();
-            if (windowResult == true)
-            {
-                var userCreatedWindow = new UserCreatedWindow();
-                userCreatedWindow.Owner = Application.Current.MainWindow;
-                userCreatedWindow.ShowDialog();
-            }
-
+            signUpWindow.ShowDialog();
         }
 
     }

@@ -11,7 +11,6 @@ namespace match4padel_staff.ViewModel
     {
         public object CurrentView { get; set; }
         public User LoggedUser { get; set; }
-        private readonly UserService userService;
         public ICommand HomeCommand { get; }
         public ICommand ReservateCourtCommand { get; }
         public ICommand MyReservationsCommand { get; }
@@ -23,7 +22,6 @@ namespace match4padel_staff.ViewModel
 
         public MenuViewModel()
         {
-            userService = new UserService();
             CurrentView = new HomeView();
             HomeCommand = new RelayCommand(OpenHomeView);
             ReservateCourtCommand = new RelayCommand(OpenReservateCourtView);
@@ -66,7 +64,7 @@ namespace match4padel_staff.ViewModel
 
         private async Task GetUserLogged()
         {
-            var response = await userService.getUserById(SessionService.Instance.UserId);
+            var response = await UserService.GetUserById(SessionService.Instance.UserId);
             if (response is User user)
             {
                 LoggedUser = user;

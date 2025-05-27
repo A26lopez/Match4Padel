@@ -38,13 +38,10 @@ namespace match4padel_staff.Model
                 {
                     case "CONFIRMED":
                         return "Confirmado";
-                        break;
                     case "COMPLETED":
                         return "Completado";
-                        break;
                     case "CANCELLED":
                         return "Cancelado";
-                        break;
                     default:
                         return Status;
                 }

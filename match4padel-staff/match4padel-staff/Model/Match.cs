@@ -67,10 +67,8 @@ namespace match4padel_staff.Model
                 {
                     case "OPEN":
                         return "Abierto";
-                        break;
                     case "CLOSED":
                         return "Cerrado";
-                        break;
                     default:
                         return Status;
                 }
@@ -85,16 +83,12 @@ namespace match4padel_staff.Model
                 {
                     case "BEGINNER":
                         return "Principiante";
-                        break;
                     case "INTERMEDIATE":
                         return "Intermedio";
-                        break;
                     case "ADVANCED":
                         return "Avanzado";
-                        break;
                     case "EXPERT":
                         return "Experto";
-                        break;
                     default:
                         return Level;
 

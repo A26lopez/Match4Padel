@@ -44,7 +44,7 @@ namespace match4padel_staff.Model
         [JsonIgnore]
         public string Price => PricePerMatch.ToString("F1");
 
-        private string TranslateCourtType(string type)
+        private static string TranslateCourtType(string type)
         {
             switch (type)
             {
@@ -57,7 +57,7 @@ namespace match4padel_staff.Model
             }
         }
 
-        private string TranslateCourtZone(string zone)
+        private static string TranslateCourtZone(string zone)
         {
             switch (zone)
             {

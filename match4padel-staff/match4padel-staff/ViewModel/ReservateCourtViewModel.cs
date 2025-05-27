@@ -25,19 +25,11 @@ namespace match4padel_staff.ViewModel
         public ObservableCollection<TimeSpan> freeHours { get; set; }
         public ObservableCollection<Court> Courts { get; set; }
 
-        private readonly ReservationService reservationService;
-        private readonly CourtService courtService;
-        private readonly PaymentService paymentService;
-
 
         public ReservateCourtViewModel()
         {
-            reservationService = new ReservationService();
-            courtService = new CourtService();
-            paymentService = new PaymentService();
-
             PaymentMethods = new List<string> { "Tarjeta", "Efectivo", "ApplePay" };
-            SelectedMethod = PaymentMethods.First();
+            SelectedMethod = PaymentMethods.FirstOrDefault();
             ReservateCourtCommand = new AsyncRelayCommand<Court>(ReservateCourt);
             Courts = new ObservableCollection<Court>();
             freeHours = new ObservableCollection<TimeSpan>();
@@ -56,14 +48,14 @@ namespace match4padel_staff.ViewModel
 
             if (freeHours.Any())
             {
-                SelectedHour = freeHours.First();
+                SelectedHour = freeHours.FirstOrDefault();
             }
         }
 
         private async Task LoadFreeHours()
         {
             freeHours.Clear();
-            var result = await reservationService.getFreeHoursByDate(SelectedDate);
+            var result = await ReservationService.GetFreeHoursByDate(SelectedDate);
             if (result is List<TimeSpan> hours)
             {
                 foreach (TimeSpan h in hours)
@@ -82,7 +74,7 @@ namespace match4padel_staff.ViewModel
                 SelectedHour = default;
 
                 if (freeHours.Any())
-                    SelectedHour = freeHours.First();
+                    SelectedHour = freeHours.FirstOrDefault();
             }
         }
 
@@ -91,7 +83,7 @@ namespace match4padel_staff.ViewModel
             if (SelectedHour != null)
             {
                 Courts.Clear();
-                var result = await courtService.getCourtsByDateAndTime(SelectedDate, SelectedHour);
+                var result = await CourtService.GetCourtsByDateAndTime(SelectedDate, SelectedHour);
                 if (result is List<Court> courts)
                 {
                     foreach (Court c in courts)
@@ -118,10 +110,10 @@ namespace match4padel_staff.ViewModel
             bool? windowResult = window.ShowDialog();
             if (windowResult == true)
             {
-                var reservationResult = await reservationService.CreateReservation(SessionService.Instance.UserId, SelectedCourt.Id, SelectedDate, SelectedHour);
+                var reservationResult = await ReservationService.CreateReservation(SessionService.Instance.UserId, SelectedCourt.Id, SelectedDate, SelectedHour);
                 if (reservationResult is Reservation reservation)
                 {
-                    var paymentResult = await paymentService.getPaymentByReservationId(reservation.Id);
+                    var paymentResult = await PaymentService.GetPaymentByReservationId(reservation.Id);
                     if (paymentResult is List<Payment> payments)
                     {
                         foreach (Payment p in payments)
@@ -141,7 +133,7 @@ namespace match4padel_staff.ViewModel
                                         break;
 
                                 }
-                                await paymentService.completePayment(p.Id, SelectedMethod);
+                                await PaymentService.CompletePayment(p.Id, SelectedMethod);
 
                                 var okWindow = new ReservationCreatedWindow
                                 {

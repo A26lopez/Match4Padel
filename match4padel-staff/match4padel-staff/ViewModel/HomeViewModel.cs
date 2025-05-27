@@ -9,7 +9,6 @@ namespace match4padel_staff.ViewModel
 
     public class HomeViewModel : BaseViewModel
     {
-        private readonly CourtService courtService;
         public Court court1 { get; set; }
         public Court court2 { get; set; }
         public Court court3 { get; set; }
@@ -21,13 +20,12 @@ namespace match4padel_staff.ViewModel
 
         public HomeViewModel()
         {
-            courtService = new CourtService();
             LoadAllCourtsAsync();
         }
 
         private async Task LoadAllCourtsAsync()
         {
-            var result = await courtService.getAllCourts();
+            var result = await CourtService.GetAllCourts();
             if (result is List<Court> courtList)
             {
                 court1 = courtList[0];

@@ -14,6 +14,7 @@ namespace match4padel_staff.View
         {
             InitializeComponent();
             viewModel = new SignUpViewModel();
+            viewModel.RequestClose += (s, e) => Close();
             DataContext = viewModel;
         }
 
@@ -27,11 +28,6 @@ namespace match4padel_staff.View
         {
             var passwordBox = sender as PasswordBox;
             viewModel.ConfirmPassword = passwordBox.Password;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.DialogResult = true;
         }
     }
 }

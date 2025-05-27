@@ -22,16 +22,12 @@ namespace match4padel_staff.Model
                 {
                     case "Principiante":
                         return "BEGINNER";
-                        break;
                     case "Intermedio":
                         return "INTERMEDIATE";
-                        break;
                     case "Avanzado":
                         return "ADVANCED";
-                        break;
                     case "Experto":
                         return "EXPERT";
-                        break;
                     default:
                         return Level;
 

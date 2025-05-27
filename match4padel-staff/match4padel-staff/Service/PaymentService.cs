@@ -1,50 +1,22 @@
 ﻿using match4padel_staff.Model;
 using System.Collections.Generic;
-using System.Text.Json;
 using System.Threading.Tasks;
+
 
 namespace match4padel_staff.Service
 {
-    class PaymentService
+    public static class PaymentService
     {
-        public async Task<object> getPaymentByReservationId(long reservationId)
+        public static async Task<object> GetPaymentByReservationId(long reservationId)
         {
-            var response = await HttpClientService.Instance.GetAsync($"{HttpClientService.ApiUrl}/payments/reservation/{reservationId}");
-            var responseJson = await response.Content.ReadAsStringAsync();
-            if (response.IsSuccessStatusCode)
-            {
-                return JsonSerializer.Deserialize<List<Payment>>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
-            else
-            {
-                return JsonSerializer.Deserialize<ErrorResponse>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
+            return await HttpClientService.SafeGetAsync<List<Payment>>($"/payments/reservation/{reservationId}");
         }
 
-        public async Task<object> completePayment(long paymentId, string method)
+        public static async Task<object> CompletePayment(long paymentId, string method)
         {
-            var response = await HttpClientService.Instance.PostAsync($"{HttpClientService.ApiUrl}/payments/{paymentId}/complete?method={method}", null);
-            var responseJson = await response.Content.ReadAsStringAsync();
-            if (response.IsSuccessStatusCode)
-            {
-                return JsonSerializer.Deserialize<LoginResponse>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
-            else
-            {
-                return JsonSerializer.Deserialize<ErrorResponse>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
+            string endpoint = $"/payments/{paymentId}/complete?method={method}";
+            return await HttpClientService.SafePostAsync<LoginResponse>(endpoint, null);
         }
     }
 }
+

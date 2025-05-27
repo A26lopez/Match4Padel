@@ -231,7 +231,6 @@
                 Grid.ColumnSpan="3"
                 Grid.Row="13"
                 Height="30"
-                Click="Button_Click"
                 Content="Registrarse"
                 Command="{Binding SignUpCommand}"/>
     </Grid>

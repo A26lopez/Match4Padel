@@ -1,117 +1,39 @@
 ﻿using match4padel_staff.Model;
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
 using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace match4padel_staff.Service
 {
-    public class MatchService
+    public static class MatchService
     {
-        public async Task<object> getMatchesByUserId(long userId)
+        public static async Task<object> GetMatchesByUserId(long userId)
         {
-            var response = await HttpClientService.Instance.GetAsync($"{HttpClientService.ApiUrl}/matches/user/{userId}");
-            var responseJson = await response.Content.ReadAsStringAsync();
-            if (response.IsSuccessStatusCode)
-            {
-                return JsonSerializer.Deserialize<List<Match>>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
-            else
-            {
-                return JsonSerializer.Deserialize<ErrorResponse>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
+            return await HttpClientService.SafeGetAsync<List<Match>>($"/matches/user/{userId}");
         }
 
-        public async Task<object> getOpenMatches()
+        public static async Task<object> GetOpenMatches()
         {
-            var response = await HttpClientService.Instance.GetAsync($"{HttpClientService.ApiUrl}/matches/status/OPEN");
-            var responseJson = await response.Content.ReadAsStringAsync();
-            if (response.IsSuccessStatusCode)
-            {
-                return JsonSerializer.Deserialize<List<Match>>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
-            else
-            {
-                return JsonSerializer.Deserialize<ErrorResponse>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
+            return await HttpClientService.SafeGetAsync<List<Match>>("/matches/status/OPEN");
         }
 
-        public async Task<object> cancelMatchById(long id)
+        public static async Task<object> CancelMatchById(long id)
         {
-            var response = await HttpClientService.Instance.PostAsync($"{HttpClientService.ApiUrl}/matches/{id}/cancel", null);
-            var responseJson = await response.Content.ReadAsStringAsync();
-            if (response.IsSuccessStatusCode)
-            {
-                return JsonSerializer.Deserialize<Match>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
-            else
-            {
-                return JsonSerializer.Deserialize<ErrorResponse>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
+            return await HttpClientService.SafePostAsync<Match>($"/matches/{id}/cancel", null);
         }
 
-        public async Task<object> joinMatch(long matchId, long userId)
+        public static async Task<object> JoinMatch(long matchId, long userId)
         {
-            var response = await HttpClientService.Instance.PostAsync($"{HttpClientService.ApiUrl}/matches/{matchId}/add/{userId}", null);
-            var responseJson = await response.Content.ReadAsStringAsync();
-            if (response.IsSuccessStatusCode)
-            {
-                return JsonSerializer.Deserialize<Match>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
-            else
-            {
-                return JsonSerializer.Deserialize<ErrorResponse>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
+            return await HttpClientService.SafePostAsync<Match>($"/matches/{matchId}/add/{userId}", null);
         }
 
-        public async Task<object> leaveMatch(long matchId, long userId)
+        public static async Task<object> LeaveMatch(long matchId, long userId)
         {
-            var response = await HttpClientService.Instance.PostAsync($"{HttpClientService.ApiUrl}/matches/{matchId}/remove/{userId}", null);
-            var responseJson = await response.Content.ReadAsStringAsync();
-            if (response.IsSuccessStatusCode)
-            {
-                return JsonSerializer.Deserialize<Match>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
-            else
-            {
-                return JsonSerializer.Deserialize<ErrorResponse>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
-
+            return await HttpClientService.SafePostAsync<Match>($"/matches/{matchId}/remove/{userId}", null);
         }
 
-        public async Task<object> CreateMatch(long userId, long courtId, string level, DateTime date, TimeSpan startTime)
+        public static async Task<object> CreateMatch(long userId, long courtId, string level, DateTime date, TimeSpan startTime)
         {
             var data = new
             {
@@ -125,28 +47,7 @@ namespace match4padel_staff.Service
                 owner = new { id = userId }
             };
 
-            var json = JsonSerializer.Serialize(data);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-            var response = await HttpClientService.Instance.PostAsync($"{HttpClientService.ApiUrl}/matches", content);
-
-            var responseJson = await response.Content.ReadAsStringAsync();
-
-            if (response.IsSuccessStatusCode)
-            {
-                return JsonSerializer.Deserialize<Match>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
-            else
-            {
-                return JsonSerializer.Deserialize<ErrorResponse>(responseJson, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-            }
+            return await HttpClientService.SafePostAsync<Match>("/matches", data);
         }
-
     }
 }

@@ -15,11 +15,9 @@ namespace match4padel_staff.ViewModel
         public IAsyncRelayCommand CancelMatchCommand { get; }
         public IAsyncRelayCommand LeaveMatchCommand { get; }
 
-        private readonly MatchService matchService;
 
         public MyMatchesViewModel()
         {
-            matchService = new MatchService();
             Matches = new ObservableCollection<Match>();
             CancelMatchCommand = new AsyncRelayCommand<Match>(CancelMatch);
             LeaveMatchCommand = new AsyncRelayCommand<Match>(LeaveMatch);
@@ -28,7 +26,7 @@ namespace match4padel_staff.ViewModel
 
         private async Task LoadMatches()
         {
-            var result = await matchService.getMatchesByUserId(SessionService.Instance.UserId);
+            var result = await MatchService.GetMatchesByUserId(SessionService.Instance.UserId);
             if (result is List<Match> matchList)
             {
                 foreach (var m in matchList)
@@ -38,7 +36,7 @@ namespace match4padel_staff.ViewModel
             }
         }
 
-        private async Task CancelMatch(Match match)
+        private static async Task CancelMatch(Match match)
         {
             if (match == null) return;
 
@@ -52,9 +50,9 @@ namespace match4padel_staff.ViewModel
             if (boxResult != MessageBoxResult.Yes)
                 return;
 
-            var result = await matchService.cancelMatchById(match.Id);
+            var result = await MatchService.CancelMatchById(match.Id);
 
-            if (result is Match m)
+            if (result is Match)
             {
                 match.Reservation.Status = "CANCELLED";
                 match.Status = "CLOSED";
@@ -65,7 +63,7 @@ namespace match4padel_staff.ViewModel
             }
         }
 
-        private async Task LeaveMatch(Match match)
+        private static async Task LeaveMatch(Match match)
         {
             if (match == null) return;
 
@@ -80,7 +78,7 @@ namespace match4padel_staff.ViewModel
                 return;
 
 
-            var result = await matchService.leaveMatch(match.Id, SessionService.Instance.UserId);
+            var result = await MatchService.LeaveMatch(match.Id, SessionService.Instance.UserId);
 
             if (result is Match m)
             {

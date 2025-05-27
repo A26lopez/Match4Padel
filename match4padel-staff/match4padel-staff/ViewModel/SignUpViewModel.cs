@@ -7,12 +7,14 @@ using PropertyChanged;
 using System;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 
 namespace match4padel_staff.ViewModel
 {
     [AddINotifyPropertyChangedInterface]
     class SignUpViewModel : BaseViewModel
     {
+        public event EventHandler RequestClose;
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Username { get; set; }
@@ -38,12 +40,10 @@ namespace match4padel_staff.ViewModel
 
         public AsyncRelayCommand SignUpCommand { get; set; }
 
-        private readonly UserService userService;
 
         public SignUpViewModel()
         {
             BirthDate = DateTime.Today;
-            userService = new UserService();
             SignUpCommand = new AsyncRelayCommand(SignUp);
         }
 
@@ -51,11 +51,9 @@ namespace match4padel_staff.ViewModel
         {
             ClearErrors();
 
-
-
             User user = CreateUser();
 
-            var result = await userService.CreateUser(user);
+            var result = await UserService.CreateUser(user);
 
             if (result is ValidationsResponse validation)
             {
@@ -72,12 +70,20 @@ namespace match4padel_staff.ViewModel
                 NifError = validation.NifError;
                 BirthDateError = validation.BirthDateError;
                 LevelError = validation.LevelError;
-                Error = validation.Error;
+                
             }
-            else if (!(result is User))
+            else if (result is User)
             {
-                MessageBox.Show("Error no controlado.");
+                var userCreatedWindow = new UserCreatedWindow();
+                userCreatedWindow.Owner = Application.Current.MainWindow;
+                userCreatedWindow.ShowDialog();
+                RequestClose?.Invoke(this, EventArgs.Empty);
             }
+            else if (result is ErrorResponse e)
+            {
+                Error = e.Error;
+            }
+
         }
 
 
@@ -112,8 +118,10 @@ namespace match4padel_staff.ViewModel
             NifError = "";
             BirthDateError = "";
             LevelError = "";
+            Error = "";
         }
 
+       
 
     }
 }

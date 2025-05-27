@@ -21,23 +21,18 @@ namespace match4padel_staff.ViewModel
         public string SelectedMethod { get; set; }
 
 
-        private readonly MatchService matchService;
-        private readonly PaymentService paymentService;
-
         public OpenMatchesViewModel()
         {
-            matchService = new MatchService();
-            paymentService = new PaymentService();
             Matches = new ObservableCollection<Match>();
             joinMatchCommand = new AsyncRelayCommand<Match>(joinMatch);
             PaymentMethods = new List<string> { "Tarjeta", "Efectivo", "ApplePay" };
-            SelectedMethod = PaymentMethods.First();
+            SelectedMethod = PaymentMethods.FirstOrDefault();
             LoadMatches();
         }
 
         private async Task LoadMatches()
         {
-            var result = await matchService.getOpenMatches();
+            var result = await MatchService.GetOpenMatches();
             if (result is List<Match> matchList)
             {
                 foreach (var m in matchList)
@@ -64,11 +59,11 @@ namespace match4padel_staff.ViewModel
             bool? windowResult = window.ShowDialog();
             if (windowResult == true)
             {
-                var result = await matchService.joinMatch(match.Id, SessionService.Instance.UserId);
+                var result = await MatchService.JoinMatch(match.Id, SessionService.Instance.UserId);
 
                 if (result is Match m)
                 {
-                    var paymentResult = await paymentService.getPaymentByReservationId(match.Reservation.Id);
+                    var paymentResult = await PaymentService.GetPaymentByReservationId(match.Reservation.Id);
                     if (paymentResult is List<Payment> payments)
                     {
                         foreach (Payment p in payments)
@@ -88,7 +83,7 @@ namespace match4padel_staff.ViewModel
                                         break;
 
                                 }
-                                await paymentService.completePayment(p.Id, SelectedMethod);
+                                await PaymentService.CompletePayment(p.Id, SelectedMethod);
 
                                 var okWindow = new JoinedMatchWindow
                                 {
