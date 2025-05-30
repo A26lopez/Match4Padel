@@ -29,6 +29,7 @@ namespace match4padel_staff.ViewModel
             CreateMatchCommand = new RelayCommand(OpenCreateMatchView);
             MyMatchesCommand = new RelayCommand(OpenMyMatchesView);
             OpenMatchesCommand = new RelayCommand(OpenOpenMatchesView);
+            MyProfileCommand = new RelayCommand(OpenMyProfile);
             GetUserLogged();
         }
 
@@ -60,6 +61,11 @@ namespace match4padel_staff.ViewModel
         private void OpenOpenMatchesView()
         {
             CurrentView = new OpenMatchesView();
+        }
+
+        private void OpenMyProfile()
+        {
+            CurrentView = new MyProfileView();
         }
 
         private async Task GetUserLogged()

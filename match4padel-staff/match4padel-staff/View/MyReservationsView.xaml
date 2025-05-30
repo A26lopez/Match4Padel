@@ -54,7 +54,7 @@
                       ItemsSource="{Binding Reservations}"
                       Style="{StaticResource dataGrid_style}"
                       ColumnHeaderStyle="{StaticResource dataGrid_headers}"
-                      RowStyle="{StaticResource dataGrid_rows}">
+                      RowStyle="{StaticResource dataGrid_rows_reservations}">
                 <DataGrid.Columns>
                     <!--FECHA-->
                     <DataGridTextColumn Header="Fecha"

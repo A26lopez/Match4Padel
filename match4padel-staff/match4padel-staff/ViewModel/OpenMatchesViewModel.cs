@@ -26,7 +26,6 @@ namespace match4padel_staff.ViewModel
             Matches = new ObservableCollection<Match>();
             joinMatchCommand = new AsyncRelayCommand<Match>(joinMatch);
             PaymentMethods = new List<string> { "Tarjeta", "Efectivo", "ApplePay" };
-            SelectedMethod = PaymentMethods.FirstOrDefault();
             LoadMatches();
         }
 
@@ -50,12 +49,9 @@ namespace match4padel_staff.ViewModel
         {
             if (match == null) return;
             SelectedMatch = match;
-            var window = new JoinMatchWindowView
-            {
-                Owner = Application.Current.MainWindow,
-                DataContext = this
-            };
-
+            SelectedMethod = PaymentMethods[0];
+            var window = new JoinMatchWindowView();
+            window.DataContext = this;
             bool? windowResult = window.ShowDialog();
             if (windowResult == true)
             {
@@ -85,10 +81,7 @@ namespace match4padel_staff.ViewModel
                                 }
                                 await PaymentService.CompletePayment(p.Id, SelectedMethod);
 
-                                var okWindow = new JoinedMatchWindow
-                                {
-                                    Owner = Application.Current.MainWindow
-                                };
+                                var okWindow = new JoinedMatchWindow();
                                 okWindow.ShowDialog();
                                 if (m.Player1 != null)
                                 {

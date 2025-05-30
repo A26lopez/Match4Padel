@@ -32,7 +32,6 @@ namespace match4padel_staff.ViewModel
 
             PaymentMethods = new List<string> { "Tarjeta", "Efectivo", "ApplePay" };
             Levels = new List<string> { "Principiante", "Intermedio", "Avanzado", "Experto " };
-            SelectedMethod = PaymentMethods.FirstOrDefault();
             SelectedLevel = Levels.FirstOrDefault();
 
             CreateMatchCommand = new AsyncRelayCommand<Court>(CreateMatch);
@@ -53,7 +52,7 @@ namespace match4padel_staff.ViewModel
 
             if (freeHours.Any())
             {
-                SelectedHour = freeHours.FirstOrDefault();
+                SelectedHour = freeHours[0];
             }
         }
 
@@ -105,12 +104,10 @@ namespace match4padel_staff.ViewModel
             {
                 SelectedCourt = court;
             }
+            SelectedMethod = PaymentMethods[0];
 
-            var window = new MatchWindowView
-            {
-                Owner = Application.Current.MainWindow,
-                DataContext = this
-            };
+            var window = new MatchWindowView();
+            window.DataContext = this;
 
             bool? windowResult = window.ShowDialog();
             if (windowResult == true)
@@ -157,10 +154,7 @@ namespace match4padel_staff.ViewModel
                                 }
                                 await PaymentService.CompletePayment(p.Id, SelectedMethod);
 
-                                var okWindow = new MatchCreatedWindow
-                                {
-                                    Owner = Application.Current.MainWindow
-                                };
+                                var okWindow = new MatchCreatedWindow();
                                 okWindow.ShowDialog();
                                 OnSelectedHourChanged();
                             }

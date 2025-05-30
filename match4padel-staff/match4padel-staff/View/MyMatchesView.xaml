@@ -54,7 +54,7 @@
                     ItemsSource="{Binding Matches}"
                     Style="{StaticResource dataGrid_style}"
                     ColumnHeaderStyle="{StaticResource dataGrid_headers}"
-                    RowStyle="{StaticResource dataGrid_rows}">
+                    RowStyle="{StaticResource dataGrid_rows_matches}">
                 <DataGrid.Columns>
                     <!--FECHA-->
                     <DataGridTextColumn Header="Fecha"

@@ -29,7 +29,6 @@ namespace match4padel_staff.ViewModel
         public ReservateCourtViewModel()
         {
             PaymentMethods = new List<string> { "Tarjeta", "Efectivo", "ApplePay" };
-            SelectedMethod = PaymentMethods.FirstOrDefault();
             ReservateCourtCommand = new AsyncRelayCommand<Court>(ReservateCourt);
             Courts = new ObservableCollection<Court>();
             freeHours = new ObservableCollection<TimeSpan>();
@@ -48,7 +47,7 @@ namespace match4padel_staff.ViewModel
 
             if (freeHours.Any())
             {
-                SelectedHour = freeHours.FirstOrDefault();
+                SelectedHour = freeHours[0];
             }
         }
 
@@ -101,11 +100,10 @@ namespace match4padel_staff.ViewModel
                 SelectedCourt = court;
             }
 
-            var window = new ReservationWindowView
-            {
-                Owner = Application.Current.MainWindow,
-                DataContext = this
-            };
+            SelectedMethod = PaymentMethods[0];
+
+            var window = new ReservationWindowView();
+            window.DataContext = this;
 
             bool? windowResult = window.ShowDialog();
             if (windowResult == true)
@@ -135,10 +133,7 @@ namespace match4padel_staff.ViewModel
                                 }
                                 await PaymentService.CompletePayment(p.Id, SelectedMethod);
 
-                                var okWindow = new ReservationCreatedWindow
-                                {
-                                    Owner = Application.Current.MainWindow
-                                };
+                                var okWindow = new ReservationCreatedWindow();
                                 okWindow.ShowDialog();
                                 OnSelectedHourChanged();
                             }

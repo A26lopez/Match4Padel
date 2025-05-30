@@ -287,8 +287,8 @@
         <Setter Property="VerticalContentAlignment" Value="Top"/>
     </Style>
 
-    <!-- DATA GRID ROWS -->
-    <Style x:Key="dataGrid_rows" TargetType="DataGridRow">
+    <!-- DATA GRID ROWS RESERVATIONS -->
+    <Style x:Key="dataGrid_rows_reservations" TargetType="DataGridRow">
         <Setter Property="FontFamily" Value="Roboto"/>
         <Setter Property="Foreground" Value="{DynamicResource DarkText}" />
         <Setter Property="Padding" Value="6"/>
@@ -302,13 +302,25 @@
             <DataTrigger Binding="{Binding Status}" Value="COMPLETED">
                 <Setter Property="Background" Value="{DynamicResource Completed_status}"/>
             </DataTrigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- DATA GRID ROWS MATCHES -->
+    <Style x:Key="dataGrid_rows_matches" TargetType="DataGridRow">
+        <Setter Property="FontFamily" Value="Roboto"/>
+        <Setter Property="Foreground" Value="{DynamicResource DarkText}" />
+        <Setter Property="Padding" Value="6"/>
+        <Style.Triggers>
             <DataTrigger Binding="{Binding Reservation.Status}" Value="CONFIRMED">
                 <Setter Property="Background" Value="{DynamicResource Confirmed_status}"/>
             </DataTrigger>
             <DataTrigger Binding="{Binding Reservation.Status}" Value="CANCELLED">
                 <Setter Property="Background" Value="{DynamicResource Cancelled_status}"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding Resvervation.Status}" Value="COMPLETED">
+            <DataTrigger Binding="{Binding Reservation.Status}" Value="COMPLETED">
                 <Setter Property="Background" Value="{DynamicResource Completed_status}"/>
             </DataTrigger>
             <Trigger Property="IsMouseOver" Value="True">
@@ -316,6 +328,7 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
 
 
     <!-- Reservation Window-->

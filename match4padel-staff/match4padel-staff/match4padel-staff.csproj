@@ -186,6 +186,9 @@
     <Compile Include="View\MyMatchesView.xaml.cs">
       <DependentUpon>MyMatchesView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MyProfileView.xaml.cs">
+      <DependentUpon>MyProfileView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MyReservationsView.xaml.cs">
       <DependentUpon>MyReservationsView.xaml</DependentUpon>
     </Compile>
@@ -288,6 +291,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MyMatchesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MyProfileView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
