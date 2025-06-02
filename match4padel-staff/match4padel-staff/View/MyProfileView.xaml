@@ -55,7 +55,8 @@
                     <TextBlock Text="Nombre"
                      Style="{StaticResource headers_text_style}"/>
                     <TextBox Style="{StaticResource textBox}"
-                     Text="{Binding FirstName, Mode=TwoWay}"/>
+                     Text="{Binding User.ContactInfo.FirstName, Mode=TwoWay}"
+                             IsEnabled="{Binding formsEnabled}"/>
                     <TextBlock Style="{StaticResource normal_text_style}"
                        Text="{Binding FirstNameError, Mode=TwoWay}"
                        FontSize="12"
@@ -69,7 +70,8 @@
                     <TextBlock Text="Apellidos"
                      Style="{StaticResource headers_text_style}"/>
                     <TextBox Style="{StaticResource textBox}"
-                     Text="{Binding LastName, Mode=TwoWay}"/>
+                     Text="{Binding User.ContactInfo.LastName, Mode=TwoWay}"
+                              IsEnabled="{Binding formsEnabled}"/>
                     <TextBlock Style="{StaticResource normal_text_style}"
                        Text="{Binding LastNameError, Mode=TwoWay}"
                        FontSize="12"
@@ -83,7 +85,8 @@
                     <TextBlock Text="Nombre de usuario"
                      Style="{StaticResource headers_text_style}"/>
                     <TextBox Style="{StaticResource textBox}"
-                     Text="{Binding Username, Mode=TwoWay}"/>
+                     Text="{Binding User.AccountInfo.Username, Mode=TwoWay}"
+                              IsEnabled="{Binding formsEnabled}"/>
                     <TextBlock Style="{StaticResource normal_text_style}"
                        Text="{Binding UsernameError, Mode=TwoWay}"
                        FontSize="12"
@@ -97,7 +100,8 @@
                     <TextBlock Text="Email"
                      Style="{StaticResource headers_text_style}"/>
                     <TextBox Style="{StaticResource textBox}"
-                     Text="{Binding Email, Mode=TwoWay}"/>
+                     Text="{Binding User.ContactInfo.Email, Mode=TwoWay}"
+                              IsEnabled="{Binding formsEnabled}"/>
                     <TextBlock Style="{StaticResource normal_text_style}"
                        Text="{Binding EmailError, Mode=TwoWay}"
                        FontSize="12"
@@ -114,7 +118,8 @@
                     <TextBlock Text="N.I.F."
                Style="{StaticResource headers_text_style}"/>
                     <TextBox Style="{StaticResource textBox}"
-               Text="{Binding Nif, Mode=TwoWay}"/>
+               Text="{Binding User.ContactInfo.Nif, Mode=TwoWay}"
+                              IsEnabled="{Binding formsEnabled}"/>
                     <TextBlock Style="{StaticResource normal_text_style}"
                  Text="{Binding NifError, Mode=TwoWay}"
                  FontSize="12"
@@ -128,20 +133,23 @@
                     <TextBlock Text="Número de teléfono"
                      Style="{StaticResource headers_text_style}"/>
                     <TextBox Style="{StaticResource textBox}"
-                     Text="{Binding PhoneNumber, Mode=TwoWay}"/>
+                     Text="{Binding User.ContactInfo.PhoneNumber, Mode=TwoWay}"
+                              IsEnabled="{Binding formsEnabled}"/>
                     <TextBlock Style="{StaticResource normal_text_style}"
                        Text="{Binding PhoneNumberError, Mode=TwoWay}"
                        FontSize="12"
                        TextWrapping="Wrap"
                        Foreground="Red"/>
                 </StackPanel>
+                
                 <!-- CONTRASEÑA -->
                 <StackPanel Grid.Column="5"
                     Grid.Row="3">
                     <TextBlock Text="Nueva contraseña"
                      Style="{StaticResource headers_text_style}"/>
                     <PasswordBox Style="{StaticResource passwordBox}"
-                         PasswordChanged="PasswordBox_PasswordChanged"/>
+                         PasswordChanged="PasswordBox_PasswordChanged"
+                                  IsEnabled="{Binding formsEnabled}"/>
                     <TextBlock Style="{StaticResource normal_text_style}"
                        Text="{Binding PasswordError, Mode=TwoWay}"
                        FontSize="12"
@@ -155,7 +163,8 @@
                     <TextBlock Text="Confirmar contraseña"
                      Style="{StaticResource headers_text_style}"/>
                     <PasswordBox Style="{StaticResource passwordBox}"
-                         PasswordChanged="ConfirmPasswordBox_PasswordChanged"/>
+                         PasswordChanged="ConfirmPasswordBox_PasswordChanged"
+                                  IsEnabled="{Binding formsEnabled}"/>
                     <TextBlock Style="{StaticResource normal_text_style}"
                        Text="{Binding ConfirmPasswordError, Mode=TwoWay}"
                        FontSize="12"
@@ -169,7 +178,8 @@
                     <TextBlock Text="Dirección"
                      Style="{StaticResource headers_text_style}"/>
                     <TextBox Style="{StaticResource textBox}"
-                     Text="{Binding Address, Mode=TwoWay}"/>
+                     Text="{Binding User.ContactInfo.Address, Mode=TwoWay}"
+                              IsEnabled="{Binding formsEnabled}"/>
                     <TextBlock Style="{StaticResource normal_text_style}"
                        Text="{Binding AddressError, Mode=TwoWay}"
                        FontSize="12"
@@ -183,7 +193,8 @@
                     <TextBlock Text="Código postal"
                      Style="{StaticResource headers_text_style}"/>
                     <TextBox Style="{StaticResource textBox}"
-                     Text="{Binding PostalCode, Mode=TwoWay}"/>
+                     Text="{Binding User.ContactInfo.PostalCode, Mode=TwoWay}"
+                              IsEnabled="{Binding formsEnabled}"/>
                     <TextBlock Style="{StaticResource normal_text_style}"
                        Text="{Binding PostalCodeError, Mode=TwoWay}"
                        FontSize="12"
@@ -197,7 +208,8 @@
                     <TextBlock Text="País"
                      Style="{StaticResource headers_text_style}"/>
                     <TextBox Style="{StaticResource textBox}"
-                     Text="{Binding Country, Mode=TwoWay}"/>
+                     Text="{Binding User.ContactInfo.Country, Mode=TwoWay}"
+                              IsEnabled="{Binding formsEnabled}"/>
                     <TextBlock Style="{StaticResource normal_text_style}"
                        Text="{Binding CountryError, Mode=TwoWay}"
                        FontSize="12"
@@ -211,7 +223,8 @@
                     <TextBlock Text="Ciudad"
                      Style="{StaticResource headers_text_style}"/>
                     <TextBox Style="{StaticResource textBox}"
-                     Text="{Binding City, Mode=TwoWay}"/>
+                     Text="{Binding User.ContactInfo.City, Mode=TwoWay}"
+                              IsEnabled="{Binding formsEnabled}"/>
                     <TextBlock Style="{StaticResource normal_text_style}"
                        Text="{Binding CityError, Mode=TwoWay}"
                        FontSize="12"
@@ -227,10 +240,11 @@
                      Style="{StaticResource headers_text_style}"/>
                     <DatePicker x:Name="reservations_calendar"
                         Width="260"
+                                 IsEnabled="{Binding formsEnabled}"
                           FontFamily="Roboto"
                           Foreground="{StaticResource DarkText}"
                           FontSize="16"
-                          SelectedDate="{Binding BirthDate, Mode=TwoWay}"
+                          SelectedDate="{Binding User.ContactInfo.BirthDate, Mode=TwoWay}"
                           HorizontalAlignment="Left"
                           BorderThickness="0"
                           Background="{StaticResource GrayLightDecoration}"
@@ -259,6 +273,7 @@
                     <TextBlock Text="Nivel"
                      Style="{StaticResource headers_text_style}"/>
                     <ComboBox Width="260"
+                               IsEnabled="{Binding formsEnabled}"
                       BorderBrush="{StaticResource GrayDarkDecoration}"
                       BorderThickness="1"
                       FontFamily="Roboto"
@@ -268,12 +283,12 @@
                       Background="{StaticResource GrayLightDecoration}"
                       Height="25"
                       Margin="0 2 0 0"
-                      SelectedValue="{Binding Level, Mode=TwoWay}"
+                      SelectedValue="{Binding User.Level, Mode=TwoWay}"
                       SelectedValuePath="Content">
-                        <ComboBoxItem Content="Principiante"></ComboBoxItem>
-                        <ComboBoxItem Content="Intermedio"></ComboBoxItem>
-                        <ComboBoxItem Content="Avanzado"></ComboBoxItem>
-                        <ComboBoxItem Content="Experto"></ComboBoxItem>
+                        <ComboBoxItem Content="BEGINNER"></ComboBoxItem>
+                        <ComboBoxItem Content="INTERMEDIATE"></ComboBoxItem>
+                        <ComboBoxItem Content="ADVANCED"></ComboBoxItem>
+                        <ComboBoxItem Content="EXPERT"></ComboBoxItem>
                     </ComboBox>
                     <TextBlock Style="{StaticResource normal_text_style}"
                        Text="{Binding LevelError, Mode=TwoWay}"
@@ -288,6 +303,7 @@
                     <TextBlock Text="Foto de perfil"
                      Style="{StaticResource headers_text_style}"/>
                     <Button Width="260"
+                             IsEnabled="{Binding formsEnabled}"
                               BorderBrush="{StaticResource GrayDarkDecoration}"
                               BorderThickness="1"
                               FontFamily="Roboto"
@@ -307,13 +323,21 @@
 
 
                 <!-- BOTON-->
-                <Button Style="{StaticResource normal_button_style}"
+                <StackPanel   
                 Grid.Column="7"
-                Grid.Row="7"
+                Grid.Row="7">
+                    <TextBlock Style="{StaticResource normal_text_style}"
+                       Text="{Binding Error, Mode=TwoWay}"
+                       FontSize="12"
+                       TextWrapping="Wrap"
+                       Foreground="Red"/>
+                    <Button Style="{StaticResource normal_button_style}"
                 Width="220"
                 Height="40"
+                             IsEnabled="{Binding formsEnabled}"
                 Content="Guardar cambios"
-                Command="{Binding SignUpCommand}"/>
+                Command="{Binding SaveChangesCommand}"/>
+                </StackPanel>
             </Grid>
         </Grid>
     </Grid>

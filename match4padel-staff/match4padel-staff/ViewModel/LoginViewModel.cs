@@ -32,7 +32,7 @@ namespace match4padel_staff.ViewModel
             var result = await LoginService.LoginAsync(Username, Password);
             if (result is LoginResponse login)
             {
-                SessionService.Instance.SetSession(login.Token, login.UserId);
+                SessionService.Instance.SetSession(login.Token, login.UserId, login.Username);
                 OpenMainWindow();
                 var loginWindow = Application.Current.MainWindow;
                 loginWindow.Close();

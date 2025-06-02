@@ -1,7 +1,9 @@
-﻿using System.Text.Json.Serialization;
+﻿using PropertyChanged;
+using System.Text.Json.Serialization;
 
 namespace match4padel_staff.Model
 {
+    [AddINotifyPropertyChangedInterface]
     public class User
     {
         public long Id { get; set; }

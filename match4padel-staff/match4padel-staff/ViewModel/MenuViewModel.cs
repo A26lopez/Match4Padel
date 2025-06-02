@@ -2,15 +2,17 @@
 using match4padel_staff.Model;
 using match4padel_staff.Service;
 using match4padel_staff.View;
+using PropertyChanged;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace match4padel_staff.ViewModel
 {
+    [AddINotifyPropertyChangedInterface]
     public class MenuViewModel : BaseViewModel
     {
         public object CurrentView { get; set; }
-        public User LoggedUser { get; set; }
+        public string LoggedUsername => SessionService.Instance.Username;
         public ICommand HomeCommand { get; }
         public ICommand ReservateCourtCommand { get; }
         public ICommand MyReservationsCommand { get; }
@@ -30,7 +32,7 @@ namespace match4padel_staff.ViewModel
             MyMatchesCommand = new RelayCommand(OpenMyMatchesView);
             OpenMatchesCommand = new RelayCommand(OpenOpenMatchesView);
             MyProfileCommand = new RelayCommand(OpenMyProfile);
-            GetUserLogged();
+            
         }
 
         private void OpenHomeView()
@@ -66,15 +68,6 @@ namespace match4padel_staff.ViewModel
         private void OpenMyProfile()
         {
             CurrentView = new MyProfileView();
-        }
-
-        private async Task GetUserLogged()
-        {
-            var response = await UserService.GetUserById(SessionService.Instance.UserId);
-            if (response is User user)
-            {
-                LoggedUser = user;
-            }
         }
     }
 }

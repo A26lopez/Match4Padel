@@ -90,10 +90,12 @@ public class UserService {
             existingUser.getContactInfo().setNif(nif);
         }
 
-        if (!passwordEncoder.matches(updatedUser.getAccountSecurity().getPassword(), existingUser.getAccountSecurity().getPasswordHash())) {
-            String password = updatedUser.getAccountSecurity().getPassword();
-            String passwordHash = passwordEncoder.encode(password);
-            existingUser.getAccountSecurity().setPasswordHash(passwordHash);
+        if (updatedUser.getAccountSecurity().getPassword() != null) {
+            if (!passwordEncoder.matches(updatedUser.getAccountSecurity().getPassword(), existingUser.getAccountSecurity().getPasswordHash())) {
+                String password = updatedUser.getAccountSecurity().getPassword();
+                String passwordHash = passwordEncoder.encode(password);
+                existingUser.getAccountSecurity().setPasswordHash(passwordHash);
+            }
         }
 
         existingUser.getAccountInfo().setProfilePictureUrl(updatedUser.getAccountInfo().getProfilePictureUrl());

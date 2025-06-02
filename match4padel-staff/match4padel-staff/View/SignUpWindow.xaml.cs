@@ -21,7 +21,7 @@ namespace match4padel_staff.View
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             var passwordBox = sender as PasswordBox;
-            viewModel.Password = passwordBox.Password;
+            viewModel.User.AccountSecurity.Password = passwordBox.Password;
         }
 
         private void ConfirmPasswordBox_PasswordChanged(object sender, RoutedEventArgs e)

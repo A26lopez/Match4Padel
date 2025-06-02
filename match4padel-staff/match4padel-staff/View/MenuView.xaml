@@ -50,7 +50,7 @@
                            FontSize="40"
             VerticalAlignment="Center"/>
                 <TextBlock Grid.Column="1"
-            Text="{Binding LoggedUser.AccountInfo.Username}"
+            Text="{Binding LoggedUsername}"
             Foreground="White"
             FontSize="40"
             VerticalAlignment="Center"/>

@@ -28,6 +28,21 @@ namespace match4padel_staff.Model.Responses
         public string NifError { get; set; }
         [JsonPropertyName("contactInfo.birthDate")]
         public string BirthDateError { get; set; }
+
+        [JsonPropertyName("contactInfo.postalCode")]
+        public string PostalCodeError { get; set; }
+
+        [JsonPropertyName("contactInfo.Address")]
+        public string AddressError { get; set; }
+
+        [JsonPropertyName("contactInfo.city")]
+        public string CityError { get; set; }
+
+        [JsonPropertyName("contactInfo.country")]
+        public string CountryError { get; set; }
+
+
+
         [JsonPropertyName("level")]
         public string LevelError { get; set; }
 

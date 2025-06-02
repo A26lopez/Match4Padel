@@ -33,7 +33,6 @@ namespace match4padel_staff.Service
             {
                 var response = await Instance.GetAsync($"{ApiUrl}{endpoint}");
                 var responseJson = await response.Content.ReadAsStringAsync();
-
                 if (response.IsSuccessStatusCode)
                 {
                     return JsonSerializer.Deserialize<T>(responseJson, new JsonSerializerOptions
@@ -72,6 +71,53 @@ namespace match4padel_staff.Service
                 var json = JsonSerializer.Serialize(data);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 var response = await Instance.PostAsync($"{ApiUrl}{endpoint}", content);
+                var responseJson = await response.Content.ReadAsStringAsync();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return JsonSerializer.Deserialize<T>(responseJson, new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+                }
+                else if (responseJson.Contains("error"))
+                {
+                    return JsonSerializer.Deserialize<ErrorResponse>(responseJson, new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+                }
+                else
+                {
+                    return JsonSerializer.Deserialize<ValidationsResponse>(responseJson, new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                MessageBox.Show($"No se pudo conectar con el servidor:\n{ex.Message}", "Error de conexión", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (TaskCanceledException ex)
+            {
+                MessageBox.Show($"Tiempo de espera agotado:\n{ex.Message}", "Timeout", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error inesperado:\n{ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            return null;
+        }
+
+        public static async Task<object> SafePutAsync<T>(string endpoint, object data)
+        {
+            try
+            {
+                var json = JsonSerializer.Serialize(data);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await Instance.PutAsync($"{ApiUrl}{endpoint}", content);
                 var responseJson = await response.Content.ReadAsStringAsync();
 
                 if (response.IsSuccessStatusCode)

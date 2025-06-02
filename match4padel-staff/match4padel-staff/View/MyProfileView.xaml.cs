@@ -1,4 +1,5 @@
-﻿using System;
+﻿using match4padel_staff.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,21 +21,25 @@ namespace match4padel_staff.View
     /// </summary>
     public partial class MyProfileView : UserControl
     {
+        private readonly MyProfileViewModel viewModel;
         public MyProfileView()
         {
+            viewModel = new MyProfileViewModel();
+            DataContext = viewModel;
+            
             InitializeComponent();
         }
 
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             var passwordBox = sender as PasswordBox;
-            //viewModel.Password = passwordBox.Password;
+            viewModel.User.AccountSecurity.Password = passwordBox.Password;
         }
 
         private void ConfirmPasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             var passwordBox = sender as PasswordBox;
-            //viewModel.ConfirmPassword = passwordBox.Password;
+            viewModel.ConfirmPassword = passwordBox.Password;
         }
     }
 }

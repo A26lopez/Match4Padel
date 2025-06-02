@@ -158,6 +158,7 @@
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\MyMatchesViewModel.cs" />
+    <Compile Include="ViewModel\MyProfileViewModel.cs" />
     <Compile Include="ViewModel\MyReservationsViewModel.cs" />
     <Compile Include="ViewModel\OpenMatchesViewModel.cs" />
     <Compile Include="ViewModel\ReservateCourtViewModel.cs" />
@@ -203,6 +204,9 @@
     </Compile>
     <Compile Include="View\ReservationWindowView.xaml.cs">
       <DependentUpon>ReservationWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SavedChangesWindow.xaml.cs">
+      <DependentUpon>SavedChangesWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SignUpWindow.xaml.cs">
       <DependentUpon>SignUpWindow.xaml</DependentUpon>
@@ -315,6 +319,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ReservationWindowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SavedChangesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -15,17 +15,8 @@ namespace match4padel_staff.ViewModel
     class SignUpViewModel : BaseViewModel
     {
         public event EventHandler RequestClose;
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Username { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public User User { get; set; }
         public string ConfirmPassword { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Nif { get; set; }
-        public DateTime BirthDate { get; set; }
-        public string Level { get; set; }
-
         public string FirstNameError { get; set; }
         public string LastNameError { get; set; }
         public string UsernameError { get; set; }
@@ -43,7 +34,11 @@ namespace match4padel_staff.ViewModel
 
         public SignUpViewModel()
         {
-            BirthDate = DateTime.Today;
+            User = new User();
+            User.ContactInfo = new ContactInfo();
+            User.AccountInfo = new AccountInfo();
+            User.AccountSecurity = new AccountSecurity();
+            User.ContactInfo.BirthDate = DateTime.Today;
             SignUpCommand = new AsyncRelayCommand(SignUp);
         }
 
@@ -51,16 +46,16 @@ namespace match4padel_staff.ViewModel
         {
             ClearErrors();
 
-            User user = CreateUser();
 
-            var result = await UserService.CreateUser(user);
+            var result = await UserService.CreateUser(User);
+
+            if (User.AccountSecurity.Password != ConfirmPassword)
+            {
+                ConfirmPasswordError = "Las contraseñas no coinciden";
+            }
 
             if (result is ValidationsResponse validation)
             {
-                if (Password != ConfirmPassword)
-                {
-                    ConfirmPasswordError = "Las contraseñas no coinciden";
-                }
                 FirstNameError = validation.FirstNameError;
                 LastNameError = validation.LastNameError;
                 UsernameError = validation.UsernameError;
@@ -84,26 +79,6 @@ namespace match4padel_staff.ViewModel
                 Error = e.Error;
             }
 
-        }
-
-
-
-        private User CreateUser()
-        {
-            User user = new User();
-            user.ContactInfo = new ContactInfo();
-            user.AccountInfo = new AccountInfo();
-            user.AccountSecurity = new AccountSecurity();
-            user.ContactInfo.FirstName = FirstName;
-            user.ContactInfo.LastName = LastName;
-            user.AccountInfo.Username = Username;
-            user.ContactInfo.Email = Email;
-            user.AccountSecurity.Password = Password;
-            user.ContactInfo.PhoneNumber = PhoneNumber;
-            user.ContactInfo.Nif = Nif;
-            user.ContactInfo.BirthDate = BirthDate;
-            user.Level = Level;
-            return user;
         }
 
         private void ClearErrors()
