@@ -46,13 +46,13 @@ namespace match4padel_staff.ViewModel
         {
             ClearErrors();
 
-
-            var result = await UserService.CreateUser(User);
-
             if (User.AccountSecurity.Password != ConfirmPassword)
             {
                 ConfirmPasswordError = "Las contraseñas no coinciden";
+                return;
             }
+
+            var result = await UserService.CreateUser(User);
 
             if (result is ValidationsResponse validation)
             {

@@ -1,10 +1,11 @@
 ﻿using PropertyChanged;
+using System.ComponentModel;
 
 namespace match4padel_staff.Service
 {
-    [AddINotifyPropertyChangedInterface]
-    public class SessionService
+    public class SessionService : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         private static SessionService _instance;
         public static SessionService Instance
         {

@@ -12,7 +12,7 @@ namespace match4padel_staff.ViewModel
     public class MenuViewModel : BaseViewModel
     {
         public object CurrentView { get; set; }
-        public string LoggedUsername => SessionService.Instance.Username;
+        public string LoggedUsername { get; set; }
         public ICommand HomeCommand { get; }
         public ICommand ReservateCourtCommand { get; }
         public ICommand MyReservationsCommand { get; }
@@ -24,6 +24,14 @@ namespace match4padel_staff.ViewModel
 
         public MenuViewModel()
         {
+            SessionService.Instance.PropertyChanged += (s, e) =>
+            {
+                if (e.PropertyName == nameof(SessionService.Username))
+                {
+                    LoggedUsername = SessionService.Instance.Username;
+                }
+            };
+            LoggedUsername = SessionService.Instance.Username;
             CurrentView = new HomeView();
             HomeCommand = new RelayCommand(OpenHomeView);
             ReservateCourtCommand = new RelayCommand(OpenReservateCourtView);

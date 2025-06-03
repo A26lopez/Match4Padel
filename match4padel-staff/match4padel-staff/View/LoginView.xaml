@@ -88,6 +88,7 @@
                        Text="{Binding ErrorMessage}"
                        Style="{StaticResource normal_text_style}"
                        Foreground="Red"
+                       TextWrapping="Wrap"
                        TextAlignment="Center"/>
 
 

@@ -48,12 +48,12 @@ namespace match4padel_staff.ViewModel
         private async void LoadUser()
         {
             var result = await UserService.GetUserById(SessionService.Instance.UserId);
-            
+
             if (result is User user)
             {
                 User = user;
                 User.AccountSecurity = new AccountSecurity();
-                
+
             }
         }
 
@@ -61,16 +61,16 @@ namespace match4padel_staff.ViewModel
         {
             ClearErrors();
 
-            var result = await UserService.updateUser(SessionService.Instance.UserId, User);
-
             if (User.AccountSecurity.Password != ConfirmPassword)
             {
                 ConfirmPasswordError = "Las contraseñas no coinciden";
+                return;
             }
+
+            var result = await UserService.updateUser(SessionService.Instance.UserId, User);
 
             if (result is ValidationsResponse validation)
             {
-
                 FirstNameError = validation.FirstNameError;
                 LastNameError = validation.LastNameError;
                 UsernameError = validation.UsernameError;
@@ -84,23 +84,21 @@ namespace match4padel_staff.ViewModel
                 CityError = validation.CityError;
                 PostalCodeError = validation.PostalCodeError;
                 CountryError = validation.CountryError;
-                
-
             }
-            else if (result is User)
+            else if (result is User u)
             {
                 var savedChangesWindow = new SavedChangesWindow();
-                savedChangesWindow.Owner = Application.Current.MainWindow;
                 savedChangesWindow.ShowDialog();
-                formsEnabled = false;
-                SessionService.Instance.Username = User.AccountInfo.Username;
-            }
-            else if (result is ErrorResponse e)
-            {
-                Error = e.Error;
-            }
 
+                formsEnabled = false;
+                SessionService.Instance.Username = u.AccountInfo.Username;
+            }
+            else if (result is ErrorResponse errorResponse)
+            {
+                Error = errorResponse.Error;
+            }
         }
+
 
         private void ClearErrors()
         {
